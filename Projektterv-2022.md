@@ -1,8 +1,8 @@
-# `Koboldgram` Projektterv `2022`
+# Közösség Projektterv 2022
 
 ## 1. Összefoglaló 
 
-`A szállítmányozás lényege, hogy a küldemény a lehető legkisebb költséggel, legbiztonságosabban, a megfelelő időben optimálisan jusson el a rendeltetési helyre. Ez megköveteli az online is elérhető nyilvántartást, épp ezért ennek a projektnek a célja, hogy a szállítmányozással foglalkozó cégek számára egy webalkalmazást fejlesszünk. Az oldal lehetővé teszi tetszőleges árukészlet nyilvántartását, amelyek akár több raktárban, szétszorva vannak tárolva. Ezenkívül az árumozgatás online nyilvántartására is alkalmas lesz az elkészült weboldal. Mindezen funkciókat egy letisztult felületen keresztül tudja elérni a felhasználó.`
+A Közösségi weboldal lényege, hogy az emberek a világ bármely pontjáról tudjanak kommunikálni és kapcsolatba lépni egymással. A felhasználók fényképeket és videókat tölthetnek fel, majd ezeket megoszthatják egymással. A felhasználók tudják követni egymást, kinyilváníthatják tetszésüket, illetve kommentálhatják a feltöltött tartalmakat. Ezekről értesítést is kapnak, hogy ne maradjanak le a legfontosabb dolgokról. 
 
 ```
 Ide írd le tömören (4-6 mondatban), hogy miről szól a projekt, amit a gyakorlatvezetőtől kaptatok. 
@@ -43,7 +43,7 @@ azaz nem feltétlen mindenki, aki módosította a dokumentumot pl. egy elírás 
 
 ## 3. A projekt bemutatása
 
-`Ez a projektterv a Szallítmányozás projektet mutatja be, mely `2021-09-20`-től `2021-11-27`-ig tart. A projekt célja, hogy megfelelő felületet biztosítson a szállítmányozási feladatok online elvégézésére és az adatok nyilvántartására. Mindezért egy egyszerűen használható, átlátható és hatékonyan működő webalkalmazás fog felelni. A projekten három fő fejlesztő fog dolgozni, az elvégzett feladatokat pedig négy alkalommal fogjuk prezentálni a megrendelőnek. `
+Ez a projektterv a Közösség projektet mutatja be, mely 2022-09-05-től 2021-12-05-ig tart. A projekt célja, hogy megfelelő felületet biztosítson az újonnan megalakuló közösségi média felületért. Mindezért egy egyszerűen használható, átlátható és hatékonyan működő webalkalmazás fog felelni. A projekten nyolc fő fejlesztő fog dolgozni, az elvégzett feladatokat pedig négy alkalommal fogjuk prezentálni a megrendelőnek. 
 
 ```
 A megvalósítás további általános leírása, pl. mennyi főből áll a csapat, mennyi átadandó lesz a megrendelőnek a félév során, 
@@ -52,7 +52,7 @@ szintén 4-6 mondattal leírva.
 
 ### 3.1. Rendszerspecifikáció
 
-`A rendszernek képesnek kell lennie arra, hogy adott cég raktárait illetve a raktárak állapotát (telítettség, fizikai pozíció, speciális tulajdonság pl. veszélyes anyag tárolása) nyilvántartsa. Ezenkívül a szállítmányozó cég alkalmazásában álló sofőröket, illetve azok kamionjait is kezelnie kell. A kamionok aktuális és korábbi szállítmányait ki tudjuk listázni. Minden funkció a megfelelő felhasználói jogosultság mellett használható, annak függvényében írható, olvasható vagy nem megtekinthető az adat.`
+A közösségi felület célja, egy olyan felület létrehozása, ahol az emberek képesek egymással kapcsolatba lépni az interneten keresztül. A felhasználók szeretnének videókat és képeket megosztani magukról, az életükről és a mindennapjaikról. A fogyasztók képesek lesznek majd megkeresni, követni a másikat, véleményüket kinyilvánítani és kommentelni egymás tartalma alá. Ezekről a funkciókról azonnali értesítéseket is kapni fognak.
 
 ```
 Ide írd le részletesen, hogy mit fog tudni a rendszer (4-6 mondatban), amit a projekt keretében kerül megvalósításra. 
@@ -61,16 +61,15 @@ Mik a megrendelő és a felhasználók igényei? Miért van szükség a projektr
 
 ### 3.2. Funkcionális követelmények
 
- - `Felhasználói munkamenet megvalósítása több jogosultsági szinttel (admin, raktáros, sofőr)`
- - `Felhasználók kezelése (CRUD)`
- - `Raktárak kezelése (CRUD)`
- - `Árukészletek kezelése (CRUD)`
- - `Járművek kezelése (CRUD)`
- - `Fuvarok/szállítmányok kezelése (CRUD)`
- - `Email-es kiértesítés új szállítmány esetén az adott raktárosnak és sofőrnek`
- - `Fuvar útvonalának megjelenítése térképen a kezdő és a végponttal együtt`
- - `Kapcsolatfelvételi űrlap biztosítása új cégek számára`
- - `Biztonsági mentés automatikus létrehozása`
+ - Felhasználói munkamenet megvalósítása több jogosultsági szinttel (admin, bejelentkezett felhasználó, vendég felhasználó)
+ - Felhasználók kezelése (CRUD)
+ - Képek és videók feltöltése (CRUD)
+ - Felhasználók keresése (CRUD)
+ - Idővonal megtekintése (CRUD)
+ - Értesítés kommentekről, like-okról és követésekről
+ - Kommentelés, követés és like-olás funckió
+ - Regisztrált felhasználóknak saját profil
+ - Posztok és kommentek pontos időpontja
  
 ```
 Ide kerülnek a rendszerrel szemben támasztott funkcionális igények: azaz amit a rendszernek tudnia kell.
@@ -78,10 +77,11 @@ Ide kerülnek a rendszerrel szemben támasztott funkcionális igények: azaz ami
 
 ### 3.3. Nem funkcionális követelmények
 
- - `A kliens oldal platform- és böngészőfüggetlen legyen`
- - `Reszponzív megjelenés`
- - `Szenzitív adatokat biztonságosan tároljuk`
- - `A legfrissebb technológiákat használja a rendszer`
+ - A kliens oldal platform- és böngészőfüggetlen legyen
+ - Reszponzív megjelenés
+ - Szenzitív adatokat biztonságosan tároljuk
+ - A legfrissebb technológiákat használja a rendszer
+ - Egyszerű kezelőfelület
 
 ```
 A rendszer nem funkcionális követelményei, pl.: milyen környezetben fusson, milyen teljesítményt kell produkálnia, 
@@ -90,9 +90,9 @@ milyen megjelenéssel kell rendelkeznie.
 
 ## 4. Költség- és erőforrás-szükségletek
 
-Az erőforrásigényünk összesen kb. `22` személynap/fő.
+Az erőforrásigényünk összesen kb. 25 személynap/fő.
 
-A rendelkezésünkre áll összesen `3 * 70 = 210` pont.
+A rendelkezésünkre áll összesen 8 * 70 = 560 pont.
 
 ```
 Becsült sarokszámok, a rendelkezésre álló erőforrás fejenként általában 17-25 személynap, 
@@ -100,10 +100,8 @@ a pontok száma = fejenként a projektre kapható maxpont * tagok száma.
 ```
 
 ## 5. Szervezeti felépítés és felelősségmegosztás
-A projekt megrendelője `Márkus András`. A `Szállítmányozás` projektet a projektcsapat fogja végrehajtani, amely `jelenleg három fejlesztőből áll. A csapatban található tapasztalt és pályakezdő webprogramozó is, A tapasztalt projekttagok több éve dolgoznak az iparban, számos sikeres projektten vannak túl.`
- - `Teszt Elek (3 év tapasztalat)`
- - `Remek Elek (3 év tapasztalat)`
- - `Lev Elek (<1 év tapasztalatő)`
+A projekt megrendelője Dr. Pflanzner Tamás. A Közösség projektet a projektcsapat fogja végrehajtani, amely jelenleg nyolc fejlesztőből áll. A csapatban leginkább kezdő és haladó fejlesztők dolgoznak.
+ - Juhász István (<1 év tapasztalat)
 
 ```
 Itt lehet részletezni pl. a tagok szakmai tapasztalatait, vagy akár a releváns gyakorlati helyeket, munkahelyeket megemlíteni (4-6 mondatban).
@@ -114,10 +112,8 @@ A projekt a következő emberekből áll:
 
 |                                                                                                                   | Név             | E-mail cím (stud-os)       |
 |-------------------------------------------------------------------------------------------------------------------|-----------------|----------------------------|
-| Megrendelő                                                                                                        | `Márkus András` | `markusa@inf.u-szeged.hu`  |
-| Felelősségek: Projekt menedzser, `Adatbázis és adatkapcsolatok`, `A rendszer működési logikája`, `Prezentációk` | `Teszt Elek`    | `h123456@stud.u-szeged.hu` |
-| Felelősségek: `Felhasználói felületek`, `Dokumentáció`                                                            | `Remek Elek`    | `h654321@stud.u-szeged.hu` |
-| `Projekt tag`                                                                                                     | `Lev Elek`      | `h000000@stud.u-szeged.hu` |
+| Megrendelő                                                                                                        | Dr. Pflanzner Tamás | tampfla@inf.u-szeged.hu |
+| Felelősségek: Projekt menedzser, A rendszer működési logikája, Backend, Prezentációk                              | Juhász István       | h046416@stud.u-szeged.hu |
 
 ```
 Nem csak az adott egység felelősének feladata az adott részegység elkészítése, pl. a mérföldkövekhez tartozó prezentációt 
@@ -128,19 +124,18 @@ mindenki szerkesztheti, de elvárható, hogy a prezentációért felelős tag ad
 
 ### 6.1. Munkakörnyezet
 A projekt a következő munkaállomásokat fogja használni a munka során:
- - `Munkaállomások: 3 db PC Windows 10-es operációs rendszerrel`
- - `Dell Inspiron 5558 laptop (CPU: i5 5200U, RAM: 8 GB, GPU: Nvidia 920M)`
- - `Acer Aspire 573g laptop (CPU: i3 5005U, RAM: 4 GB, GPU: Nvidia 920M)`
- - `Asztali számítógép (CPU: i7 7700k, RAM: 16GB, GPU: Nvidia GTX1070)`
+ - Munkaállomások: 
+ - Macbook Air M1
 
 A projekt a következő technológiákat/szoftvereket fogja használni a munka során: 
  - `Heroku platformszolgáltatás`
  - `Heroku által biztosított PostgreSQL adatbázisszerver`
  - `Spring Boot (backend)`
- - `React.js (frontend)`
+ - `Angular (frontend)`
  - `Maven szoftverprojekt menedzselő szoftver`
- - `Eclipse IDE`
- - `Git verziókövető (GitLab)`
+ - Visual Studio Code
+ - IntelliJ IDEA
+ - Git verziókövető (GitLab)
 
 ```
 Milyen gépet használnak a projekttagok, milyen OS-t használnak, milyen szoftverkörnyezetben, stb.
@@ -150,8 +145,9 @@ Milyen gépet használnak a projekttagok, milyen OS-t használnak, milyen szoftv
 
 | Kockázat                                    | Leírás                                                                                                                                                                                     | Valószínűség | Hatás  |
 |---------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|--------|
-| `Betegség`                                  | `Súlyosságtól függően hátráltatja vagy bizonyos esetekben teljes mértékben korlátozza a munkavégzőt, így az egész projektre kihatással van. Megoldás: a feladatok átcsoportosítása`        | `nagy`       | `erős` |
-| `Kommunikációs fennakadás a csapattagokkal` | `A csapattagok között nem elégséges az információ áramlás, nem pontosan, esetleg késve vagy nem egyértelműen tájékoztatjuk egymást. Megoldás: még gyakoribb megbeszélések és ellenőrzések` | `kis`        | `erős` |
+| Betegség                                  | Súlyosságtól függően hátráltatja vagy bizonyos esetekben teljes mértékben korlátozza a munkavégzőt, így az egész projektre kihatással van. Megoldás: a feladatok átcsoportosítása            | nagy         | erős |
+| Kommunikációs fennakadás a csapattagokkal | A csapattagok között nem elégséges az információ áramlás, nem pontosan, esetleg késve vagy nem egyértelműen tájékoztatjuk egymást. Megoldás: még gyakoribb megbeszélések és ellenőrzések     | kis          | erős |
+| Hardver hiba | Valamelyik tagnak hardvare problémája van ezért egy ideig nem tudja folytatni a munkát. Megoldás: a feladatok átcsoportosítása                                                                                            | kis          | erős |
 
 ```
 A rizikótényezők bemutatása, amely hátráltathatja a projekt befejezését. Minden rizikót érdemes megemlíteni, részletezve, hogy mit jelent, 
@@ -162,7 +158,7 @@ milyen valószínűséggel következhet be (kis, közepes és nagy) és mekkora 
 ## 7. Jelentések
 
 ### 7.1. Munka menedzsment
-A munkát `Teszt Elek` koordinálja. `Fő feladata, hogy folyamatosan egyeztessen a csapattagokkal az előrehaladásról és a fellépő problémákról, esetlegesen a megoldásban is segítséget nyújhat a projekt csúszásának elkerülése végett. További feladata a heti szinten tartandó csoportgyűlések időpontjának és helyszínének leszervezése, erről email-ben tájékoztatja a projektcsapatot.`
+A munkát Juhász István koordinálja. Fő feladata, hogy folyamatosan egyeztessen a csapattagokkal az előrehaladásról és a fellépő problémákról, esetlegesen a megoldásban is segítséget nyújhat a projekt csúszásának elkerülése végett. További feladata a heti szinten tartandó csoportgyűlések időpontjának és helyszínének leszervezése, erről Discordon tájékoztatja a projektcsapatot.
 
 ```
 Írd le, hogy ki menedzseli a munkát (tipikusan a projekt menedzser), mik a feladatai, és azokat hogyan hajtja végre.
@@ -170,25 +166,31 @@ A munkát `Teszt Elek` koordinálja. `Fő feladata, hogy folyamatosan egyeztesse
 
 ### 7.2. Csoportgyűlések
 
-`A projekt hetente ülésezik, hogy megvitassák az azt megelőző hét problémáit, illetve hogy megbeszéljék a következő hét feladatait. A megbeszélésről minden esetben memó készül.`
+A projekt hetente ülésezik, hogy megvitassák az azt megelőző hét problémáit, illetve hogy megbeszéljék a következő hét feladatait.
 
-`1. megbeszélés:`
- - `Időpont: 2021.09.15.`
- - `Hely: SZTE Irinyi épület - Szeged, Tisza Lajos krt. 103`
- - `Résztvevők: Teszt Elek, Remek Elek, Lev Elek`
- - `Érintett témák: Ismerkedés, projekttéma kiválasztása`
+1. megbeszélés:
+ - Időpont: 2021.09.05.
+ - Hely: Discord
+ - Résztvevők: Juhász István, Orosz Bence, Papp Lukács, Gila Valter, Losonczi Máté, Simon Dániel, Oláh Balázs, Bondár Kristóf
+ - Érintett témák: Ismerkedés, projekttémák megnézése
 
-`2. megbeszélés:`
- - `Időpont: 2021.09.22.`
- - `Hely: Pivovár - Szeged, Vitéz utca 26.`
- - `Résztvevők: Teszt Elek, Remek Elek, Lev Elek`
- - `Érintett témák: A projektben használt technológiák, a dokumentáció felépítése, szerepkörök kiosztása, dokumentáció kisebb részekre felosztása`
+2. megbeszélés:
+ - Időpont: 2021.09.12.
+ - Hely: Discord
+ - Résztvevők: Juhász István, Orosz Bence, Gila Valter, Losonczi Máté, Simon Dániel, Oláh Balázs, Bondár Kristóf
+ - Érintett témák: A projekttéma kiválasztása, projektvezető megválasztása.
 
-`3. Megbeszélés:`
- - `Időpont: 2021.09.29.`
- - `Hely: TIK – Szeged, Ady tér 10.`
- - `Résztvevők: Teszt Elek, Remek Elek`
- - `Érintett témák: Funkcionális és nem funkcionális követelmények megbeszélése, UML és adatbázis tervek kiosztása`
+3. Megbeszélés:
+ - Időpont: 2021.09.19.
+ - Hely: Discord.
+ - Résztvevők: Orosz Bence, Papp Lukács, Gila Valter, Losonczi Máté, Simon Dániel, Oláh Balázs, Bondár Kristóf
+ - Érintett témák: Funkcionális és nem funkcionális követelmények megbeszélése.
+
+4. Megbeszélés:
+ - Időpont: 2021.09.26.
+ - Hely: Discord.
+ - Résztvevők: Juhász István, Orosz Bence, Papp Lukács, Gila Valter, Simon Dániel, Oláh Balázs, Bondár Kristóf
+ - Érintett témák:  Használt technológiák átbeszélése, szerepek felosztása.
 
 ```
 A memókat ebben a dokumentumban kell vezetni a teljes projekt során, amely tartalmazza a következőket: 
@@ -207,7 +209,7 @@ Az alábbi lehetőségek vannak a szoftver megfelelő minőségének biztosítá
 
 ### 7.4. Átadás, eredmények elfogadása
 
-A projekt eredményeit `Márkus András` fogja elfogadni. A projektterven változásokat csak  `Márkus András` írásos kérés esetén `Márkus András`engedélyével lehet tenni. A projekt eredményesnek bizonyul, ha specifikáció helyes és határidőn belül készül el. Az esetleges késések pontlevonást eredményeznek.
+A projekt eredményeit Dr. Pflanzner Tamás fogja elfogadni. A projektterven változásokat csak  Dr. Pflanzner Tamás írásos kérés esetén Dr. Pflanzner Tamás engedélyével lehet tenni. A projekt eredményesnek bizonyul, ha specifikáció helyes és határidőn belül készül el. Az esetleges késések pontlevonást eredményeznek.
 Az elfogadás feltételeire és beadás formájára vonatkozó részletes leírás a következő honlapon olvasható: https://okt.sed.hu/rf1/
 
 ### 7.5. Státuszjelentés
