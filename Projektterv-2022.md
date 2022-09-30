@@ -102,6 +102,7 @@ a pontok száma = fejenként a projektre kapható maxpont * tagok száma.
 ## 5. Szervezeti felépítés és felelősségmegosztás
 A projekt megrendelője Dr. Pflanzner Tamás. A Közösség projektet a projektcsapat fogja végrehajtani, amely jelenleg nyolc fejlesztőből áll. A csapatban leginkább kezdő és haladó fejlesztők dolgoznak.
  - Juhász István (<1 év tapasztalat)
+ - Losonczi Máté (<1 év tapasztalat)
 
 ```
 Itt lehet részletezni pl. a tagok szakmai tapasztalatait, vagy akár a releváns gyakorlati helyeket, munkahelyeket megemlíteni (4-6 mondatban).
@@ -126,6 +127,7 @@ mindenki szerkesztheti, de elvárható, hogy a prezentációért felelős tag ad
 A projekt a következő munkaállomásokat fogja használni a munka során:
  - Munkaállomások: 
  - Macbook Air M1
+ - Acer Aspire 5 
 
 A projekt a következő technológiákat/szoftvereket fogja használni a munka során: 
  - `Heroku platformszolgáltatás`
