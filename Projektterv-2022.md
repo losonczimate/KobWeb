@@ -104,6 +104,7 @@ A projekt megrendelője Dr. Pflanzner Tamás. A Közösség projektet a projektc
  - Juhász István (<1 év tapasztalat)
  - Losonczi Máté (<1 év tapasztalat)
  - Gila Valter (<1 év tapasztalat)
+ - Orosz Bence (<1 év tapasztalat)
 
 ```
 Itt lehet részletezni pl. a tagok szakmai tapasztalatait, vagy akár a releváns gyakorlati helyeket, munkahelyeket megemlíteni (4-6 mondatban).
@@ -117,6 +118,7 @@ A projekt a következő emberekből áll:
 | Megrendelő                                                                                                        | Dr. Pflanzner Tamás | tampfla@inf.u-szeged.hu |
 | Felelősségek: Projekt menedzser, A rendszer működési logikája, Backend, Prezentációk                              | Juhász István       | h046416@stud.u-szeged.hu |
 | Felelősségek: Backend                                                                                             | Gila Valter         | h045200@stud.u-szeged.hu |
+| Felelősségek: Adatbázis                                                                                           | Orosz Bence         | h049967@stud.u-szeged.hu |
 ```
 Nem csak az adott egység felelősének feladata az adott részegység elkészítése, pl. a mérföldkövekhez tartozó prezentációt 
 mindenki szerkesztheti, de elvárható, hogy a prezentációért felelős tag adja elő. 
@@ -130,6 +132,7 @@ A projekt a következő munkaállomásokat fogja használni a munka során:
  - Macbook Air M1
  - Acer Aspire 5 
  - Lenovo Ideapad 3
+ - Asztali számítógép Windows 10 Pro operációs rendszerrel
 
 A projekt a következő technológiákat/szoftvereket fogja használni a munka során: 
  - `Heroku platformszolgáltatás`
