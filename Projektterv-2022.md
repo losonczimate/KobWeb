@@ -122,6 +122,7 @@ A projekt a következő emberekből áll:
 | Felelősségek: Adatbázis                                                                                           | Orosz Bence         | h049967@stud.u-szeged.hu |
 | Felelősségek: Adatbázis                                                                                           | Bondár Kristóf      | h043327@stud.u-szeged.hu |
 | Felelősségek: Backend                                                                                             | Simon Dániel        | h051356@stud.u-szeged.hu |
+| Felelősségek: Frontend                                                                                            | Losonczi Máté       | h048281@stud.u-szeged.hu |
 ```
 Nem csak az adott egység felelősének feladata az adott részegység elkészítése, pl. a mérföldkövekhez tartozó prezentációt 
 mindenki szerkesztheti, de elvárható, hogy a prezentációért felelős tag adja elő. 
