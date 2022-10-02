@@ -107,6 +107,7 @@ A projekt megrendelője Dr. Pflanzner Tamás. A Közösség projektet a projektc
  - Orosz Bence (<1 év tapasztalat)
  - Bondár Kristóf (<1 év tapasztalat)
  - Simon Dániel (<1 év tapasztalat)
+ - Oláh Balázs (<1 év tapasztalat)
 ```
 Itt lehet részletezni pl. a tagok szakmai tapasztalatait, vagy akár a releváns gyakorlati helyeket, munkahelyeket megemlíteni (4-6 mondatban).
 ```
@@ -123,6 +124,7 @@ A projekt a következő emberekből áll:
 | Felelősségek: Adatbázis                                                                                           | Bondár Kristóf      | h043327@stud.u-szeged.hu |
 | Felelősségek: Backend                                                                                             | Simon Dániel        | h051356@stud.u-szeged.hu |
 | Felelősségek: Frontend                                                                                            | Losonczi Máté       | h048281@stud.u-szeged.hu |
+| Felelősségek: Frontend                                                                                            | Oláh Balázs         | h049912@stud.u-szeged.hu |
 ```
 Nem csak az adott egység felelősének feladata az adott részegység elkészítése, pl. a mérföldkövekhez tartozó prezentációt 
 mindenki szerkesztheti, de elvárható, hogy a prezentációért felelős tag adja elő. 
@@ -137,6 +139,7 @@ A projekt a következő munkaállomásokat fogja használni a munka során:
  - Acer Aspire 5 
  - Lenovo Ideapad 3
  - Dell Insprion 15 7000 Gaming
+ - LG Gram 14Z990
  - Asztali számítógép Windows 10 Pro operációs rendszerrel
 
 A projekt a következő technológiákat/szoftvereket fogja használni a munka során: 
@@ -181,25 +184,25 @@ A munkát Juhász István koordinálja. Fő feladata, hogy folyamatosan egyeztes
 A projekt hetente ülésezik, hogy megvitassák az azt megelőző hét problémáit, illetve hogy megbeszéljék a következő hét feladatait.
 
 1. megbeszélés:
- - Időpont: 2021.09.05.
+ - Időpont: 2022.09.05.
  - Hely: Discord
  - Résztvevők: Juhász István, Orosz Bence, Papp Lukács, Gila Valter, Losonczi Máté, Simon Dániel, Oláh Balázs, Bondár Kristóf
  - Érintett témák: Ismerkedés, projekttémák megnézése
 
 2. megbeszélés:
- - Időpont: 2021.09.12.
+ - Időpont: 2022.09.12.
  - Hely: Discord
  - Résztvevők: Juhász István, Orosz Bence, Gila Valter, Losonczi Máté, Simon Dániel, Oláh Balázs, Bondár Kristóf
  - Érintett témák: A projekttéma kiválasztása, projektvezető megválasztása.
 
 3. Megbeszélés:
- - Időpont: 2021.09.19.
+ - Időpont: 2022.09.19.
  - Hely: Discord.
  - Résztvevők: Orosz Bence, Papp Lukács, Gila Valter, Losonczi Máté, Simon Dániel, Oláh Balázs, Bondár Kristóf
  - Érintett témák: Funkcionális és nem funkcionális követelmények megbeszélése.
 
 4. Megbeszélés:
- - Időpont: 2021.09.26.
+ - Időpont: 2022.09.26.
  - Hely: Discord.
  - Résztvevők: Juhász István, Orosz Bence, Papp Lukács, Gila Valter, Simon Dániel, Oláh Balázs, Bondár Kristóf
  - Érintett témák:  Használt technológiák átbeszélése, szerepek felosztása.
