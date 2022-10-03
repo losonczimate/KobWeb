@@ -108,6 +108,7 @@ A projekt megrendelője Dr. Pflanzner Tamás. A Közösség projektet a projektc
  - Bondár Kristóf (<1 év tapasztalat)
  - Simon Dániel (<1 év tapasztalat)
  - Oláh Balázs (<1 év tapasztalat)
+ - Papp Lukács (<1 év tapasztalat)
 ```
 Itt lehet részletezni pl. a tagok szakmai tapasztalatait, vagy akár a releváns gyakorlati helyeket, munkahelyeket megemlíteni (4-6 mondatban).
 ```
@@ -125,6 +126,7 @@ A projekt a következő emberekből áll:
 | Felelősségek: Backend                                                                                             | Simon Dániel        | h051356@stud.u-szeged.hu |
 | Felelősségek: Frontend                                                                                            | Losonczi Máté       | h048281@stud.u-szeged.hu |
 | Felelősségek: Frontend                                                                                            | Oláh Balázs         | h049912@stud.u-szeged.hu |
+| Felelősségek: Frontend                                                                                            | Papp Lukács         | h050203@stud.u-szeged.hu |
 ```
 Nem csak az adott egység felelősének feladata az adott részegység elkészítése, pl. a mérföldkövekhez tartozó prezentációt 
 mindenki szerkesztheti, de elvárható, hogy a prezentációért felelős tag adja elő. 
@@ -140,6 +142,7 @@ A projekt a következő munkaállomásokat fogja használni a munka során:
  - Lenovo Ideapad 3
  - Dell Insprion 15 7000 Gaming
  - LG Gram 14Z990
+ - Lenovo Thinkpad X250
  - Asztali számítógép Windows 10 Pro operációs rendszerrel
 
 A projekt a következő technológiákat/szoftvereket fogja használni a munka során: 
