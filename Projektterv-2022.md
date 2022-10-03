@@ -109,9 +109,6 @@ A projekt megrendelője Dr. Pflanzner Tamás. A Közösség projektet a projektc
  - Simon Dániel (<1 év tapasztalat)
  - Oláh Balázs (<1 év tapasztalat)
  - Papp Lukács (<1 év tapasztalat)
-```
-Itt lehet részletezni pl. a tagok szakmai tapasztalatait, vagy akár a releváns gyakorlati helyeket, munkahelyeket megemlíteni (4-6 mondatban).
-```
 
 ### 5.1 Projektcsapat
 A projekt a következő emberekből áll:
@@ -146,11 +143,11 @@ A projekt a következő munkaállomásokat fogja használni a munka során:
  - Asztali számítógép Windows 10 Pro operációs rendszerrel
 
 A projekt a következő technológiákat/szoftvereket fogja használni a munka során: 
- - `Heroku platformszolgáltatás`
- - `Heroku által biztosított PostgreSQL adatbázisszerver`
- - `Spring Boot (backend)`
- - `Angular (frontend)`
- - `Maven szoftverprojekt menedzselő szoftver`
+ - `Heroku platformszolgáltatás (ezt még nem tudjuk)`
+ - `Heroku által biztosított PostgreSQL adatbázisszerver (ezt még nem tudjuk)`
+ - Javascript (backend)
+ - Angular (frontend)
+ - `Maven szoftverprojekt menedzselő szoftver (ezt még nem tudjuk)`
  - Visual Studio Code
  - IntelliJ IDEA
  - Git verziókövető (GitLab)
