@@ -638,14 +638,6 @@ Tartam:  `3 nap`
 Erőforrásigény:  `1 személynap/fő`
 
 
-#### 9.3.35. Bemutató elkészítése 
-
-Felelős: `Teszt Elek`
-
-Tartam:  `1 nap`
-
-Erőforrásigény:  `1 személynap`
-
 ```
 A feladatokat a 3.2-es pont figyelembevételével érdemes meghatározni és lehető legrészletesebben definiálni a feladatokat és a felelőseit. 
 A bemutató során a prototípus aktuális állását kell prezentálni.
