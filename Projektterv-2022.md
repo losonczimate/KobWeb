@@ -84,7 +84,7 @@ milyen megjelenéssel kell rendelkeznie.
 
 ## 4. Költség- és erőforrás-szükségletek
 
-Az erőforrásigényünk összesen kb. 25 személynap/fő.
+Az erőforrásigényünk összesen kb. 20 személynap/fő.
 
 A rendelkezésünkre áll összesen 8 * 70 = 560 pont.
 
