@@ -205,6 +205,12 @@ A projekt hetente ülésezik, hogy megvitassák az azt megelőző hét problém�
  - Hely: Discord.
  - Résztvevők: Juhász István, Orosz Bence, Papp Lukács, Gila Valter, Simon Dániel, Oláh Balázs, Bondár Kristóf
  - Érintett témák:  Használt technológiák átbeszélése, szerepek felosztása.
+ 
+5. Megbeszélés:
+ - Időpont: 2022.10.09.
+ - Hely: Discord.
+ - Résztvevők: Juhász István, Papp Lukács, Gila Valter, Simon Dániel, Oláh Balázs, Bondár Kristóf, Losonczi Máté
+ - Érintett témák:  Használt technológiák átbeszélése, szerepek felosztása.
 
 ```
 A memókat ebben a dokumentumban kell vezetni a teljes projekt során, amely tartalmazza a következőket: 
