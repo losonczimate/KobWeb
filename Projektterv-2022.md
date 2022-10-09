@@ -651,107 +651,67 @@ Részfeladatai a következők:
 
 #### 9.4.1. Javított minőségű prototípus új funkciókkal
 
-Felelős: `Teszt Elek`
+Felelős: Papp Lukács Lóránt
 
-Tartam:  `5 nap`
+Tartam:  4 nap
 
-Erőforrásigény:  `1 személynap`
+Erőforrásigény:  3 személynap
 
 #### 9.4.2. Javított minőségű prototípus javított funkciókkal
 
-Felelős: `Lev Elek`
+Felelős: Bodnár Kristóf
 
-Tartam:  `5 nap`
+Tartam:  4 nap
 
-Erőforrásigény:  `2 személynap`
+Erőforrásigény:  3 személynap
 
 #### 9.4.3. Javított minőségű prototípus a korábbi hiányzó funkciókkal
 
-Felelős: `Remek Elek`
+Felelős: Oláh Balázs
 
-Tartam:  `5 nap`
+Tartam:  4 nap
 
-Erőforrásigény:  `2 személynap`
+Erőforrásigény:  3 személynap
 
-#### 9.4.4. `Felhasználói munkamenet tesztelése (TP, TC, TR)`
+#### 9.4.4. Felhasználók kezelésének tesztelése (TP, TC, TR)
 
-Felelős: `Teszt Elek`
+Felelős: Losonczi Máté
 
-Tartam:  `1 nap`
+Tartam:  4 nap
 
-Erőforrásigény:  `0.3 személynap`
+Erőforrásigény:  3 személynap
 
-#### 9.4.5. `Raktárak kezelésének tesztelése (TP, TC, TR)`
+#### 9.4.5. Értesitések kezelésének tesztelése (TP, TC, TR)
 
-Felelős: `Remek Elek`
+Felelős: Gila Valter
 
-Tartam:  `1 nap`
+Tartam:  4 nap
 
-Erőforrásigény:  `0.3 személynap`
+Erőforrásigény:  3 személynap
 
-#### 9.4.6. `Árukészletek kezelésének tesztelése (TP, TC, TR)`
+#### 9.4.6. Követések kezelésének tesztelése (TP, TC, TR)
 
-Felelős: `Teszt Elek`
+Felelős: Juhász István
 
-Tartam:  `1 nap`
+Tartam:  4 nap
 
-Erőforrásigény:  `0.3 személynap`
+Erőforrásigény:  3 személynap
 
-#### 9.4.7. `Járművek kezelésének tesztelése (TP, TC, TR)`
+#### 9.4.7. Email-es funkciók tesztelése (TP, TC, TR)
 
-Felelős: `Remek Elek`
+Felelős: Simon Dániel
 
-Tartam:  `1 nap`
+Tartam:  4 nap
 
-Erőforrásigény:  `0.3 személynap`
+Erőforrásigény:  2 személynap
 
-#### 9.4.8. `Fuvarok kezelésének tesztelése (TP, TC, TR)`
+#### 9.4.8. Beviteli mezők tesztelése. (TP, TC, TR)
 
-Felelős: `Teszt Elek`
+Felelős: Orosz Bence
 
-Tartam:  `1 nap`
+Tartam:  4 nap
 
-Erőforrásigény:  `0.3 személynap`
-
-#### 9.4.9. `Email-es funkciók tesztelése (TP, TC, TR)`
-
-Felelős: `Remek Elek`
-
-Tartam:  `1 nap`
-
-Erőforrásigény:  `0.3 személynap`
-
-#### 9.4.10. `Térképes funkciók tesztelése (TP, TC, TR)`
-
-Felelős: `Lev Elek`
-
-Tartam:  `1 nap`
-
-Erőforrásigény:  `0.3 személynap`
-
-#### 9.4.11. `Kapcsolatfelvételi űrlap tesztelése (TP, TC, TR)`
-
-Felelős: `Lev Elek`
-
-Tartam:  `1 nap`
-
-Erőforrásigény:  `0.3 személynap`
-
-#### 9.4.12. `Biztonsági mentés tesztelése (TP, TC, TR)`
-
-Felelős: `Lev Elek`
-
-Tartam:  `1 nap`
-
-Erőforrásigény:  `0.3 személynap`
-
-#### 9.4.13. Bemutató elkészítése 
-
-Felelős: `Teszt Elek`
-
-Tartam:  `1 nap`
-
-Erőforrásigény:  `1 személynap`
+Erőforrásigény:  3 személynap
 
 ```
 Működő végleges program, a frissített tesztelési dokumentációval. A 3. mérföldkőhöz képest funkiconálisan többet kell tudnia az oldalnak.
