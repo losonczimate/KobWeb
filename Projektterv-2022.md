@@ -367,7 +367,7 @@ Részfeladatai a következők:
 
 #### 9.3.1.  `Felhasználói munkamenethez szükséges adatok létrehozása az adatbázisban`
 
-Felelős: `Teszt Elek`
+Felelős: `Orosz Bence`
 
 Tartam:  `5 nap`
 
@@ -375,7 +375,7 @@ Erőforrásigény:  `2 személynap`
 
 #### 9.3.2.  `Admin munkamenethez szükséges adatok létrehozása az adatbázisban`
 
-Felelős: `Remek Elek`
+Felelős: `Bodnár Kristóf`
 
 Tartam:  `4 nap`
 
@@ -383,7 +383,7 @@ Erőforrásigény:  `2 személynap`
 
 #### 9.3.3.  `Vendég munkamenethez szükséges adatok létrehozása az adatbázisban`
 
-Felelős: `Lev Elek`
+Felelős: `Orosz Bence`
 
 Tartam:  `3 nap`
 
@@ -391,7 +391,7 @@ Erőforrásigény:  `1 személynap`
 
 #### 9.3.4.  `Felhasználói munkamenethez kapcsolódó GUI megvalósítása`
 
-Felelős: `Teszt Elek `
+Felelős: `Papp Lukács Lóránt`
 
 Tartam:  `4 nap`
 
@@ -399,7 +399,7 @@ Erőforrásigény:  `2 személynap`
 
 #### 9.3.5.  `Admin munkamenethez kapcsolódó GUI megvalósítása`
 
-Felelős: `Teszt Elek`
+Felelős: `Papp Lukács Lóránt`
 
 Tartam:  `3 nap`
 
@@ -407,7 +407,7 @@ Erőforrásigény:  `1 személynap`
 
 #### 9.3.6.  `Vendég munkamenethez kapcsolódó GUI megvalósítása`
 
-Felelős: `Remek Elek`
+Felelős: `Papp Lukács Lóránt`
 
 Tartam:  `4 nap`
 
@@ -415,7 +415,7 @@ Erőforrásigény:  `2 személynap`
 
 #### 9.3.7.  `Adatbázis fejlesztése`
 
-Felelős: `Remek Elek `
+Felelős: `Bodnár Kristóf`
 
 Tartam:  `4 nap`
 
@@ -423,7 +423,7 @@ Erőforrásigény:  `2 személynap`
 
 #### 9.3.8.  `Felhasználók kezeléséhez tartozó logika ( CRUD )`
 
-Felelős: `Lev Elek`
+Felelős: `Simon Dániel`
 
 Tartam:  `3 nap`
 
@@ -431,7 +431,7 @@ Erőforrásigény:  `1 személynap`
 
 #### 9.3.9.  `Felhasználók kereséséhez kapcsolódó GUI megvalósítása`
 
-Felelős: `Lev Elek`
+Felelős: `Losonczi Máté`
 
 Tartam:  `5 nap`
 
@@ -439,7 +439,7 @@ Erőforrásigény:  `2 személynap`
 
 #### 9.3.10.  `Profilok kezeléshez tartozó üzleti logika (listázása, módosítása, létrehozása, törlése)`
 
-Felelős: `Lev Elek`
+Felelős: `Simon Dániel`
 
 Tartam:  `5 nap`
 
@@ -447,7 +447,7 @@ Erőforrásigény:  `2 személynap`
 
 #### 9.3.11.  `Profilok kezeléshez kapcsolódó GUI megvalósítása`
 
-Felelős: `Lev Elek`
+Felelős: `Oláh Balázs`
 
 Tartam:  `3 nap`
 
@@ -455,7 +455,7 @@ Erőforrásigény:  `1 személynap`
 
 #### 9.3.12.  `Profilkezeléshez szükséges adatok létrehozása az adatbázisban`
 
-Felelős: `Teszt Elek`
+Felelős: `Juhász István`
 
 Tartam:  `4 nap`
 
