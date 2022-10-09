@@ -281,14 +281,6 @@ Tartam:  4 nap
 Erőforrásigény:  1 személynap/fő
 
 
-#### 9.1.2. Bemutató elkészítése
-
-Felelős: `Teszt Elek`
-
-Tartam:  `2 nap`
-
-Erőforrásigény:  `1 személynap`
-
 ```
 A mérföldkőhöz tartozó feladatok bemutatása PPT keretében, pl. téma, tervezett funkciók, tagok, Gantt diagram.`
 ```
@@ -301,7 +293,7 @@ Részfeladatai a következők:
 
 #### 9.2.1. Use Case diagram
 
-Felelős: `Teszt Elek`
+Felelős: `Orosz Bence`
 
 Tartam:  `4 nap`
 
@@ -309,7 +301,7 @@ Erőforrásigény:  `1 személynap`
 
 #### 9.2.2. Class diagram
 
-Felelős: `Lev Elek`
+Felelős: `Gila Valter`
 
 Tartam:  `4 nap`
 
@@ -317,7 +309,7 @@ Erőforrásigény:  `2 személynap`
 
 #### 9.2.3. Sequence diagram
 
-Felelős: `Remek Elek`
+Felelős: `Juhász István`
 
 Tartam:  `3 nap`
 
@@ -325,7 +317,7 @@ Erőforrásigény:  `1 személynap`
 
 #### 9.2.4. Egyed-kapcsolat diagram adatbázishoz
 
-Felelős: `Remek Ele`
+Felelős: `Bodnár Kristóf`
 
 Tartam:  `4 nap`
 
@@ -333,7 +325,7 @@ Erőforrásigény:  `3 személynap`
 
 #### 9.2.5. Package diagram
 
-Felelős: `Teszt Elek`
+Felelős: `Oláh Balázs`
 
 Tartam:  `4 nap`
 
@@ -341,15 +333,23 @@ Erőforrásigény:  `1 személynap`
 
 #### 9.2.6. Képernyőtervek
 
-Felelős: `Teszt Elek`
+Felelős: `Papp Lukács Lóránt`
 
 Tartam:  `3 nap`
 
 Erőforrásigény:  `1 személynap`
 
-#### 9.2.7. Bemutató elkészítése
+#### 9.2.7. Firebase beállítása
 
-Felelős: `Lev Elek`
+Felelős: `Simon Dániel`
+
+Tartam:  `1 nap`
+
+Erőforrásigény:  `1 személynap`
+
+#### 9.2.8. Bemutató elkészítése
+
+Felelős: `Losonczi Máté`
 
 Tartam:  `1 nap`
 
