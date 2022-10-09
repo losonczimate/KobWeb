@@ -255,10 +255,10 @@ A főbb átadandók és határidők a projekt időtartama alatt a következők:
 
 | Szállítandó |                 Neve                |   Határideje  |
 |:-----------:|:-----------------------------------:|:-------------:|
-|      D1     |       Projektterv és útmutató       | `2021-10-04`  |
-|    P1+D2    | UML, DB, képernyőtervek és bemutató | `2021-10-18 ` |
-|    P1+D3    |      Prototípus I. és bemutató      | `2021-11-08 ` |
-|    P2+D4    |      Prototípus II. és bemutató     | `2021-11-29 ` |
+|      D1     |       Projektterv és útmutató       |  2021-10-10   |
+|    P1+D2    | UML, DB, képernyőtervek és bemutató |  2021-10-24   |
+|    P1+D3    |      Prototípus I. és bemutató      |  2021-11-14   |
+|    P2+D4    |      Prototípus II. és bemutató     |  2021-11-28   |
 
 ```
 D - dokumentáció, P - prototípus
