@@ -18,7 +18,7 @@ feketével írt részek törlése tilos, azok közösek.
 
 | Verzió | Szerző(k)                | Dátum        | Státusz         | Megjegyzés                                                    |
 |--------|--------------------------|--------------|-----------------|---------------------------------------------------------------|
-| `0.1`  | `Teszt Elek`             | `2021-09-26` | `Tervezet`      | `Legelső verzió`                                              |
+|  0.1   |  Juhász István           | 2021-10-09   |  Tervezet       | Legelső verzió                                                |
 | `0.2`  | `Remek Elek, Teszt Elek` | `2021-10-04` | `Előterjesztés` | `A projekt menedzsere jónak találta`                          |
 | `1.0`  | `Lev Elek`               | `2021-10-11` | `Elfogadott`    | `Apróbb átszervezések a kommentek alapján`                    |
 | `1.1`  | `Remek Elek`             | `2021-10-15` | `Tervezet`      | `Személyes felelősségek átszervezése, Gantt chart módosítása` |
