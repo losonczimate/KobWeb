@@ -295,65 +295,65 @@ Részfeladatai a következők:
 
 Felelős: Orosz Bence
 
-Tartam:  `4 nap`
+Tartam:  5 nap
 
-Erőforrásigény:  `1 személynap`
+Erőforrásigény:  3 személynap
 
 #### 9.2.2. Class diagram
 
 Felelős: Gila Valter
 
-Tartam:  `4 nap`
+Tartam:  5 nap
 
-Erőforrásigény:  `2 személynap`
+Erőforrásigény:  3 személynap
 
 #### 9.2.3. Sequence diagram
 
 Felelős: Juhász István
 
-Tartam:  `3 nap`
+Tartam:  5 nap
 
-Erőforrásigény:  `1 személynap`
+Erőforrásigény:  3 személynap
 
 #### 9.2.4. Egyed-kapcsolat diagram adatbázishoz
 
 Felelős: Bodnár Kristóf
 
-Tartam:  `4 nap`
+Tartam:  5 nap
 
-Erőforrásigény:  `3 személynap`
+Erőforrásigény:  3 személynap
 
 #### 9.2.5. Package diagram
 
 Felelős: Oláh Balázs
 
-Tartam:  `4 nap`
+Tartam:  5 nap
 
-Erőforrásigény:  `1 személynap`
+Erőforrásigény:  3 személynap
 
 #### 9.2.6. Képernyőtervek
 
 Felelős: Papp Lukács Lóránt
 
-Tartam:  `3 nap`
+Tartam:  5 nap
 
-Erőforrásigény:  `1 személynap`
+Erőforrásigény:  3 személynap
 
 #### 9.2.7. Firebase beállítása
 
 Felelős: Simon Dániel
 
-Tartam:  `1 nap`
+Tartam:  5 nap
 
-Erőforrásigény:  `1 személynap`
+Erőforrásigény:  2 személynap
 
 #### 9.2.8. Bemutató elkészítése
 
 Felelős: Losonczi Máté
 
-Tartam:  `1 nap`
+Tartam:  5 nap
 
-Erőforrásigény:  `1 személynap`
+Erőforrásigény:  3 személynap
 
 ```
 A mérföldkőhöz tartozó feladatok bemutatása PPT keretében (elkészült diagramok és képernyőtervek)`
@@ -369,7 +369,7 @@ Részfeladatai a következők:
 
 Felelős: Orosz Bence
 
-Tartam:  `5 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -377,7 +377,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Bodnár Kristóf
 
-Tartam:  `4 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -385,7 +385,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Orosz Bence
 
-Tartam:  `3 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `1 személynap`
 
@@ -393,7 +393,7 @@ Erőforrásigény:  `1 személynap`
 
 Felelős: Papp Lukács Lóránt
 
-Tartam:  `4 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -401,7 +401,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Papp Lukács Lóránt
 
-Tartam:  `3 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `1 személynap`
 
@@ -409,7 +409,7 @@ Erőforrásigény:  `1 személynap`
 
 Felelős: Papp Lukács Lóránt
 
-Tartam:  `4 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -417,7 +417,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Bodnár Kristóf
 
-Tartam:  `4 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -425,7 +425,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Simon Dániel
 
-Tartam:  `3 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `1 személynap`
 
@@ -433,7 +433,7 @@ Erőforrásigény:  `1 személynap`
 
 Felelős: Losonczi Máté
 
-Tartam:  `5 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -441,7 +441,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Simon Dániel
 
-Tartam:  `5 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -449,7 +449,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Oláh Balázs
 
-Tartam:  `3 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `1 személynap`
 
@@ -457,7 +457,7 @@ Erőforrásigény:  `1 személynap`
 
 Felelős: Juhász István
 
-Tartam:  `4 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -465,7 +465,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Gila Valter
 
-Tartam:  `5 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `3 személynap`
 
@@ -473,7 +473,7 @@ Erőforrásigény:  `3 személynap`
 
 Felelős: Losonczi Máté
 
-Tartam:  `3 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `1 személynap`
 
@@ -481,7 +481,7 @@ Erőforrásigény:  `1 személynap`
 
 Felelős: Bodnár Kristóf
 
-Tartam:  `4 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -489,7 +489,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Gila Valter
 
-Tartam:  `5 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `3 személynap`
 
@@ -497,7 +497,7 @@ Erőforrásigény:  `3 személynap`
 
 Felelős: Oláh Balázs
 
-Tartam:  `3 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `1 személynap`
 
@@ -505,7 +505,7 @@ Erőforrásigény:  `1 személynap`
 
 Felelős: Juhász István
 
-Tartam:  `5 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -513,7 +513,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Gila Valter
 
-Tartam:  `3 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `1 személynap`
 
@@ -521,7 +521,7 @@ Erőforrásigény:  `1 személynap`
 
 Felelős: Oláh Balázs
 
-Tartam:  `4 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -529,7 +529,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Juhász István
 
-Tartam:  `4 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -537,7 +537,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Simon Dániel
 
-Tartam:  `4 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -545,7 +545,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Simon Dániel
 
-Tartam:  `4 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -553,7 +553,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Orosz Bence
 
-Tartam:  `4 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -561,7 +561,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Gila Valter
 
-Tartam:  `4 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -569,7 +569,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Juhász István
 
-Tartam:  `4 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -577,7 +577,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Papp Lukács Lóránt
 
-Tartam:  `4 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -585,7 +585,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Orosz Bence
 
-Tartam:  `4 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -593,7 +593,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Bodnár Kristóf
 
-Tartam:  `4 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -601,7 +601,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Losonczi Máté
 
-Tartam:  `4 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -609,7 +609,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Simon Dániel
 
-Tartam:  `4 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -617,7 +617,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Simon Dániel
 
-Tartam:  `4 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -625,7 +625,7 @@ Erőforrásigény:  `2 személynap`
 
 Felelős: Oláh Balázs
 
-Tartam:  `4 nap`
+Tartam:  4 nap
 
 Erőforrásigény:  `2 személynap`
 
@@ -635,7 +635,7 @@ Felelős: Mindenki
 
 Tartam:  3 nap
 
-Erőforrásigény:  1 személynap/fő
+Erőforrásigény:  2 személynap/fő
 
 
 ```
