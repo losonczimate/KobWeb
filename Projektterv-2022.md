@@ -293,7 +293,7 @@ Részfeladatai a következők:
 
 #### 9.2.1. Use Case diagram
 
-Felelős: `Orosz Bence`
+Felelős: Orosz Bence
 
 Tartam:  `4 nap`
 
@@ -301,7 +301,7 @@ Erőforrásigény:  `1 személynap`
 
 #### 9.2.2. Class diagram
 
-Felelős: `Gila Valter`
+Felelős: Gila Valter
 
 Tartam:  `4 nap`
 
@@ -309,7 +309,7 @@ Erőforrásigény:  `2 személynap`
 
 #### 9.2.3. Sequence diagram
 
-Felelős: `Juhász István`
+Felelős: Juhász István
 
 Tartam:  `3 nap`
 
@@ -317,7 +317,7 @@ Erőforrásigény:  `1 személynap`
 
 #### 9.2.4. Egyed-kapcsolat diagram adatbázishoz
 
-Felelős: `Bodnár Kristóf`
+Felelős: Bodnár Kristóf
 
 Tartam:  `4 nap`
 
@@ -325,7 +325,7 @@ Erőforrásigény:  `3 személynap`
 
 #### 9.2.5. Package diagram
 
-Felelős: `Oláh Balázs`
+Felelős: Oláh Balázs
 
 Tartam:  `4 nap`
 
@@ -333,7 +333,7 @@ Erőforrásigény:  `1 személynap`
 
 #### 9.2.6. Képernyőtervek
 
-Felelős: `Papp Lukács Lóránt`
+Felelős: Papp Lukács Lóránt
 
 Tartam:  `3 nap`
 
@@ -341,7 +341,7 @@ Erőforrásigény:  `1 személynap`
 
 #### 9.2.7. Firebase beállítása
 
-Felelős: `Simon Dániel`
+Felelős: Simon Dániel
 
 Tartam:  `1 nap`
 
@@ -349,7 +349,7 @@ Erőforrásigény:  `1 személynap`
 
 #### 9.2.8. Bemutató elkészítése
 
-Felelős: `Losonczi Máté`
+Felelős: Losonczi Máté
 
 Tartam:  `1 nap`
 
@@ -365,265 +365,265 @@ Ennek a feladatnak az a célja, hogy egy működő prototípust hozzunk létre, 
 
 Részfeladatai a következők:
 
-#### 9.3.1.  `Felhasználói munkamenethez szükséges adatok létrehozása az adatbázisban`
+#### 9.3.1.  Felhasználói munkamenethez szükséges adatok létrehozása az adatbázisban
 
-Felelős: `Orosz Bence`
-
-Tartam:  `5 nap`
-
-Erőforrásigény:  `2 személynap`
-
-#### 9.3.2.  `Admin munkamenethez szükséges adatok létrehozása az adatbázisban`
-
-Felelős: `Bodnár Kristóf`
-
-Tartam:  `4 nap`
-
-Erőforrásigény:  `2 személynap`
-
-#### 9.3.3.  `Vendég munkamenethez szükséges adatok létrehozása az adatbázisban`
-
-Felelős: `Orosz Bence`
-
-Tartam:  `3 nap`
-
-Erőforrásigény:  `1 személynap`
-
-#### 9.3.4.  `Felhasználói munkamenethez kapcsolódó GUI megvalósítása`
-
-Felelős: `Papp Lukács Lóránt`
-
-Tartam:  `4 nap`
-
-Erőforrásigény:  `2 személynap`
-
-#### 9.3.5.  `Admin munkamenethez kapcsolódó GUI megvalósítása`
-
-Felelős: `Papp Lukács Lóránt`
-
-Tartam:  `3 nap`
-
-Erőforrásigény:  `1 személynap`
-
-#### 9.3.6.  `Vendég munkamenethez kapcsolódó GUI megvalósítása`
-
-Felelős: `Papp Lukács Lóránt`
-
-Tartam:  `4 nap`
-
-Erőforrásigény:  `2 személynap`
-
-#### 9.3.7.  `Adatbázis fejlesztése`
-
-Felelős: `Bodnár Kristóf`
-
-Tartam:  `4 nap`
-
-Erőforrásigény:  `2 személynap`
-
-#### 9.3.8.  `Felhasználók kezeléséhez tartozó logika ( CRUD )`
-
-Felelős: `Simon Dániel`
-
-Tartam:  `3 nap`
-
-Erőforrásigény:  `1 személynap`
-
-#### 9.3.9.  `Felhasználók kereséséhez kapcsolódó GUI megvalósítása`
-
-Felelős: `Losonczi Máté`
+Felelős: Orosz Bence
 
 Tartam:  `5 nap`
 
 Erőforrásigény:  `2 személynap`
 
-#### 9.3.10.  `Profilok kezeléshez tartozó üzleti logika (listázása, módosítása, létrehozása, törlése)`
+#### 9.3.2.  Admin munkamenethez szükséges adatok létrehozása az adatbázisban
 
-Felelős: `Simon Dániel`
-
-Tartam:  `5 nap`
-
-Erőforrásigény:  `2 személynap`
-
-#### 9.3.11.  `Profilok kezeléshez kapcsolódó GUI megvalósítása`
-
-Felelős: `Oláh Balázs`
-
-Tartam:  `3 nap`
-
-Erőforrásigény:  `1 személynap`
-
-#### 9.3.12.  `Profilkezeléshez szükséges adatok létrehozása az adatbázisban`
-
-Felelős: `Juhász István`
+Felelős: Bodnár Kristóf
 
 Tartam:  `4 nap`
 
 Erőforrásigény:  `2 személynap`
 
-#### 9.3.13.  `Hirfolyam kezeléséhez tartozó üzleti logika (listázása, módosítása, létrehozása, törlése)`
+#### 9.3.3.  Vendég munkamenethez szükséges adatok létrehozása az adatbázisban
 
-Felelős: `Gila Valter`
-
-Tartam:  `5 nap`
-
-Erőforrásigény:  `3 személynap`
-
-#### 9.3.14.  `Hirfolyam kezeléshez kapcsolódó GUI megvalósítás`
-
-Felelős: `Losonczi Máté`
+Felelős: Orosz Bence
 
 Tartam:  `3 nap`
 
 Erőforrásigény:  `1 személynap`
 
-#### 9.3.15.  `Hirfolyam kezeléséhez szükséges adatok létrehozása az adatbázisban`
+#### 9.3.4.  Felhasználói munkamenethez kapcsolódó GUI megvalósítása
 
-Felelős: `Bodnár Kristóf`
+Felelős: Papp Lukács Lóránt
 
 Tartam:  `4 nap`
 
 Erőforrásigény:  `2 személynap`
 
-#### 9.3.16.  `Reklámok kezeléséhez tartozó üzleti logika (listázása, módosítása, létrehozása, törlése)`
+#### 9.3.5.  Admin munkamenethez kapcsolódó GUI megvalósítása
 
-Felelős: `Gila Valter`
+Felelős: Papp Lukács Lóránt
+
+Tartam:  `3 nap`
+
+Erőforrásigény:  `1 személynap`
+
+#### 9.3.6.  Vendég munkamenethez kapcsolódó GUI megvalósítása
+
+Felelős: Papp Lukács Lóránt
+
+Tartam:  `4 nap`
+
+Erőforrásigény:  `2 személynap`
+
+#### 9.3.7.  Adatbázis fejlesztése
+
+Felelős: Bodnár Kristóf
+
+Tartam:  `4 nap`
+
+Erőforrásigény:  `2 személynap`
+
+#### 9.3.8.  Felhasználók kezeléséhez tartozó logika ( CRUD )
+
+Felelős: Simon Dániel
+
+Tartam:  `3 nap`
+
+Erőforrásigény:  `1 személynap`
+
+#### 9.3.9.  Felhasználók kereséséhez kapcsolódó GUI megvalósítása
+
+Felelős: Losonczi Máté
+
+Tartam:  `5 nap`
+
+Erőforrásigény:  `2 személynap`
+
+#### 9.3.10.  Profilok kezeléshez tartozó üzleti logika (listázása, módosítása, létrehozása, törlése)
+
+Felelős: Simon Dániel
+
+Tartam:  `5 nap`
+
+Erőforrásigény:  `2 személynap`
+
+#### 9.3.11.  Profilok kezeléshez kapcsolódó GUI megvalósítása
+
+Felelős: Oláh Balázs
+
+Tartam:  `3 nap`
+
+Erőforrásigény:  `1 személynap`
+
+#### 9.3.12.  Profilkezeléshez szükséges adatok létrehozása az adatbázisban
+
+Felelős: Juhász István
+
+Tartam:  `4 nap`
+
+Erőforrásigény:  `2 személynap`
+
+#### 9.3.13.  Hirfolyam kezeléséhez tartozó üzleti logika (listázása, módosítása, létrehozása, törlése)
+
+Felelős: Gila Valter
 
 Tartam:  `5 nap`
 
 Erőforrásigény:  `3 személynap`
 
-#### 9.3.17.  `Reklámok kezeléshez kapcsolódó GUI megvalósítás`
+#### 9.3.14.  Hirfolyam kezeléshez kapcsolódó GUI megvalósítás
 
-Felelős: `Oláh Balázs`
+Felelős: Losonczi Máté
 
 Tartam:  `3 nap`
 
 Erőforrásigény:  `1 személynap`
 
-#### 9.3.18.  `Reklámok kezeléséhez szükséges adatok létrehozása az adatbázisban`
+#### 9.3.15.  Hirfolyam kezeléséhez szükséges adatok létrehozása az adatbázisban
 
-Felelős: `Juhász István`
+Felelős: Bodnár Kristóf
+
+Tartam:  `4 nap`
+
+Erőforrásigény:  `2 személynap`
+
+#### 9.3.16.  Reklámok kezeléséhez tartozó üzleti logika (listázása, módosítása, létrehozása, törlése)
+
+Felelős: Gila Valter
+
+Tartam:  `5 nap`
+
+Erőforrásigény:  `3 személynap`
+
+#### 9.3.17.  Reklámok kezeléshez kapcsolódó GUI megvalósítás
+
+Felelős: Oláh Balázs
+
+Tartam:  `3 nap`
+
+Erőforrásigény:  `1 személynap`
+
+#### 9.3.18.  Reklámok kezeléséhez szükséges adatok létrehozása az adatbázisban
+
+Felelős: Juhász István
 
 Tartam:  `5 nap`
 
 Erőforrásigény:  `2 személynap`
 
-#### 9.3.19.  `Médiatartalom kezeléséhez kapcsolódó üzleti logika (listázása, módosítása, létrehozása, törlése)`
+#### 9.3.19.  Médiatartalom kezeléséhez kapcsolódó üzleti logika (listázása, módosítása, létrehozása, törlése)
 
-Felelős: `Gila Valter`
+Felelős: Gila Valter
 
 Tartam:  `3 nap`
 
 Erőforrásigény:  `1 személynap`
 
-#### 9.3.20.  `Médiatartalom kezeléshez kapcsolódó GUI megvalósítás`
+#### 9.3.20.  Médiatartalom kezeléshez kapcsolódó GUI megvalósítás
 
-Felelős: `Oláh Balázs`
-
-Tartam:  `4 nap`
-
-Erőforrásigény:  `2 személynap`
-
-#### 9.3.21.  `Médiatartalom kezeléséhez szükséges adatok létrehozása az adatbázisban`
-
-Felelős: `Juhász István`
+Felelős: Oláh Balázs
 
 Tartam:  `4 nap`
 
 Erőforrásigény:  `2 személynap`
 
-#### 9.3.22.  `Posztok es kommentek időpontjának kiszámitása`
+#### 9.3.21.  Médiatartalom kezeléséhez szükséges adatok létrehozása az adatbázisban
 
-Felelős: `Simon Dániel`
-
-Tartam:  `4 nap`
-
-Erőforrásigény:  `2 személynap`
-
-#### 9.3.23.  `Követések kezeléshez kapcsolódó GUI megvalósítása`
-
-Felelős: `Simon Dániel`
+Felelős: Juhász István
 
 Tartam:  `4 nap`
 
 Erőforrásigény:  `2 személynap`
 
-#### 9.3.24.  `Követések kezeléséhez szükséges adatok létrehozása az adatbázisban`
+#### 9.3.22.  Posztok es kommentek időpontjának kiszámitása
 
-Felelős: `Orosz Bence`
-
-Tartam:  `4 nap`
-
-Erőforrásigény:  `2 személynap`
-
-#### 9.3.25.  `Követések kezeléséhez kapcsolódó üzleti logika`
-
-Felelős: `Gila Valter`
+Felelős: Simon Dániel
 
 Tartam:  `4 nap`
 
 Erőforrásigény:  `2 személynap`
 
-#### 9.3.26.  `Értesitések kezeléséhez tartozó üzleti logika (listázása, módosítása, létrehozása, törlése)`
+#### 9.3.23.  Követések kezeléshez kapcsolódó GUI megvalósítása
 
-Felelős: `Juhász István`
-
-Tartam:  `4 nap`
-
-Erőforrásigény:  `2 személynap`
-
-#### 9.3.27.  `Értesitések kezeléshez kapcsolódó GUI megvalósítása`
-
-Felelős: `Papp Lukács Lóránt`
+Felelős: Simon Dániel
 
 Tartam:  `4 nap`
 
 Erőforrásigény:  `2 személynap`
 
-#### 9.3.28.  `Értesitések kezeléséhez szükséges adatok létrehozása az adatbázisban`
+#### 9.3.24.  Követések kezeléséhez szükséges adatok létrehozása az adatbázisban
 
-Felelős: `Orosz Bence`
-
-Tartam:  `4 nap`
-
-Erőforrásigény:  `2 személynap`
-
-#### 9.3.29.  `Email-es kiértesítés új regisztráció esetén`
-
-Felelős: `Bodnár Kristóf`
+Felelős: Orosz Bence
 
 Tartam:  `4 nap`
 
 Erőforrásigény:  `2 személynap`
 
-#### 9.3.30.  `Regisztráció GUI létrehozása`
+#### 9.3.25.  Követések kezeléséhez kapcsolódó üzleti logika
 
-Felelős: `Losonczi Máté`
-
-Tartam:  `4 nap`
-
-Erőforrásigény:  `2 személynap`
-
-#### 9.3.31.  `Jelszóváltoztatás lehetőség biztositása`
-
-Felelős: `Simon Dániel`
+Felelős: Gila Valter
 
 Tartam:  `4 nap`
 
 Erőforrásigény:  `2 személynap`
 
-#### 9.3.32.  `Jelszóváltoztatás ürlap GUI létrehozása`
+#### 9.3.26.  Értesitések kezeléséhez tartozó üzleti logika (listázása, módosítása, létrehozása, törlése)
 
-Felelős: `Simon Dániel`
+Felelős: Juhász István
 
 Tartam:  `4 nap`
 
 Erőforrásigény:  `2 személynap`
 
-#### 9.3.33.  `Support űrlap biztosítása`
+#### 9.3.27.  Értesitések kezeléshez kapcsolódó GUI megvalósítása
 
-Felelős: `Oláh Balázs`
+Felelős: Papp Lukács Lóránt
+
+Tartam:  `4 nap`
+
+Erőforrásigény:  `2 személynap`
+
+#### 9.3.28.  Értesitések kezeléséhez szükséges adatok létrehozása az adatbázisban
+
+Felelős: Orosz Bence
+
+Tartam:  `4 nap`
+
+Erőforrásigény:  `2 személynap`
+
+#### 9.3.29.  Email-es kiértesítés új regisztráció esetén
+
+Felelős: Bodnár Kristóf
+
+Tartam:  `4 nap`
+
+Erőforrásigény:  `2 személynap`
+
+#### 9.3.30.  Regisztráció GUI létrehozása
+
+Felelős: Losonczi Máté
+
+Tartam:  `4 nap`
+
+Erőforrásigény:  `2 személynap`
+
+#### 9.3.31.  Jelszóváltoztatás lehetőség biztositása
+
+Felelős: Simon Dániel
+
+Tartam:  `4 nap`
+
+Erőforrásigény:  `2 személynap`
+
+#### 9.3.32.  Jelszóváltoztatás ürlap GUI létrehozása
+
+Felelős: Simon Dániel
+
+Tartam:  `4 nap`
+
+Erőforrásigény:  `2 személynap`
+
+#### 9.3.33.  Support űrlap biztosítása
+
+Felelős: Oláh Balázs
 
 Tartam:  `4 nap`
 
@@ -631,11 +631,11 @@ Erőforrásigény:  `2 személynap`
 
 #### 9.3.34. Tesztelési dokumentum (TP, TC)
 
-Felelős: `Mindenki`
+Felelős: Mindenki
 
-Tartam:  `3 nap`
+Tartam:  3 nap
 
-Erőforrásigény:  `1 személynap/fő`
+Erőforrásigény:  1 személynap/fő
 
 
 ```
