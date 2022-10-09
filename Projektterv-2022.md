@@ -143,11 +143,10 @@ A projekt a következő munkaállomásokat fogja használni a munka során:
  - Asztali számítógép Windows 10 Pro operációs rendszerrel
 
 A projekt a következő technológiákat/szoftvereket fogja használni a munka során: 
- - `Heroku platformszolgáltatás (ezt még nem tudjuk)`
- - `Heroku által biztosított PostgreSQL adatbázisszerver (ezt még nem tudjuk)`
+ - Firebase platformszolgáltatás 
+ - Firebase által biztosított NoSQL adatbázisszerver
  - Javascript (backend)
  - Angular (frontend)
- - `Maven szoftverprojekt menedzselő szoftver (ezt még nem tudjuk)`
  - Visual Studio Code
  - IntelliJ IDEA
  - Git verziókövető (GitLab)
@@ -235,9 +234,9 @@ Minden leadásnál a projektmenedzser jelentést tesz a projekt haladásáról, 
 
 ### 8.1. Tervezett szoftverfolyamat modell és architektúra
 
-`A szoftver fejlesztése során az agilis fejlesztési modellt alkalmazzuk. A fejlesztés során nagy hangsúlyt fektetünk a folyamatos kommunikcióra. A fejlesztés során a szoftver specifikációi rugalmasan vátozhatnak, és ezzel a módszertannal tudunk a leggyorsabban alkalmazkodni az új elvárásokhoz.`
+A szoftver fejlesztése során az agilis fejlesztési modellt alkalmazzuk. A fejlesztés során nagy hangsúlyt fektetünk a folyamatos kommunikcióra. A fejlesztés során a szoftver specifikációi rugalmasan vátozhatnak, és ezzel a módszertannal tudunk a leggyorsabban alkalmazkodni az új elvárásokhoz.
 
-`A szoftver MVC alapú REST webszolgáltatásként működik. A szerver és a kliens függetlenek, csupán API végpontok segítségével kommunikálnak.`
+A szoftver MVC alapú REST webszolgáltatásként működik. A szerver és a kliens függetlenek, csupán API végpontok segítségével kommunikálnak.
 
 ```
 Milyen szoftverfolyamat modellt követve állítja elő a csapat a specifikációnak megfelelő prototípusokat? Miért ezt választja? 
@@ -269,17 +268,17 @@ Alapvetően egy feladatnak 1 felelőse lehet, de kivételt képez pl. a 9.1.1. r
 
 ### 9.1. Projektterv (1. mérföldkő)
 
-Ennek a feladatnak az a célja, hogy `megvalósításhoz szükséges lépéseket, az ütemzést és a felelősöket meghatározzuk.`
+Ennek a feladatnak az a célja, hogy megvalósításhoz szükséges lépéseket, az ütemzést és a felelősöket meghatározzuk.
 
 Részfeladatai a következők:
 
 #### 9.1.1. Projektterv kitöltése
 
-Felelős: `Mindenki`
+Felelős: Mindenki
 
-Tartam:  `4 nap`
+Tartam:  4 nap
 
-Erőforrásigény:  `1 személynap/fő`
+Erőforrásigény:  1 személynap/fő
 
 
 #### 9.1.2. Bemutató elkészítése
@@ -296,7 +295,7 @@ A mérföldkőhöz tartozó feladatok bemutatása PPT keretében, pl. téma, ter
 
 ### 9.2. UML és adatbázis tervek (2. mérföldkő)
 
-Ennek a feladatnak az a célja, hogy `a rendszerarchitektúrát, az adatbázist és webalkalmazás kinézetét megtervezzük.`
+Ennek a feladatnak az a célja, hogy a rendszerarchitektúrát, az adatbázist és webalkalmazás kinézetét megtervezzük.
 
 Részfeladatai a következők:
 
@@ -362,7 +361,7 @@ A mérföldkőhöz tartozó feladatok bemutatása PPT keretében (elkészült di
 
 ### 9.3. Prototípus I. (3. mérföldkő)
 
-Ennek a feladatnak az a célja, hogy `egy működő prototípust hozzunk létre, ahol a vállalt funkcionális követelmények nagy része már prezentálható állapotban van.`
+Ennek a feladatnak az a célja, hogy egy működő prototípust hozzunk létre, ahol a vállalt funkcionális követelmények nagy része már prezentálható állapotban van.
 
 Részfeladatai a következők:
 
