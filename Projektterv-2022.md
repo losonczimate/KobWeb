@@ -563,7 +563,7 @@ A bemutató során a prototípus aktuális állását kell prezentálni.
 
 ### 9.4. Prototípus II. (4. mérföldkő)
 
-Ennek a feladatnak az a célja, hogy `az előző mérföldkő hiányzó funkcióit pótoljuk, illetve a hibásan működő funkciókat és az esetlegesen felmerülő új funkciókat megvalósítsuk. Továbbá az alkalmazás alapos tesztelése is a mérföldkőben történik.`
+Ennek a feladatnak az a célja, hogy az előző mérföldkő hiányzó funkcióit pótoljuk, illetve a hibásan működő funkciókat és az esetlegesen felmerülő új funkciókat megvalósítsuk. Továbbá az alkalmazás alapos tesztelése is a mérföldkőben történik.
 
 Részfeladatai a következők:
 
@@ -717,4 +717,4 @@ Az egyes leadások alkalmával rögzített erőforrásigényt, az elvállalt fel
 |                     `Remek Elek`              |           `4`          |             `21`           |          `30`           |            `15`          |    `70`   |
 |                     `Lev Elek`                |           `4`          |             `21`           |          `30`           |            `15`          |    `70`   |
 
-Szeged, `2021-10-25`.
+Szeged, 2022-10-09.
