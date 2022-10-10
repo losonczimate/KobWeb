@@ -737,14 +737,14 @@ Az egyes leadások alkalmával rögzített erőforrásigényt, az elvállalt fel
 
 |                     Név                    | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
 |:------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:-----------:|
-|                     `Bondár Kristóf`       |           1          |             3            |           16          |            3           |    23     |
-|                     `Juhász István`        |           1          |             3            |           16          |            3           |    23     |
-|                     `Gila Valter`          |           1          |             3            |           16          |            3           |    23     |
-|                     `Orosz Bence`          |           1          |             3            |           16          |            3           |    23     |
-|                     `Oláh Balázs`          |           1          |             3            |           16          |            3           |    23     |
-|                     `Papp Lukács Lóránt`   |           1          |             3            |           16          |            3           |    23     |
-|                     `Simon Dániel`         |           1          |             2            |           18          |            2           |    23     |
-|                     `Losonczi Máté`        |           1          |             3            |           16          |            3           |    23     |
+|                     Bondár Kristóf       |           1          |             3            |           16          |            3           |    23     |
+|                     Juhász István        |           1          |             3            |           16          |            3           |    23     |
+|                     Gila Valter          |           1          |             3            |           16          |            3           |    23     |
+|                     Orosz Bence          |           1          |             3            |           16          |            3           |    23     |
+|                     Oláh Balázs          |           1          |             3            |           16          |            3           |    23     |
+|                     Papp Lukács Lóránt   |           1          |             3            |           16          |            3           |    23     |
+|                     Simon Dániel         |           1          |             2            |           18          |            2           |    23     |
+|                     Losonczi Máté        |           1          |             3            |           16          |            3           |    23     |
 
 
 ### 11.2. Részletes feladatszámok
