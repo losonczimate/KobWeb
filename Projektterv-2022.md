@@ -737,41 +737,41 @@ Az egyes leadások alkalmával rögzített erőforrásigényt, az elvállalt fel
 
 |                     Név                    | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
 |:------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:-----------:|
-|                     `Bondár Kristóf`       |           `1`          |             `3`            |           `16`          |            `3`           |    `23`     |
-|                     `Juhász István`        |           `1`          |             `3`            |           `16`          |            `3`           |    `23`     |
-|                     `Gila Valter`          |           `1`          |             `3`            |           `16`          |            `3`           |    `23`     |
-|                     `Orosz Bence`          |           `1`          |             `3`            |           `16`          |            `3`           |    `23`     |
-|                     `Oláh Balázs`          |           `1`          |             `3`            |           `16`          |            `3`           |    `23`     |
-|                     `Papp Lukács Lóránt`   |           `1`          |             `3`            |           `16`          |            `3`           |    `23`     |
-|                     `Simon Dániel`         |           `1`          |             `2`            |           `18`          |            `2`           |    `23`     |
-|                     `Losonczi Máté`        |           `1`          |             `3`            |           `16`          |            `3`           |    `23`     |
+|                     `Bondár Kristóf`       |           1          |             3            |           16          |            3           |    23     |
+|                     `Juhász István`        |           1          |             3            |           16          |            3           |    23     |
+|                     `Gila Valter`          |           1          |             3            |           16          |            3           |    23     |
+|                     `Orosz Bence`          |           1          |             3            |           16          |            3           |    23     |
+|                     `Oláh Balázs`          |           1          |             3            |           16          |            3           |    23     |
+|                     `Papp Lukács Lóránt`   |           1          |             3            |           16          |            3           |    23     |
+|                     `Simon Dániel`         |           1          |             2            |           18          |            2           |    23     |
+|                     `Losonczi Máté`        |           1          |             3            |           16          |            3           |    23     |
 
 
 ### 11.2. Részletes feladatszámok
 
 |                     Név                    | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
 |:------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
-|                     `Bondár Kristóf`       |           `1`          |             `1`            |           `5`          |            `1`           |    `8`     |
-|                     `Juhász István`        |           `1`          |             `1`            |           `5`          |            `1`           |    `8`     |
-|                     `Gila Valter`          |           `1`          |             `1`            |           `5`          |            `1`           |    `8`     |
-|                     `Orosz Bence`          |           `1`          |             `1`            |           `5`          |            `1`           |    `8`     |
-|                     `Oláh Balázs`          |           `1`          |             `1`            |           `5`          |            `1`           |    `8`     |
-|                     `Papp Lukács Lóránt`   |           `1`          |             `1`            |           `5`          |            `1`           |    `8`     |
-|                     `Simon Dániel`         |           `1`          |             `1`            |           `6`          |            `1`           |    `9`     |
-|                     `Losonczi Máté`        |           `1`          |             `1`            |           `5`          |            `1`           |    `8`     |
+|                     Bondár Kristóf       |           1          |             1            |           5          |            1           |    8     |
+|                     Juhász István        |           1          |             1            |           5          |            1           |    8     |
+|                     Gila Valter          |           1          |             1            |           5          |            1           |    8     |
+|                     Orosz Bence          |           1          |             1            |           5          |            1           |    8     |
+|                     Oláh Balázs          |           1          |             1            |           5          |            1           |    8     |
+|                     Papp Lukács Lóránt   |           1          |             1            |           5          |            1           |    8     |
+|                     Simon Dániel         |           1          |             1            |           6          |            1           |    9     |
+|                     Losonczi Máté        |           1          |             1            |           5          |            1           |    8     |
 
 ### 11.3. Részletes költségvetés
 
 |                     Név                       | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
 |:---------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
 |        Maximálisan választható pontszám %-ban |         10% (7)        |            30% (21)        |          50% (35)       |          30% (21)        | 100% (70) |
-|                     `Bondár Kristóf`          |           `10%`        |             `30%`          |           `50%`         |            `30%`         |    `100%` |
-|                     `Juhász István`           |           `10%`        |             `30%`          |           `50%`         |            `30%`         |    `100%` |
-|                     `Gila Valter`             |           `10%`        |             `30%`          |           `50%`         |            `30%`         |    `100%` |
-|                     `Orosz Bence`             |           `10%`        |             `30%`          |           `50%`         |            `30%`         |    `100%` |
-|                     `Oláh Balázs`             |           `10%`        |             `30%`          |           `50%`         |            `30%`         |    `100%` |
-|                     `Papp Lukács Lóránt`      |           `10%`        |             `30%`          |           `50%`         |            `30%`         |    `100%` |
-|                     `Simon Dániel`            |           `10%`        |             `30%`          |           `50%`         |            `30%`         |    `100%` |
-|                     `Losonczi Máté`           |           `10%`        |             `30%`          |           `50%`         |            `30%`         |    `100%` |
+|                     Bondár Kristóf          |           10%        |             30%          |           50%         |            30%         |    100% |
+|                     Juhász István           |           10%        |             30%          |           50%         |            30%         |    100% |
+|                     Gila Valter             |           10%        |             30%          |           50%         |            30%         |    100% |
+|                     Orosz Bence             |           10%        |             30%          |           50%         |            30%         |    100% |
+|                     Oláh Balázs             |           10%        |             30%          |           50%         |            30%         |    100% |
+|                     Papp Lukács Lóránt      |           10%        |             30%          |           50%         |            30%         |    100% |
+|                     Simon Dániel            |           10%        |             30%          |           50%         |            30%         |    100% |
+|                     Losonczi Máté           |           10%        |             30%          |           50%         |            30%         |    100% |
 
 Szeged, 2022-10-09.
