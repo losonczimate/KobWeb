@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "rf1-2022-kobweb": {
+      "hosting": {
+        "SocialMedia": [
+          "rf1-2022-kobweb"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "rf1-2022-kobweb"
+  }
+}
