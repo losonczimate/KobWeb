@@ -55,15 +55,35 @@ Mik a megrendelő és a felhasználók igényei? Miért van szükség a projektr
 
 ### 3.2. Funkcionális követelmények
 
- - Felhasználói munkamenet megvalósítása több jogosultsági szinttel (admin, bejelentkezett felhasználó, vendég felhasználó)
- - Felhasználók kezelése (CRUD)
- - Képek és videók feltöltése (CRUD)
- - Felhasználók keresése (CRUD)
- - Idővonal megtekintése (CRUD)
- - Értesítés kommentekről, like-okról és követésekről
- - Kommentelés, követés és like-olás funckió
- - Regisztrált felhasználóknak saját profil
- - Posztok és kommentek pontos időpontja
+ - Felhasználói munkamenet megvalósítása több jogosultsági szinttel (admin, bejelentkezett felhasználó, vendég felhasználó):
+	- Vendég (Guest) felhasználó:
+		+ Nagyrészt korlátozott tulajdonságokkal rendelkezik, regisztrációval léphet tovább, addig csak böngészni, ill. regisztrálni és bejelentkezni tud.
+ 	- Bejelentkezett (ill. regisztrált) felhasználó:
+		+ Első alkalomnál regisztráció, utána loginnal elérhető jogszint. Ő az aki már tud tevékenykedni a saját oldalán, posztolhat, kommentelhet, és likeolhat.
+	- Admin:
+		+ Minden jogosultsággal rendelkezik (pl. posztok törlése, kommentek moderálása stb...), moderátorok ill. developerek rendelkeznek vele.
+ - Felhasználók kezelése (CRUD):
+	- Az oldal rendelkezik egy bejelentkező ill. egy regisztrációs felülettel, ahol tudnak a régi/új felhasználók bejelentkezni régi fiókjaikba, ill. létrehozni újat. 
+	- Már létrehozott fiókoknál lehetőség van a bejelentkezési adatok módosítására (jellemzően e-mail cím/jelszó).
+	- Lehetőség van fiók(ok) törlésére is, az adminisztrátor vagy saját döntés alapján.
+ - Képek és videók feltöltése (CRUD):
+	- Minimum követelmény: Legyen egy regisztrált fiók és legyen bejelentkezve az adott személy.
+	- Lehetőség van posztolásra, kép ill. videó feltöltésére. Maximális méret egyelőre nincs.
+	- Ha esetleg később már nem szeretnénk, hogy lássa más, lehet letörölni is őket.
+ - Felhasználók keresése (CRUD):
+	- Lehetőség van felhasználók/oldalak keresésére, ehhez is minimum követelmény a bejelentkezett fiók.
+	- Keresés e-mail cím ill. tel. szám alapján lesz lehetséges.
+ - Idővonal megtekintése (CRUD):
+	- Szintén regisztrált fiókkal lehetséges belépés után, az ismerősök aktivitását tudja megtekinteni, ill. interaktálni vele.
+ - Értesítés kommentekről, like-okról és követésekről:
+	- Ha szeretnénk, hogy naprakészek legyünk, egy csengő ikon megnyomása után már tudni fogunk róla, hogy mi történik az adott poszt alatt.
+	- Regisztrált fiókkal, belépés után és barátlistán szereplő személy esetén lehetséges.
+ - Kommentelés, követés és like-olás funckió:
+	- A social media platformok nagy része a kommentelés/követés és az ún. like-olás. Így tudunk interaktálni más személyekkel az oldalon.
+ - Regisztrált felhasználóknak saját profil:
+	- Lesz külön oldala az adott felhasználónak, ahol megjelenik a saját profilképe, adatai. Itt tud majd módosítani is rajtuk ha szeretne.
+ - Posztok és kommentek pontos időpontja:
+	- Minden poszt/kommentnek lesz egy ún. timestampje, hogy tudjuk mikor történt az adott interakció a poszt alatt.
  
 ```
 Ide kerülnek a rendszerrel szemben támasztott funkcionális igények: azaz amit a rendszernek tudnia kell.
