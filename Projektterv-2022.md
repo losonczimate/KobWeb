@@ -68,6 +68,9 @@ Mik a megrendelő és a felhasználók igényei? Miért van szükség a projektr
 	- Az oldal rendelkezik egy bejelentkező ill. egy regisztrációs felülettel, ahol tudnak a régi/új felhasználók bejelentkezni régi fiókjaikba, ill. létrehozni újat. 
 	- Már létrehozott fiókoknál lehetőség van a bejelentkezési adatok módosítására (jellemzően e-mail cím/jelszó).
 	- Lehetőség van fiók(ok) törlésére is, az adminisztrátor vagy saját döntés alapján.
+ - Regisztráció/bejelentkezés folyamata (CRUD):
+	- Regisztrálni bármelyik személy tud jogtól független. Kell megadni egy szabad e-mail címet, és egy tetszőleges jelszót 2x. Helyes form kitöltés után az e-mail címre, amivel lehet bejelentkezni.
+	- Bejelentkezni e-mail cím és jelszó párosítással lehetséges, sikeres regisztráció után.
  - Képek és videók feltöltése (CRUD):
 	- Minimum követelmény: Legyen egy regisztrált fiók és legyen bejelentkezve az adott személy.
 	- Lehetőség van posztolásra, kép ill. videó feltöltésére. Maximális méret egyelőre nincs.
@@ -84,6 +87,8 @@ Mik a megrendelő és a felhasználók igényei? Miért van szükség a projektr
 	- A social media platformok nagy része a kommentelés/követés és az ún. like-olás. Így tudunk interaktálni más személyekkel az oldalon.
  - Regisztrált felhasználóknak saját profil:
 	- Lesz külön oldala az adott felhasználónak, ahol megjelenik a saját profilképe, adatai. Itt tud majd módosítani is rajtuk ha szeretne.
+ - Poszt készítése:
+	- Regisztrált és belépett felhasználók tudnak posztot csinálni, ami tartalmaz egy képet és leírást a poszthoz kapcsolódóan. Más felhasználók tudnak reagálni és kommentelni a poszt alatt.
  - Posztok és kommentek pontos időpontja:
 	- Minden poszt/kommentnek lesz egy ún. timestampje, hogy tudjuk mikor történt az adott interakció a poszt alatt.
  
