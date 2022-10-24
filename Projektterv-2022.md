@@ -19,6 +19,8 @@ feketével írt részek törlése tilos, azok közösek.
 | Verzió | Szerző(k)                | Dátum        | Státusz         | Megjegyzés                                                    |
 |--------|--------------------------|--------------|-----------------|---------------------------------------------------------------|
 |  0.1   |  Juhász István           | 2021-10-09   |  Tervezet       | Legelső verzió                                                |
+|  0.2   |  Mindenki                | 2021-10-09   |  Előterjesztés  | Projektterv                                                   |
+|  0.3   |  Mindenki                | 2021-10-17   |  Előterjesztés  | Projektterv módositott                                        |
 
 Státusz osztályozás:
  - Tervezet: befejezetlen dokumentum, a mérföldkő leadása előtti napokban
@@ -473,7 +475,7 @@ Tartam:  4 nap
 
 Erőforrásigény:  4 személynap
 
-#### 9.3.12.  Profilkezeléshez szükséges adatok létrehozása az adatbázisban
+#### 9.3.12.  Kommentelési lehetőség backend létrehozása
 
 Felelős: Juhász István
 
@@ -521,7 +523,7 @@ Tartam:  4 nap
 
 Erőforrásigény:  3 személynap
 
-#### 9.3.18.  Reklámok kezeléséhez szükséges adatok létrehozása az adatbázisban
+#### 9.3.18.  Reklámok backend létrehozása
 
 Felelős: Juhász István
 
@@ -545,7 +547,7 @@ Tartam:  4 nap
 
 Erőforrásigény:  4 személynap
 
-#### 9.3.21.  Médiatartalom kezeléséhez szükséges adatok létrehozása az adatbázisban
+#### 9.3.21.  Kedvelési lehetőség backend létrehozása
 
 Felelős: Juhász István
 
