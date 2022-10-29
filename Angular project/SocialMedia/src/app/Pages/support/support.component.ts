@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-support',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SupportComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _formBuilder: FormBuilder) { }
+  firstFormGroup: FormGroup = this._formBuilder.group({firstCtrl: ['']});
+  secondFormGroup: FormGroup = this._formBuilder.group({secondCtrl: ['']});
 
   ngOnInit(): void {
   }

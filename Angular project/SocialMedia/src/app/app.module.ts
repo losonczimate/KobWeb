@@ -9,6 +9,8 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { MenuComponent } from './Shared/menu/menu.component';
 import { AdvertisementComponent } from './Shared/advertisement/advertisement.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {SupportModule} from "./Pages/support/support.module";
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { AdvertisementComponent } from './Shared/advertisement/advertisement.com
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
-    provideStorage(() => getStorage())
+    provideStorage(() => getStorage()),
+    BrowserAnimationsModule,
+    SupportModule
   ],
   providers: [],
   bootstrap: [AppComponent]
