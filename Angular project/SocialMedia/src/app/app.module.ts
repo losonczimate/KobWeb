@@ -7,10 +7,14 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { MenuComponent } from './Shared/menu/menu.component';
+import { AdvertisementComponent } from './Shared/advertisement/advertisement.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent,
+    AdvertisementComponent
   ],
   imports: [
     BrowserModule,
