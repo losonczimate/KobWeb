@@ -11,6 +11,7 @@ import { MenuComponent } from './Shared/menu/menu.component';
 import { AdvertisementComponent } from './Shared/advertisement/advertisement.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {SupportModule} from "./Pages/support/support.module";
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -18,15 +19,16 @@ import {SupportModule} from "./Pages/support/support.module";
     MenuComponent,
     AdvertisementComponent
   ],
-  imports: [
-    BrowserModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore()),
-    provideStorage(() => getStorage()),
-    BrowserAnimationsModule,
-    SupportModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        provideFirebaseApp(() => initializeApp(environment.firebase)),
+        provideAuth(() => getAuth()),
+        provideFirestore(() => getFirestore()),
+        provideStorage(() => getStorage()),
+        BrowserAnimationsModule,
+        SupportModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

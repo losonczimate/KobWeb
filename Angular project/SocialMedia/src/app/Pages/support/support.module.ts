@@ -8,25 +8,21 @@ import {MatStepperModule} from "@angular/material/stepper";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
     SupportComponent
   ],
-  exports: [
-    SupportComponent
-  ],
-  imports: [
-    CommonModule,
-    SupportRoutingModule,
-    ReactiveFormsModule,
-    MatStepperModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    BrowserAnimationsModule
-  ]
+    imports: [
+        CommonModule,
+        SupportRoutingModule,
+        ReactiveFormsModule,
+        MatStepperModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatCardModule
+    ]
 })
 export class SupportModule { }
