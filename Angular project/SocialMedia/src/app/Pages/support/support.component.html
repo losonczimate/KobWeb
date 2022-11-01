@@ -7,48 +7,101 @@
 
   <mat-card id="form" [class.mat-elevation-z12]="true">
     <mat-card-content>
-      <mat-horizontal-stepper [linear]="true" #stepper>
+      <mat-horizontal-stepper [linear]="true" #stepper fxShow.lt-md="false" fxShow="true">
         <mat-step [stepControl]="firstFormGroup">
-          <form [formGroup]="firstFormGroup">
+          <form [formGroup]="firstFormGroup" fxLayout="column wrap" style="justify-content: center">
             <ng-template matStepLabel>Személyes adatok</ng-template>
-            <mat-form-field>
-              <input matInput placeholder="Vezetéknév" formControlName="firstname" required>
-            </mat-form-field>
-            <mat-form-field>
-              <input matInput placeholder="Keresztnév" formControlName="surname" required>
-            </mat-form-field>
-            <mat-form-field>
-              <input matInput placeholder="Email-cím" formControlName="email" required>
-            </mat-form-field>
-            <mat-form-field>
-              <input matInput placeholder="Telefonszám" formControlName="phone">
-            </mat-form-field>
+              <div fxLayout="row wrap" style="justify-content:space-evenly">
+                <mat-form-field>
+                  <input matInput placeholder="Vezetéknév" formControlName="firstname" required>
+                </mat-form-field>
+                <mat-form-field>
+                  <input matInput placeholder="Keresztnév" formControlName="surname" required>
+                </mat-form-field>
+              </div>
+              <div fxLayout="row wrap" style="justify-content:space-evenly">
+                <mat-form-field>
+                  <input matInput placeholder="Email-cím" formControlName="email" required>
+                </mat-form-field>
+                <mat-form-field>
+                  <input matInput placeholder="Telefonszám" formControlName="phone">
+                </mat-form-field>
+              </div>
             <div>
-              <button mat-button matStepperNext>Next</button>
+              <button mat-raised-button color="primary" matStepperNext [class.mat-elevation-z5]="true">Tovább</button>
             </div>
           </form>
         </mat-step>
         <mat-step [stepControl]="secondFormGroup">
-          <form [formGroup]="secondFormGroup">
-            <ng-template matStepLabel>Fill out your address</ng-template>
-            <mat-form-field>
-              <input matInput placeholder="Address" formControlName="secondCtrl" required>
+          <form [formGroup]="secondFormGroup" fxLayout="column" style="justify-content: center">
+            <ng-template matStepLabel>Probléma leírása</ng-template>
+            <mat-form-field appearance="outline">
+              <textarea matInput placeholder="Probléma részletei *" formControlName="problem" required></textarea>
             </mat-form-field>
-            <div>
-              <button mat-button matStepperPrevious>Back</button>
-              <button mat-button matStepperNext>Next</button>
+            <div fxLayout="row" style="justify-content:flex-start; gap: 1%">
+              <button mat-raised-button color="accent" matStepperPrevious [class.mat-elevation-z5]="true">Vissza</button>
+              <button mat-raised-button color="primary" matStepperNext [class.mat-elevation-z5]="true">Tovább</button>
             </div>
           </form>
         </mat-step>
         <mat-step>
-          <ng-template matStepLabel>Done</ng-template>
-          You are now done.
-          <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button (click)="stepper.reset()">Reset</button>
+          <ng-template matStepLabel>Kész</ng-template>
+          <h3>Nyomj a kész gombra, hogy elküldd az üzenetet!</h3>
+          <div fxLayout="row" style="justify-content:flex-start; gap: 1%">
+            <button mat-raised-button color="accent" matStepperPrevious [class.mat-elevation-z5]="true">Vissza</button>
+            <button mat-raised-button color="primary" (click)="send()" [class.mat-elevation-z5]="true">Kész</button>
+            <button mat-raised-button color="warn" (click)="stepper.reset()" [class.mat-elevation-z5]="true">Reset</button>
           </div>
         </mat-step>
       </mat-horizontal-stepper>
+<!--      Vertikalis, kis nezetes form-->
+      <mat-vertical-stepper [linear]="true" #stepper2 fxShow.lt-md="true" fxShow="false">
+        <mat-step [stepControl]="firstFormGroup">
+          <form [formGroup]="firstFormGroup" fxLayout="column wrap" style="justify-content: center">
+            <ng-template matStepLabel>Személyes adatok</ng-template>
+            <div fxLayout="row wrap" fxLayout.lt-md="column" style="justify-content:space-evenly">
+              <mat-form-field>
+                <input matInput placeholder="Vezetéknév" formControlName="firstname" required>
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Keresztnév" formControlName="surname" required>
+              </mat-form-field>
+            </div>
+            <div fxLayout="row wrap" fxLayout.lt-md="column" style="justify-content:space-evenly">
+              <mat-form-field>
+                <input matInput placeholder="Email-cím" formControlName="email" required>
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Telefonszám" formControlName="phone">
+              </mat-form-field>
+            </div>
+            <div>
+              <button mat-raised-button color="primary" matStepperNext [class.mat-elevation-z5]="true">Tovább</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup">
+          <form [formGroup]="secondFormGroup" fxLayout="column" style="justify-content: center">
+            <ng-template matStepLabel style="white-space: normal">Probléma leírása</ng-template>
+            <mat-form-field appearance="outline">
+              <textarea matInput placeholder="Probléma részletei *" formControlName="problem" required></textarea>
+            </mat-form-field>
+            <div fxLayout="row" style="justify-content:flex-start; gap: 2%">
+              <button mat-raised-button color="accent" matStepperPrevious [class.mat-elevation-z5]="true">Vissza</button>
+              <button mat-raised-button color="primary" matStepperNext [class.mat-elevation-z5]="true">Tovább</button>
+            </div>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Kész</ng-template>
+          <h3>Nyomj a kész gombra, hogy elküldd az üzenetet!</h3>
+          <div fxLayout="row" style="justify-content:flex-start; gap: 2%">
+            <button mat-raised-button color="accent" matStepperPrevious [class.mat-elevation-z5]="true">Vissza</button>
+            <button mat-raised-button color="primary" (click)="send()" [class.mat-elevation-z5]="true">Kész</button>
+            <button mat-raised-button color="warn" (click)="stepper2.reset()" [class.mat-elevation-z5]="true">Reset</button>
+          </div>
+        </mat-step>
+      </mat-vertical-stepper>
     </mat-card-content>
   </mat-card>
 </div>

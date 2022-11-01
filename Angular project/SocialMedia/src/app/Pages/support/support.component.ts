@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import {UntypedFormBuilder, UntypedFormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-support',
@@ -7,16 +7,20 @@ import {FormBuilder, FormGroup} from '@angular/forms';
   styleUrls: ['./support.component.scss']
 })
 export class SupportComponent implements OnInit {
-  firstFormGroup: FormGroup = this._formBuilder.group({
+  firstFormGroup: UntypedFormGroup = this._formBuilder.group({
     firstname: [''],
     surname: [''],
     email: [''],
     phone: ['']});
-  secondFormGroup: FormGroup = this._formBuilder.group({secondCtrl: ['']});
+  secondFormGroup: UntypedFormGroup = this._formBuilder.group({problem: ['']});
 
-  constructor(private _formBuilder: FormBuilder) { }
+  constructor(private _formBuilder: UntypedFormBuilder) { }
 
   ngOnInit(): void {
+  }
+
+  send(){
+
   }
 
 }

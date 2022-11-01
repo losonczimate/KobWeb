@@ -12,7 +12,7 @@ import { AdvertisementComponent } from './Shared/advertisement/advertisement.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {SupportModule} from "./Pages/support/support.module";
 import {AppRoutingModule} from "./app-routing.module";
-
+import {FlexLayoutModule} from "@angular/flex-layout";
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,8 +26,9 @@ import {AppRoutingModule} from "./app-routing.module";
         provideAuth(() => getAuth()),
         provideFirestore(() => getFirestore()),
         provideStorage(() => getStorage()),
-        BrowserAnimationsModule,
         SupportModule,
+        BrowserAnimationsModule,
+        FlexLayoutModule
     ],
   providers: [],
   bootstrap: [AppComponent]
