@@ -6,10 +6,14 @@ import { AdvertComponent } from './advert.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
+import {ExtendedModule} from "@angular/flex-layout";
 
 
 @NgModule({
   declarations: [
+    AdvertComponent
+  ],
+  exports: [
     AdvertComponent
   ],
   imports: [
@@ -17,7 +21,8 @@ import {MatButtonModule} from "@angular/material/button";
     AdvertRoutingModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    ExtendedModule
   ]
 })
 export class AdvertModule { }

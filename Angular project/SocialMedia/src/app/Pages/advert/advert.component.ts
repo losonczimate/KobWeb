@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-advert',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./advert.component.scss']
 })
 export class AdvertComponent implements OnInit {
+  @Input() topad?: boolean;
+  @Input() botad?: boolean;
+  @Input() fillad?: boolean;
+
 
   constructor() { }
 

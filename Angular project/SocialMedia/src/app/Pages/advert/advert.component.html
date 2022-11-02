@@ -1,4 +1,5 @@
-<mat-toolbar style="top: 0;
+<mat-toolbar *ngIf="topad==true"
+             style="top: 0;
                     position: fixed;
                     display: flex;
                     justify-content: flex-end;
@@ -12,7 +13,7 @@
   </button>
 </mat-toolbar>
 
-<div id="fillad">
+<div id="fillad" *ngIf="fillad==true">
   <button mat-button style="width: 100%; height: 100%; position: relative; z-index: 2">
     <h1 style="align-self: center; justify-self: center">nagy reklam</h1>
   </button>
@@ -23,7 +24,8 @@
   </div>
 </div>
 
-<mat-toolbar style="bottom:0;
+<mat-toolbar *ngIf="botad==true"
+             style="bottom:0;
                     position: fixed;
                     display: flex;
                     justify-content: center;

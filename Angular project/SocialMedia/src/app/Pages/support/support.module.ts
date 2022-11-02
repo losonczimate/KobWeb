@@ -10,21 +10,23 @@ import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
 import {FlexLayoutModule} from "@angular/flex-layout";
+import {AdvertModule} from "../advert/advert.module";
 
 @NgModule({
   declarations: [
     SupportComponent
   ],
-  imports: [
-    CommonModule,
-    SupportRoutingModule,
-    ReactiveFormsModule,
-    MatStepperModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatCardModule,
-    FlexLayoutModule
-  ]
+    imports: [
+        CommonModule,
+        SupportRoutingModule,
+        ReactiveFormsModule,
+        MatStepperModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatCardModule,
+        FlexLayoutModule,
+        AdvertModule
+    ]
 })
 export class SupportModule { }
