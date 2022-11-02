@@ -8,29 +8,29 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { MenuComponent } from './Shared/menu/menu.component';
-import { AdvertisementComponent } from './Shared/advertisement/advertisement.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {SupportModule} from "./Pages/support/support.module";
 import {AppRoutingModule} from "./app-routing.module";
 import {FlexLayoutModule} from "@angular/flex-layout";
+import {MatToolbarModule} from "@angular/material/toolbar";
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
-    AdvertisementComponent
+    MenuComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        provideFirebaseApp(() => initializeApp(environment.firebase)),
-        provideAuth(() => getAuth()),
-        provideFirestore(() => getFirestore()),
-        provideStorage(() => getStorage()),
-        SupportModule,
-        BrowserAnimationsModule,
-        FlexLayoutModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage()),
+    BrowserAnimationsModule,
+    FlexLayoutModule,
+    MatToolbarModule
+  ],
   providers: [],
+  exports: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

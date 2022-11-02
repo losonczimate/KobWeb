@@ -29,6 +29,7 @@ const routes: Routes = [
   {
     path: 'login', loadChildren: () => import('./Pages/login/login.module').then(m => m.LoginModule)
   },
+  { path: 'advert', loadChildren: () => import('./Pages/advert/advert.module').then(m => m.AdvertModule) },
   {
     path: '**',
     redirectTo: '/login'
