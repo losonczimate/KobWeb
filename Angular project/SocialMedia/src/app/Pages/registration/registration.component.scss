@@ -1,0 +1,35 @@
+#regpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #f8f7eb;
+  height: 100%;
+}
+
+#title{
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+#regform {
+  display: inline-grid;
+  align-self: center;
+  margin: 5% auto 0 auto;
+  border-radius: 10px;
+}
+#matcardkont{
+  width: 30%;
+  align-items: center;
+  margin: 5% auto 0 auto;
+  border-radius: 10px;
+}
+
+.buttons {
+  padding: 5px;
+}
