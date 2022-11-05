@@ -7,7 +7,10 @@
 }
 
 #title{
-
+  margin-left: auto;
+  margin-right: auto;
+  height: 10%;
+  width: 30%;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -31,4 +34,5 @@
 
 .buttons {
   padding: 5px;
+  margin-top: 15px;
 }
