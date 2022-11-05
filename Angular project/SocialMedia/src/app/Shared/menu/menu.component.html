@@ -1,1 +1,72 @@
-<p>menu works!</p>
+<!--<p>menu works!</p>-->
+<mat-sidenav-container>
+  <mat-sidenav mode="side" #smallnav opened>
+    <mat-list role="list" style="padding: 0; height: 100%; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; align-content: space-evenly">
+      <mat-list-item role="listitem" (click)="bignav.open();smallnav.close()">
+        <mat-icon>menu</mat-icon>
+      </mat-list-item>
+      <mat-list-item role="listitem" routerLink="/login" (click)="close()" [ngStyle]="{'border-bottom': this.router.url === '/login' ? 'solid 5px #9fd35c' : ''}">
+        <mat-icon>login</mat-icon>
+      </mat-list-item>
+      <mat-list-item role="listitem" routerLink="/registration" (click)="close()" [ngStyle]="{'border-bottom': this.router.url === '/registration' ? 'solid 5px #9fd35c' : ''}">
+        <mat-icon>app_registration</mat-icon>
+      </mat-list-item>
+      <mat-list-item role="listitem" routerLink="/feed" (click)="close()" [ngStyle]="{'border-bottom': this.router.url === '/feed' ? 'solid 5px #9fd35c' : ''}">
+        <mat-icon>explore</mat-icon>
+      </mat-list-item>
+      <mat-list-item role="listitem" routerLink="/profile" (click)="close()" [ngStyle]="{'border-bottom': this.router.url === '/profile' ? 'solid 5px #9fd35c' : ''}">
+        <mat-icon>account_box</mat-icon>
+      </mat-list-item>
+      <mat-list-item role="listitem" routerLink="/gallery" (click)="close()" [ngStyle]="{'border-bottom': this.router.url === '/gallery' ? 'solid 5px #9fd35c' : ''}">
+        <mat-icon>photo_library</mat-icon>
+      </mat-list-item>
+      <mat-list-item role="listitem" routerLink="/post" (click)="close()" [ngStyle]="{'border-bottom': this.router.url === '/post' ? 'solid 5px #9fd35c' : ''}">
+        <mat-icon>announcement</mat-icon>
+      </mat-list-item>
+      <mat-list-item role="listitem" routerLink="/support" (click)="close()" [ngStyle]="{'border-bottom': this.router.url === '/support' ? 'solid 5px #9fd35c' : ''}">
+        <mat-icon>help</mat-icon>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav #bignav (keydown.escape)="bignav.close();smallnav.open()">
+    <mat-list role="list" style="padding: 0; height: 100%; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; align-content: space-evenly">
+      <mat-list-item role="listitem" (click)="bignav.close();smallnav.open()">
+        <mat-icon>menu</mat-icon>
+        <span>Close</span>
+      </mat-list-item>
+      <mat-list-item role="listitem" routerLink="/login" (click)="close();bignav.close();smallnav.open()" [ngStyle]="{'border-bottom': this.router.url === '/login' ? 'solid 5px #9fd35c' : ''}">
+        <mat-icon>login</mat-icon>
+        <span>Login</span>
+      </mat-list-item>
+      <mat-list-item role="listitem" routerLink="/registration" (click)="close();bignav.close();smallnav.open()" [ngStyle]="{'border-bottom': this.router.url === '/registration' ? 'solid 5px #9fd35c' : ''}">
+        <mat-icon>app_registration</mat-icon>
+        <span>Registration</span>
+      </mat-list-item>
+      <mat-list-item role="listitem" routerLink="/feed" (click)="close();bignav.close();smallnav.open()" [ngStyle]="{'border-bottom': this.router.url === '/feed' ? 'solid 5px #9fd35c' : ''}">
+        <mat-icon>explore</mat-icon>
+        <span>Feed</span>
+      </mat-list-item>
+      <mat-list-item role="listitem" routerLink="/profile" (click)="close();bignav.close();smallnav.open()" [ngStyle]="{'border-bottom': this.router.url === '/profile' ? 'solid 5px #9fd35c' : ''}">
+        <mat-icon>account_box</mat-icon>
+        <span>Profile</span>
+      </mat-list-item>
+      <mat-list-item role="listitem" routerLink="/gallery" (click)="close();bignav.close();smallnav.open()" [ngStyle]="{'border-bottom': this.router.url === '/gallery' ? 'solid 5px #9fd35c' : ''}">
+        <mat-icon>photo_library</mat-icon>
+        <span>Gallery</span>
+      </mat-list-item>
+      <mat-list-item role="listitem" routerLink="/post" (click)="close();bignav.close();smallnav.open()" [ngStyle]="{'border-bottom': this.router.url === '/post' ? 'solid 5px #9fd35c' : ''}">
+        <mat-icon>announcement</mat-icon>
+        <span>Post</span>
+      </mat-list-item>
+      <mat-list-item role="listitem" routerLink="/support" (click)="close();bignav.close();smallnav.open()" [ngStyle]="{'border-bottom': this.router.url === '/support' ? 'solid 5px #9fd35c' : ''}">
+        <mat-icon>help</mat-icon>
+        <span>Support</span>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content [ngStyle]="{'margin-left': bignav.opened ? '144px' : '56px'}">
+    <router-outlet (click)="bignav.close();smallnav.open()"></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
