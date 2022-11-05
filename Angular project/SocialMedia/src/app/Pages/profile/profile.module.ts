@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { ProfileRoutingModule } from './profile-routing.module';
 import { ProfileComponent } from './profile.component';
+import {MatGridListModule} from "@angular/material/grid-list";
+import {FlexModule} from "@angular/flex-layout";
+import {MatChipsModule} from "@angular/material/chips";
+import {MatListModule} from "@angular/material/list";
 
 
 @NgModule({
@@ -11,7 +15,11 @@ import { ProfileComponent } from './profile.component';
   ],
   imports: [
     CommonModule,
-    ProfileRoutingModule
+    ProfileRoutingModule,
+    MatGridListModule,
+    FlexModule,
+    MatChipsModule,
+    MatListModule
   ]
 })
 export class ProfileModule { }

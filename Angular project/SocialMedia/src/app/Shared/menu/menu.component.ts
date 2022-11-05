@@ -1,4 +1,4 @@
-import {Component, HostListener, OnInit, ViewChild} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
@@ -8,6 +8,7 @@ import {Router} from "@angular/router";
 })
 export class MenuComponent implements OnInit {
   ltsm: boolean = false;
+  backdrop: boolean = false;
 
   constructor(public router: Router) { }
 
@@ -21,10 +22,14 @@ export class MenuComponent implements OnInit {
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize(event: Event) {
+  onResize() {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
     if (this.screenWidth < 959) this.ltsm = true;
+  }
+
+  ngOnChanges(){
+    console.log("helo")
   }
 
   close() {

@@ -1,1 +1,39 @@
-<p>profile works!</p>
+<div fxLayout="column" fxLayoutAlign="space-evenly center" style="margin-top: 2%">
+  <div fxLayout="row" fxLayoutAlign="center" style="width: 70%" fxLayoutGap="2%">
+    <div style="width: 20%">
+      <div style="margin: 0 auto 0 auto; height: 0; width:80%;padding-bottom:80%;background-color:cyan">Profilkep</div>
+    </div>
+    <div fxLayout="column" style="width: 80%;">
+      <div fxLayout="row" style="width: 70%;">
+        <mat-chip-list aria-label="Fish selection">
+          <mat-chip>One fish</mat-chip>
+          <mat-chip>Two fish</mat-chip>
+          <mat-chip color="primary" selected>Primary fish</mat-chip>
+          <mat-chip color="accent" selected>Accent fish</mat-chip>
+          <mat-chip>One fish</mat-chip>
+          <mat-chip>Two fish</mat-chip>
+          <mat-chip color="primary" selected>Primary fish</mat-chip>
+          <mat-chip color="accent" selected>Accent fish</mat-chip>
+          <mat-chip>One fish</mat-chip>
+          <mat-chip>Two fish</mat-chip>
+        </mat-chip-list>
+      </div>
+      <mat-list fxLayout="column" dense>
+        <mat-list-item>Szovegggggggggggggggggggggggggggggggggggggggggggggggggggggggg</mat-list-item>
+        <mat-list-item>Szovegggggggggggggggggggggggggggggggggggggggggggggggggggggggg</mat-list-item>
+        <mat-list-item>Szovegggggggggggggggggggggggggggggggggggggggggggggggggggggggg</mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+  <hr>
+  <mat-grid-list cols="4" rowHeight="1:1" gutterSize="2em" style="width: 70%">
+    <mat-grid-tile
+      *ngFor="let tile of tiles"
+      [colspan]="1"
+      [rowspan]="1"
+      [style.background]="tile.color">
+      {{tile.text}}
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
