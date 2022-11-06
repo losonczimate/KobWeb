@@ -9,12 +9,13 @@ export class AdvertisementsService {
 
   collectionName = 'Advertisements';
 
-  constructor(private afs: AngularFirestore) { }
+  constructor(private afs: AngularFirestore) {
+
+  }
 
   create(ad: Advertisement) {
     ad.id = this.afs.createId();
     return this.afs.collection<Advertisement>(this.collectionName).doc(ad.id).set(ad);
-    // return this.afs.collection<Comment>(this.collectionName).add(comment);
   }
 
   getAll() {

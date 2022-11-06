@@ -14,7 +14,6 @@ export class GalleryService {
   create(image: Image) {
     image.id = this.afs.createId();
     return this.afs.collection<Image>(this.collectionName).doc(image.id).set(image);
-    // return this.afs.collection<Comment>(this.collectionName).add(comment);
   }
 
   getAll() {
