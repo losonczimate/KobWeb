@@ -29,6 +29,8 @@ export class GalleryService {
     return this.afs.collection<Image>(this.collectionName).doc(id).delete();
   }
 
-
+  getById(id: string) {
+    return this.afs.collection<Image>(this.collectionName).doc(id).valueChanges();
+  }
 
 }
