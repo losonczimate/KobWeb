@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import firebase from 'firebase/compat/app';
 import 'firebase/auth';
+import {getAuth, sendPasswordResetEmail} from "@angular/fire/auth";
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,20 @@ import 'firebase/auth';
 export class AuthService {
 
   constructor(private auth: AngularFireAuth) { }
+
+  newpass(email:string){
+    const auth = getAuth();
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        // Password reset email sent!
+        console.log("email send to " + email)
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+      });
+  }
 
   login(email: string, password: string) {
     return firebase.auth().signInWithEmailAndPassword(email, password);

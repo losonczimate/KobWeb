@@ -10,7 +10,7 @@
       <form [formGroup]="LoginForm" id="loginform" (ngSubmit)="onSubmit()">
 
         <mat-form-field>
-          <input matInput type="text" placeholder="Felhasználónév" formControlName="nickname" required>
+          <input matInput type="text" placeholder="Email" formControlName="email" required>
         </mat-form-field>
         <mat-form-field>
           <input matInput type="password" placeholder="Jelszó" formControlName="password" required>
@@ -18,10 +18,11 @@
 
         <button mat-raised-button color="primary" type="submit" class="buttons" [class.mat-elevation-z5]="true" style="justify-content:space-evenly">Bejelentkezés</button>
 
+
+      </form>
         <button mat-raised-button color="primary" class="buttons" [class.mat-elevation-z5]="true" (click)="goToReg()" style="justify-content:space-evenly">Ha nincs fiókod, regisztrálj!</button>
         <button mat-raised-button color="primary" class="buttons" [class.mat-elevation-z5]="true" (click)="goToRePassw()" style="justify-content:space-evenly">Elfelejtetted a jelszavad? KATTINTS IDE!</button>
 
-      </form>
       </div>
     </mat-card-content>
   </mat-card>

@@ -4,6 +4,7 @@ import {UserService} from "../../Shared/services/user.service";
 import {AuthService} from "../../Shared/services/auth.service";
 import {Felhasznalo} from "../../Model/Felhasznalo";
 import {Router} from "@angular/router";
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-registration',
@@ -20,7 +21,7 @@ export class RegistrationComponent implements OnInit {
 
   });
 
-  constructor(private router: Router, private authService: AuthService, private userService: UserService) {
+  constructor(private location: Location, private router: Router, private authService: AuthService, private userService: UserService) {
   }
 
   ngOnInit(): void {
@@ -58,6 +59,6 @@ export class RegistrationComponent implements OnInit {
   }
 
   goBack() {
-    //this.location.back();
+    this.location.back();
   }
 }

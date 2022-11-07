@@ -7,6 +7,7 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import {FlexModule} from "@angular/flex-layout";
 import {MatChipsModule} from "@angular/material/chips";
 import {MatListModule} from "@angular/material/list";
+import {SharedPipeModule} from "../../Shared/shared-pipe/shared-pipe.module";
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {MatListModule} from "@angular/material/list";
     MatGridListModule,
     FlexModule,
     MatChipsModule,
-    MatListModule
+    MatListModule,
+    SharedPipeModule
   ]
 })
 export class ProfileModule { }

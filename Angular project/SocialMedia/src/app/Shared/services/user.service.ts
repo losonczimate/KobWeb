@@ -16,8 +16,10 @@ export class UserService {
   constructor(private fs: Firestore) { }
 
   create(Felhasznalo: Felhasznalo) {
-    const usersref = collection(this.fs, this.collectionName);
-    return addDoc(usersref, Felhasznalo);
+    const userDocRef = doc(this.fs, `${this.collectionName}/${Felhasznalo.id}`);
+    return setDoc(userDocRef, Felhasznalo);
+    //const usersref = collection(this.fs, this.collectionName);
+    //return addDoc(usersref, Felhasznalo);
   }
 
   getAll() {
@@ -35,7 +37,7 @@ export class UserService {
     return deleteDoc(bookDocRef);
   }
 
-  getBookByID(id: string) {
+  getByID(id: string) {
     const userRef = doc(this.fs, `${this.collectionName}/${id}`);
     return docData(userRef, { idField: 'id' }) as Observable<Felhasznalo>;
   }

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import firebase from "firebase/compat/app";
+import {UserService} from "../../Shared/services/user.service";
+import {getAuth} from "@angular/fire/auth";
+import {AuthService} from "../../Shared/services/auth.service";
 
 export interface Tile {
   //ide kell majd 2 adattag:
@@ -28,9 +32,27 @@ export class ProfileComponent implements OnInit {
     {text: 'Four', color: '#DDBDF1'},
   ];
 
-  constructor() { }
+  nickname: string = "";
+  email: string = "";
+  regdatum: number = 0;
+
+  constructor(private authService: AuthService, private userService: UserService) { }
 
   ngOnInit(): void {
+
+
+    this.authService.isUserLoggedIn().subscribe(curruser =>{
+      if(curruser){
+        console.log(curruser)
+        this.userService.getByID(curruser.uid as string).subscribe(currentuser =>{
+          this.nickname = currentuser?.nev as string;
+          this.email = currentuser?.email as string;
+          this.regdatum = currentuser?.regdatum;
+          console.log(this.nickname);
+          console.log(this.authService.isUserLoggedIn())
+        });
+      }
+    })
 
   }
 
