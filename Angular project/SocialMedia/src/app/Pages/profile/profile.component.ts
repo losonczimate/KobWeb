@@ -3,6 +3,7 @@ import firebase from "firebase/compat/app";
 import {UserService} from "../../Shared/services/user.service";
 import {getAuth} from "@angular/fire/auth";
 import {AuthService} from "../../Shared/services/auth.service";
+import {Router} from "@angular/router";
 
 export interface Tile {
   //ide kell majd 2 adattag:
@@ -36,7 +37,7 @@ export class ProfileComponent implements OnInit {
   email: string = "";
   regdatum: number = 0;
 
-  constructor(private authService: AuthService, private userService: UserService) { }
+  constructor(private router: Router,private authService: AuthService, private userService: UserService) { }
 
   ngOnInit(): void {
 
@@ -51,6 +52,8 @@ export class ProfileComponent implements OnInit {
           console.log(this.nickname);
           console.log(this.authService.isUserLoggedIn())
         });
+      } else {
+        this.router.navigateByUrl("/login")
       }
     })
 

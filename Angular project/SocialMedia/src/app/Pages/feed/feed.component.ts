@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from "../../Shared/services/auth.service";
+import {Router} from "@angular/router";
 
 export interface Tile {
   //ide kell majd 2 adattag:
@@ -29,9 +31,14 @@ export class FeedComponent implements OnInit {
     {name:"Orbán",text: 'Four', color: '#DDBDF1', datemade: 1667760535167},
   ];
 
-  constructor() { }
+  constructor(private router: Router , private authService:AuthService) { }
 
   ngOnInit(): void {
+    this.authService.isUserLoggedIn().subscribe(curruser => {
+      if (!curruser) {
+        this.router.navigateByUrl("/login");
+      }
+    })
   }
 
 }
