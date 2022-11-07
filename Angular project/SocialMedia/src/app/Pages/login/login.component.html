@@ -1,2 +1,28 @@
-<p>login works! {{ 1667763535167 | customdate}} </p>
+<div id="logpage" style="justify-content:space-evenly">
+  <mat-card id="title" [class.mat-elevation-z12]="true">
+    <mat-card-content>
+      <h1>Jelentkezz be!</h1>
+    </mat-card-content>
+  </mat-card>
+  <mat-card [class.mat-elevation-z12]="true" id="matcardkont" style="justify-content:space-evenly">
+    <mat-card-content>
+      <div>
+      <form [formGroup]="LoginForm" id="loginform" (ngSubmit)="onSubmit()">
 
+        <mat-form-field>
+          <input matInput type="text" placeholder="Felhasználónév" formControlName="nickname" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="password" placeholder="Jelszó" formControlName="password" required>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" class="buttons" [class.mat-elevation-z5]="true" style="justify-content:space-evenly">Bejelentkezés</button>
+
+        <button mat-raised-button color="primary" class="buttons" [class.mat-elevation-z5]="true" (click)="goToReg()" style="justify-content:space-evenly">Ha nincs fiókod, regisztrálj!</button>
+        <button mat-raised-button color="primary" class="buttons" [class.mat-elevation-z5]="true" (click)="goToRePassw()" style="justify-content:space-evenly">Elfelejtetted a jelszavad? KATTINTS IDE!</button>
+
+      </form>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

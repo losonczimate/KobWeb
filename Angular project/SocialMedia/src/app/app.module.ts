@@ -16,8 +16,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatListModule} from "@angular/material/list";
 import {MatIconModule} from "@angular/material/icon";
 import {HttpClientModule} from "@angular/common/http";
-import { FIREBASE_OPTIONS } from '@angular/fire/compat';
-
+import {FIREBASE_OPTIONS} from "@angular/fire/compat";
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +37,7 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
     MatIconModule,
     HttpClientModule
   ],
+
   providers: [{ provide: FIREBASE_OPTIONS, useValue: environment.firebase }],
   exports: [
   ],
