@@ -59,7 +59,7 @@
     </mat-list>
   </mat-sidenav>
 
-  <mat-sidenav-content style="margin-left: 56px">
-    <router-outlet (click)="bignav.close();smallnav.open()"></router-outlet>
+  <mat-sidenav-content style="margin-left: 56px" (click)="bignav.close();smallnav.open()">
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
