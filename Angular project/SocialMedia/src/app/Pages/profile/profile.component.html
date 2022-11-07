@@ -1,26 +1,66 @@
-<div fxLayout="column" fxLayoutAlign="space-evenly center" style="margin-top: 2%">
-  <div fxLayout="row" fxLayoutAlign="center" style="width: 70%" fxLayoutGap="2%">
-    <div style="width: 20%">
-      <div style="margin: 0 auto 0 auto; height: 0; width:80%;padding-bottom:80%;background-color:cyan">Profilkep</div>
-    </div>
-    <div fxLayout="column" style="width: 80%;">
-      <div fxLayout="row" style="width: 70%;">
-        <mat-chip-list aria-label="Fish selection">
-          <mat-chip>One fish</mat-chip>
-          <mat-chip>Two fish</mat-chip>
-          <mat-chip color="primary" selected>Primary fish</mat-chip>
-          <mat-chip color="accent" selected>Accent fish</mat-chip>
-        </mat-chip-list>
-      </div>
+<div fxLayout="column" fxLayoutAlign="space-evenly center" style="margin-top: 1%">
+  <mat-card>
+    <mat-card-header>
+      <img mat-card-lg-image class="example-header-image" src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="tile.profilkep" style=" margin-right: 4%">
+      <mat-chip-list fxShow.lt-md="false" fxShow aria-label="Fish selection" style="margin-top: auto; margin-bottom: auto">
+        <mat-chip>One fish</mat-chip>
+        <mat-chip>Two fish</mat-chip>
+        <mat-chip color="primary" selected>Primary fish</mat-chip>
+        <mat-chip color="accent" selected>Accent fish</mat-chip>
+      </mat-chip-list>
+      <mat-chip-list fxShow.lt-md fxShow="false" class="mat-chip-list-stacked" aria-label="Fish selection">
+        <mat-chip>One fish</mat-chip>
+        <mat-chip>Two fish</mat-chip>
+        <mat-chip color="primary" selected>Primary fish</mat-chip>
+        <mat-chip color="accent" selected>Accent fish</mat-chip>
+      </mat-chip-list>
+    </mat-card-header>
+    <mat-card-content>
       <mat-list fxLayout="column" dense>
         <mat-list-item>{{nickname}}</mat-list-item>
         <mat-list-item>{{email}}</mat-list-item>
         <mat-list-item>Regisztrált: {{regdatum | customdate}}</mat-list-item>
       </mat-list>
-    </div>
-  </div>
+    </mat-card-content>
+  </mat-card>
   <hr>
-  <mat-grid-list cols="4" rowHeight="1:1" gutterSize="2em" style="width: 70%">
+  <mat-grid-list fxShow.lt-xl="false" fxShow cols="4" rowHeight="1:1" gutterSize="2em" style="width: 65%">
+    <mat-grid-tile
+      *ngFor="let tile of tiles"
+      [colspan]="1"
+      [rowspan]="1"
+      [style.background]="tile.color">
+      {{tile.text}}
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list fxShow.lg fxShow.lt-lg="false" fxShow="false" cols="4" rowHeight="1:1" gutterSize="2em" style="width: 67%">
+    <mat-grid-tile
+      *ngFor="let tile of tiles"
+      [colspan]="1"
+      [rowspan]="1"
+      [style.background]="tile.color">
+      {{tile.text}}
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list fxShow.lt-lg fxShow.lt-md="false" fxShow="false" cols="4" rowHeight="1:1" gutterSize="2em" style="width: 80%">
+    <mat-grid-tile
+      *ngFor="let tile of tiles"
+      [colspan]="1"
+      [rowspan]="1"
+      [style.background]="tile.color">
+      {{tile.text}}
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list fxShow.lt-md fxShow.lt-sm="false" fxShow="false" cols="2" rowHeight="1:1" gutterSize="2em" style="width: 70%">
+    <mat-grid-tile
+      *ngFor="let tile of tiles"
+      [colspan]="1"
+      [rowspan]="1"
+      [style.background]="tile.color">
+      {{tile.text}}
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list fxShow.lt-sm fxShow="false" cols="2" rowHeight="1:1" gutterSize="1em" style="width: 70%">
     <mat-grid-tile
       *ngFor="let tile of tiles"
       [colspan]="1"
