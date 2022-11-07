@@ -38,12 +38,13 @@ export class RegistrationComponent implements OnInit {
             id: cred.user?.uid as string,
             email: this.regForm.get('email')?.value as string,
             nev: this.regForm.get('nickname')?.value as string,
-            ismerosok: []
+            ismerosok: [],
+            regdatum: Date.now()
           }
 
           this.userService.create(user).then(_ => {
             console.log('User added successfully.');
-            this.router.navigateByUrl('/main');
+            this.router.navigateByUrl('/profile');
           }).catch(error => {
             console.error(error);
           })

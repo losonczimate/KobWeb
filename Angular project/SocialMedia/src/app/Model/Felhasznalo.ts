@@ -3,4 +3,5 @@ export interface Felhasznalo {
   email: string;
   nev: string;
   ismerosok: string[];
+  regdatum: number;
 }
