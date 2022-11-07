@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
-import { SharedPipeModule } from 'src/app/Shared/shared-pipe/shared-pipe.module';
+import { SharedPipeModule } from '../../Shared/shared-pipe/shared-pipe.module';
 
 
 
