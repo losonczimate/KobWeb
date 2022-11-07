@@ -9,16 +9,16 @@ import {MatChipsModule} from "@angular/material/chips";
 import {MatListModule} from "@angular/material/list";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatCardModule} from "@angular/material/card";
-import {CustomDatePipe} from "../../Shared/Pipes/customdate.pipe";
 import {MatButtonModule} from '@angular/material/button';
+import { SharedPipeModule } from 'src/app/Shared/shared-pipe/shared-pipe.module';
 
 
 @NgModule({
   declarations: [
     FeedComponent,
-    CustomDatePipe
   ],
     imports: [
+        SharedPipeModule,
         CommonModule,
         FeedRoutingModule,
         MatIconModule,
