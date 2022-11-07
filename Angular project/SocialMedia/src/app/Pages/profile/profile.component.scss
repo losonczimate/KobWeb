@@ -5,9 +5,31 @@ hr {
   width: 82%;
   background-color: #2c2c2c;
   height: 1px;
-  margin: 2% 0 2% 0;
+  margin: 1% 0 1% 0;
 }
 
 mat-grid-list{
   margin: 0;
+}
+
+mat-chip{
+  font-size: 1vw;
+}
+
+@media only screen and (max-width: 1279px){
+  mat-chip{
+    font-size: 1.4vw;
+  }
+}
+
+@media only screen and (max-width: 959px){
+  mat-chip {
+    font-size: 1.5vw;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  mat-chip{
+    font-size: 2vw;
+  }
 }

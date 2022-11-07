@@ -1,7 +1,7 @@
-<div fxLayout="column" fxLayoutAlign="space-evenly center" style="margin-top: 2%">
+<div fxLayout="row" fxLayoutAlign="center">
+  <div fxLayout="column" fxFlex fxLayoutAlign="space-evenly center" style="margin-top: 2%">
 
-
-  <ng-template ngFor let-tile [ngForOf]="tiles" let-i="index">
+    <ng-template ngFor let-tile [ngForOf]="tiles" let-i="index">
       <mat-card class="example-card">
         <mat-card-header>
 
@@ -18,11 +18,21 @@
         <mat-card-actions style="width: 90%; margin-left: auto;margin-right: auto">
           <button mat-raised-button color="warn">LIKE</button>
           <button mat-raised-button color="primary">SHARE</button>
+          <button mat-raised-button color="accent">COMMENT</button>
         </mat-card-actions>
       </mat-card>
-    <br>
-    <br>
-  </ng-template>
+      <br>
+      <br>
+    </ng-template>
 
+  </div>
+
+  <app-advert id="ad" fxFlex="8" [vertad]="true"></app-advert>
 </div>
+
+
+
+
+
+
 

@@ -17,9 +17,6 @@
       <mat-list-item role="listitem" routerLink="/profile" (click)="close()" [ngStyle]="{'border-bottom': this.router.url === '/profile' ? 'solid 5px #9fd35c' : ''}">
         <mat-icon>account_box</mat-icon>
       </mat-list-item>
-      <mat-list-item role="listitem" routerLink="/gallery" (click)="close()" [ngStyle]="{'border-bottom': this.router.url === '/gallery' ? 'solid 5px #9fd35c' : ''}">
-        <mat-icon>photo_library</mat-icon>
-      </mat-list-item>
       <mat-list-item role="listitem" routerLink="/post" (click)="close()" [ngStyle]="{'border-bottom': this.router.url === '/post' ? 'solid 5px #9fd35c' : ''}">
         <mat-icon>announcement</mat-icon>
       </mat-list-item>
@@ -51,10 +48,6 @@
         <mat-icon>account_box</mat-icon>
         <span>Profile</span>
       </mat-list-item>
-      <mat-list-item role="listitem" routerLink="/gallery" (click)="close();bignav.close();smallnav.open()" [ngStyle]="{'border-bottom': this.router.url === '/gallery' ? 'solid 5px #9fd35c' : ''}">
-        <mat-icon>photo_library</mat-icon>
-        <span>Gallery</span>
-      </mat-list-item>
       <mat-list-item role="listitem" routerLink="/post" (click)="close();bignav.close();smallnav.open()" [ngStyle]="{'border-bottom': this.router.url === '/post' ? 'solid 5px #9fd35c' : ''}">
         <mat-icon>announcement</mat-icon>
         <span>Post</span>
@@ -66,7 +59,7 @@
     </mat-list>
   </mat-sidenav>
 
-  <mat-sidenav-content [ngStyle]="{'margin-left': (bignav.opened && ltsm==false) ? '144px' : '56px'}">
+  <mat-sidenav-content style="margin-left: 56px">
     <router-outlet (click)="bignav.close();smallnav.open()"></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
