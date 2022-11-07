@@ -16,6 +16,7 @@ export interface Tile {
 })
 //Dinamikusan kell majd feltolteni a tiles tombot, az adatbazisbol lekerdezett kepekkel.
 export class ProfileComponent implements OnInit {
+
   tiles: Tile[] = [
     {text: 'One', color: 'lightblue'},
     {text: 'Two', color: 'lightgreen'},

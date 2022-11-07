@@ -1,2 +1,28 @@
-<p>feed works!</p>
-<mat-icon aria-hidden="false" aria-label="Example home icon" color="accent" fontIcon="home"></mat-icon>
+<div fxLayout="column" fxLayoutAlign="space-evenly center" style="margin-top: 2%">
+
+
+  <ng-template ngFor let-tile [ngForOf]="tiles" let-i="index">
+      <mat-card class="example-card">
+        <mat-card-header>
+
+          <mat-card-title> <img mat-card-sm-image="" class="example-header-image" src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="tile.profilkep">
+            {{tile.name}}</mat-card-title>
+          <mat-card-subtitle>{{ (tile.datemade | customdate)}}</mat-card-subtitle>
+        </mat-card-header>
+        <img style="width: 90%; margin-left: auto;margin-right: auto" mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="tile.kep">
+        <mat-card-content style="width: 90%; margin-left: auto;margin-right: auto">
+          <p>
+            {{tile.text}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions style="width: 90%; margin-left: auto;margin-right: auto">
+          <button mat-raised-button color="warn">LIKE</button>
+          <button mat-raised-button color="primary">SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    <br>
+    <br>
+  </ng-template>
+
+</div>
+
