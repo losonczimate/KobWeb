@@ -9,10 +9,10 @@ mat-sidenav-content{
 
 mat-list-item{
   border-radius: 5px;
-  border-bottom: solid 3px rgba(255, 0, 0, 0);
+  border-bottom: solid 5px rgba(255, 0, 0, 0);
 }
 
 mat-list-item:hover{
   background-color: lightgray;
-  border-bottom: solid 3px #b7e079;
+  border-bottom: solid 5px #b7e079;
 }

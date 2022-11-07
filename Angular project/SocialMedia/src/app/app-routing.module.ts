@@ -11,10 +11,6 @@ const routes: Routes = [
     loadChildren: () => import('./Pages/support/support.module').then(m => m.SupportModule)
   },
   {
-    path: 'gallery',
-    loadChildren: () => import('./Pages/gallery/gallery.module').then(m => m.GalleryModule)
-  },
-  {
     path: 'post',
     loadChildren: () => import('./Pages/post/post.module').then(m => m.PostModule)
   },
@@ -29,7 +25,7 @@ const routes: Routes = [
   {
     path: 'login', loadChildren: () => import('./Pages/login/login.module').then(m => m.LoginModule)
   },
-  { path: 'advert', loadChildren: () => import('./Pages/advert/advert.module').then(m => m.AdvertModule) },
+  { path: 'advert', loadChildren: () => import('./Pages/advert/advert.module').then(m => m.AdvertModule) }, //kesobb torolni kell
   {
     path: '**',
     redirectTo: '/login'
