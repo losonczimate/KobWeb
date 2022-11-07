@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {UntypedFormBuilder, UntypedFormGroup} from '@angular/forms';
-import { Comment } from '../../Model/comment';
-import { CommentService } from '../../Shared/services/comment.service';
 
 @Component({
   selector: 'app-support',
@@ -18,10 +16,9 @@ export class SupportComponent implements OnInit {
 
   comments: Comment[] = []
 
-  constructor(private _formBuilder: UntypedFormBuilder, private commentService: CommentService) { }
+  constructor(private _formBuilder: UntypedFormBuilder) { }
 
   ngOnInit(): void {
-    
   }
 
   send(){
