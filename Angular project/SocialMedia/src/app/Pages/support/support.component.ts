@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UntypedFormBuilder, UntypedFormGroup} from '@angular/forms';
+import { Comment } from '../../Model/comment';
+import { CommentService } from '../../Shared/services/comment.service';
 
 @Component({
   selector: 'app-support',
@@ -14,22 +16,12 @@ export class SupportComponent implements OnInit {
     phone: ['']});
   secondFormGroup: UntypedFormGroup = this._formBuilder.group({problem: ['']});
 
-  constructor(private _formBuilder: UntypedFormBuilder) { }
+  comments: Comment[] = []
+
+  constructor(private _formBuilder: UntypedFormBuilder, private commentService: CommentService) { }
 
   ngOnInit(): void {
-    // Testing comment backend CREATE mukodik
-    // const comment: Comment = {
-    //   postId: 'MSLMYbmSk14JylU6H25C',
-    //   commentId: '', //Ezt hagy uresen, a create fuggveny majd csinal neki id-t.
-    //   comment: "be szartam",
-    //   username: "pistike",
-    //   date: new Date()
-    // }
-    // commentService.create(comment).then(_ => {
-    //   //Comment felkuldes sikeres, frissiteni kell a komment reszleget h latszodjon.
-    // }).catch(error => {
-    //   console.error(error);
-    // })
+    
   }
 
   send(){
