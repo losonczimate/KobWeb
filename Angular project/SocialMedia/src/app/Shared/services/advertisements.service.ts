@@ -10,7 +10,6 @@ export class AdvertisementsService {
   collectionName = 'Advertisements';
 
   constructor(private afs: AngularFirestore) {
-
   }
 
   create(ad: Advertisement) {
