@@ -25,7 +25,6 @@ export class LoginComponent implements OnInit {
    // this.authService.newpass(this.LoginForm.get('nickname')?.value as string)
     this.authService.login(this.LoginForm.get('email')?.value as string, this.LoginForm.get('password')?.value as string).then(cred => {
       console.log(cred);
-
       this.router.navigateByUrl('/profile');
     }).catch(error => {
       console.error(error);

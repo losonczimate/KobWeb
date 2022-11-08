@@ -1,25 +1,17 @@
-<div fxLayout="column" fxLayoutAlign="space-evenly center" style="margin-top: 1%">
-  <mat-card>
+<div fxLayout="column" fxLayoutAlign="center center" style="margin-top: 1%">
+  <mat-card fxLayoutAlign="center stretch">
     <mat-card-header>
       <img mat-card-lg-image class="example-header-image" src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="tile.profilkep" style=" margin-right: 4%">
-      <mat-chip-list fxShow.lt-md="false" fxShow aria-label="Fish selection" style="margin-top: auto; margin-bottom: auto">
-        <mat-chip>One fish</mat-chip>
-        <mat-chip>Two fish</mat-chip>
-        <mat-chip color="primary" selected>Primary fish</mat-chip>
-        <mat-chip color="accent" selected>Accent fish</mat-chip>
-      </mat-chip-list>
-      <mat-chip-list fxShow.lt-md fxShow="false" class="mat-chip-list-stacked" aria-label="Fish selection">
-        <mat-chip>One fish</mat-chip>
-        <mat-chip>Two fish</mat-chip>
-        <mat-chip color="primary" selected>Primary fish</mat-chip>
-        <mat-chip color="accent" selected>Accent fish</mat-chip>
-      </mat-chip-list>
     </mat-card-header>
     <mat-card-content>
       <mat-list fxLayout="column" dense>
         <mat-list-item>{{nickname}}</mat-list-item>
         <mat-list-item>{{email}}</mat-list-item>
         <mat-list-item>Regisztrált: {{regdatum | customdate}}</mat-list-item>
+        <mat-list-item>E-mail megerősítve: {{(verified) ? "Igen" : "Nem"}}</mat-list-item>
+        <mat-chip-list fxShow.lt-md="false" style="font-size: 10px" fxLayout="row" fxLayoutAlign="right end">
+          <mat-chip>E-mail megerősítése</mat-chip>
+        </mat-chip-list>
       </mat-list>
     </mat-card-content>
   </mat-card>

@@ -1,17 +1,19 @@
-import { Injectable } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+import {Injectable} from '@angular/core';
+import {AngularFireAuth} from '@angular/fire/compat/auth';
 import firebase from 'firebase/compat/app';
 import 'firebase/auth';
-import {getAuth, sendPasswordResetEmail} from "@angular/fire/auth";
+import {getAuth, sendPasswordResetEmail, user} from "@angular/fire/auth";
+import { Router } from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private auth: AngularFireAuth) { }
+  constructor(private auth: AngularFireAuth, private router: Router) {
+  }
 
-  newpass(email:string){
+  newpass(email: string) {
     const auth = getAuth();
     sendPasswordResetEmail(auth, email)
       .then(() => {
@@ -41,8 +43,7 @@ export class AuthService {
     return this.auth.signOut();
   }
 
-  currentuser(){
-
+  currentuser() {
     return this.auth.currentUser;
   }
 }

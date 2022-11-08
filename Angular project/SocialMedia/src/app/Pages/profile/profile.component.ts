@@ -36,6 +36,7 @@ export class ProfileComponent implements OnInit {
   nickname: string = "";
   email: string = "";
   regdatum: number = 0;
+  verified: boolean = false;
 
   constructor(private router: Router,private authService: AuthService, private userService: UserService) { }
 
@@ -49,6 +50,7 @@ export class ProfileComponent implements OnInit {
           this.nickname = currentuser?.nev as string;
           this.email = currentuser?.email as string;
           this.regdatum = currentuser?.regdatum;
+          this.verified = curruser.emailVerified;
           console.log(this.nickname);
           console.log(this.authService.isUserLoggedIn())
         });
