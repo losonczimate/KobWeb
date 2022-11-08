@@ -14,8 +14,6 @@ export class SupportComponent implements OnInit {
     phone: ['']});
   secondFormGroup: UntypedFormGroup = this._formBuilder.group({problem: ['']});
 
-  comments: Comment[] = []
-
   constructor(private _formBuilder: UntypedFormBuilder) { }
 
   ngOnInit(): void {
@@ -24,5 +22,4 @@ export class SupportComponent implements OnInit {
   send(){
 
   }
-
 }
