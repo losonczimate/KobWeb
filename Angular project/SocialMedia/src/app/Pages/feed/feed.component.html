@@ -19,7 +19,20 @@
           <button mat-raised-button color="warn">LIKE</button>
           <button mat-raised-button color="primary">SHARE</button>
           <button mat-raised-button color="accent">COMMENT</button>
+          <button (click)="toggle()" mat-raised-button color="accent">COMMENT</button>
         </mat-card-actions>
+
+        <div *ngIf="show">
+          <mat-form-field id="comment-box" appearance="legacy" style="margin-left: 5%; margin-right: auto">
+            <mat-label>Hozzászólás írása...</mat-label>
+            <input matInput placeholder="Hozzászólás írása...">
+            <mat-hint>Hozzászólás írása...</mat-hint>
+          </mat-form-field>
+          <mat-list *ngFor = "let comment of comments" style="margin-left: 5%; margin-right: auto">
+            <mat-list-item> {{comment.userName}} : {{comment.comment}} </mat-list-item>
+           </mat-list>
+        </div>
+
       </mat-card>
       <br>
       <br>
