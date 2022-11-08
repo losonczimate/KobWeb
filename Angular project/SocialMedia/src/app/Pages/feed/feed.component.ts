@@ -19,8 +19,9 @@ export interface Tile {
   styleUrls: ['./feed.component.scss']
 })
 export class FeedComponent implements OnInit {
-  public show:boolean = false;
-  public buttonName:any = 'Show';
+  show: boolean = false;
+  buttonName: any = 'Show';
+  panelOpenState = false;
   
   tiles: Tile[] = [
     {name:"József", text: 'One', color: 'lightblue', datemade: Date.now()},
@@ -34,10 +35,10 @@ export class FeedComponent implements OnInit {
   ];
 
   comments: any[] = [
-    { userName: 'Orbán', comment: 'Rezsicsökkentés' },
-    { userName: 'Attila', comment: 'Kecske' },
-    { userName: 'Feri', comment: 'Keresett a Feri :)' },
-    { userName: 'Doge', comment: 'Vau!' }
+    { userName: 'Orbán', comment: 'Rezsicsökkentés', postId: 1},
+    { userName: 'Attila', comment: 'Kecske', postId: 2},
+    { userName: 'Feri', comment: 'Keresett a Feri :)', postId: 3},
+    { userName: 'Doge', comment: 'Vau!', postId: 4}
   ];
 
   toggle() {
