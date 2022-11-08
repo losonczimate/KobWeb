@@ -12,6 +12,8 @@ import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from '@angular/material/button';
 import { SharedPipeModule } from '../../Shared/shared-pipe/shared-pipe.module';
 import {AdvertModule} from "../advert/advert.module";
+import {MatFormFieldModule} from "@angular/material/form-field";
+
 
 
 @NgModule({
@@ -29,7 +31,8 @@ import {AdvertModule} from "../advert/advert.module";
         MatListModule,
         MatCardModule,
         MatButtonModule,
-        AdvertModule
+        AdvertModule,
+        MatFormFieldModule
     ]
 })
 export class FeedModule { }

@@ -19,7 +19,9 @@ export interface Tile {
   styleUrls: ['./feed.component.scss']
 })
 export class FeedComponent implements OnInit {
-
+  public show:boolean = false;
+  public buttonName:any = 'Show';
+  
   tiles: Tile[] = [
     {name:"József", text: 'One', color: 'lightblue', datemade: Date.now()},
     {name:"Attila",text: 'Two', color: 'lightgreen', datemade: 1667763525167},
@@ -30,6 +32,18 @@ export class FeedComponent implements OnInit {
     {name:"Toldi Miklos",text: 'Three', color: 'lightpink', datemade: 1667963535167},
     {name:"Orbán",text: 'Four', color: '#DDBDF1', datemade: 1667760535167},
   ];
+
+  comments: any[] = [
+    { userName: 'Orbán', comment: 'Rezsicsökkentés' },
+    { userName: 'Attila', comment: 'Kecske' },
+    { userName: 'Feri', comment: 'Keresett a Feri :)' },
+    { userName: 'Doge', comment: 'Vau!' }
+  ];
+
+  toggle() {
+    this.buttonName = "COMMENT";
+    this.show = !this.show;
+  }
 
   constructor(private router: Router , private authService:AuthService) { }
 
