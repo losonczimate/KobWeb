@@ -11,7 +11,7 @@ export class NotificationsService {
   }
 
   create(notification: Notification) {
-    
+    notification.notificationId = this.afs.createId();
   }
 
   getAll() {
