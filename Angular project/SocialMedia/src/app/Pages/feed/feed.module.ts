@@ -14,26 +14,30 @@ import { SharedPipeModule } from '../../Shared/shared-pipe/shared-pipe.module';
 import {AdvertModule} from "../advert/advert.module";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatExpansionModule} from '@angular/material/expansion';
+import {PostModule} from "../post/post.module";
+import {MatInputModule} from "@angular/material/input";
 
 
 @NgModule({
   declarations: [
     FeedComponent,
   ],
-    imports: [
-        SharedPipeModule,
-        CommonModule,
-        FeedRoutingModule,
-        MatIconModule,
-        MatGridListModule,
-        FlexModule,
-        MatChipsModule,
-        MatListModule,
-        MatCardModule,
-        MatButtonModule,
-        AdvertModule,
-        MatFormFieldModule,
-        MatExpansionModule
-    ]
+  imports: [
+    SharedPipeModule,
+    CommonModule,
+    FeedRoutingModule,
+    MatIconModule,
+    MatGridListModule,
+    FlexModule,
+    MatChipsModule,
+    MatListModule,
+    MatCardModule,
+    MatButtonModule,
+    AdvertModule,
+    MatFormFieldModule,
+    MatExpansionModule,
+    PostModule,
+    MatInputModule
+  ]
 })
 export class FeedModule { }
