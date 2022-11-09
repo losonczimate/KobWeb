@@ -40,9 +40,15 @@ export class ProfileComponent implements OnInit {
 
   constructor(private router: Router,private authService: AuthService, private userService: UserService) { }
 
+  sendVerificationMail(){
+    return this.authService.currentuser().then((user) => {
+      return user.sendEmailVerification();
+    }).then(() => {
+      window.alert('Ellenőrizd az e-mail fiókodat (a spam mappát is!), és erősítsd meg az e-mail címedet.');
+    })
+  }
+
   ngOnInit(): void {
-
-
     this.authService.isUserLoggedIn().subscribe(curruser =>{
       if(curruser){
         console.log(curruser)
@@ -58,7 +64,6 @@ export class ProfileComponent implements OnInit {
         this.router.navigateByUrl("/login")
       }
     })
-
   }
 
 }
