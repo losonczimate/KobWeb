@@ -3,12 +3,12 @@
   <mat-sidenav mode="side" #smallnav opened>
     <mat-list role="list" style="padding: 0; height: 100%; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; align-content: space-evenly">
       <mat-list-item role="listitem" (click)="bignav.open();smallnav.close()">
-        <mat-icon>menu</mat-icon>
+        <mat-icon>arrow_forward_ios</mat-icon>
       </mat-list-item>
       <mat-list-item *ngIf="!loggedInUser" role="listitem" routerLink="/login" (click)="close()" [ngStyle]="{'border-bottom': this.router.url === '/login' ? 'solid 5px #9fd35c' : ''}">
         <mat-icon>login</mat-icon>
       </mat-list-item>
-      <mat-list-item *ngIf="loggedInUser" role="listitem" routerLink="/login" (click)="logout()" [ngStyle]="{'border-bottom': this.router.url === '/login' ? 'solid 5px #9fd35c' : ''}">
+      <mat-list-item *ngIf="loggedInUser" style="color: red" role="listitem" routerLink="/login" (click)="logout()" [ngStyle]="{'border-bottom': this.router.url === '/login' ? 'solid 5px #9fd35c' : ''}">
         <mat-icon>logout</mat-icon>
       </mat-list-item>
       <mat-list-item  *ngIf="!loggedInUser" role="listitem" routerLink="/registration" (click)="close()" [ngStyle]="{'border-bottom': this.router.url === '/registration' ? 'solid 5px #9fd35c' : ''}">
@@ -32,14 +32,14 @@
   <mat-sidenav #bignav (keydown.escape)="bignav.close();smallnav.open()">
     <mat-list role="list" style="padding: 0; height: 100%; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; align-content: space-evenly">
       <mat-list-item role="listitem" (click)="bignav.close();smallnav.open()">
-        <mat-icon>menu</mat-icon>
+        <mat-icon>arrow_back_ios</mat-icon>
         <span>Close</span>
       </mat-list-item>
       <mat-list-item *ngIf="!loggedInUser" role="listitem" routerLink="/login" (click)="close();bignav.close();smallnav.open()" [ngStyle]="{'border-bottom': this.router.url === '/login' ? 'solid 5px #9fd35c' : ''}">
         <mat-icon>login</mat-icon>
         <span>Login</span>
       </mat-list-item>
-      <mat-list-item *ngIf="loggedInUser" role="listitem" routerLink="/login" (click)="logout();bignav.close();smallnav.open()" [ngStyle]="{'border-bottom': this.router.url === '/login' ? 'solid 5px #9fd35c' : ''}">
+      <mat-list-item *ngIf="loggedInUser" style="color: red" role="listitem" routerLink="/login" (click)="logout();bignav.close();smallnav.open()" [ngStyle]="{'border-bottom': this.router.url === '/login' ? 'solid 5px #9fd35c' : ''}">
         <mat-icon>logout</mat-icon>
         <span>Logout</span>
       </mat-list-item>

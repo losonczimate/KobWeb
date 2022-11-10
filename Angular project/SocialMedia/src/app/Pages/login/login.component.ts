@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {getAuth, sendPasswordResetEmail} from '@angular/fire/auth';
+//import {getAuth, sendPasswordResetEmail} from '@angular/fire/auth';
 import {FormControl, FormGroup} from "@angular/forms";
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/Shared/services/auth.service';
@@ -18,7 +18,11 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit(): void {
-
+    this.authService.isUserLoggedIn().subscribe(curruser => {
+      if (curruser) {
+        this.router.navigateByUrl("/feed");
+      }
+    })
   }
 
   onSubmit() {
