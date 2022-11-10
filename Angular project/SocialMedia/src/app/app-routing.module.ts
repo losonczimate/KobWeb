@@ -1,10 +1,23 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {map, pipe} from "rxjs";
+import {AngularFireAuthGuard, emailVerified} from "@angular/fire/compat/auth-guard";
+
+const redirectIfEmailNotValidated = () => pipe(emailVerified, map(emailVerified => {
+  if (emailVerified){
+    return true;
+  }
+  else{
+    return ['profile'];
+  }
+}))
 
 const routes: Routes = [
   {
     path: 'feed',
-    loadChildren: () => import('./Pages/feed/feed.module').then(m => m.FeedModule)
+    loadChildren: () => import('./Pages/feed/feed.module').then(m => m.FeedModule),
+    canActivate: [AngularFireAuthGuard],
+    data: {authGuardPipe: redirectIfEmailNotValidated}
   },
   {
     path: 'support',
@@ -12,7 +25,9 @@ const routes: Routes = [
   },
   {
     path: 'post',
-    loadChildren: () => import('./Pages/post/post.module').then(m => m.PostModule)
+    loadChildren: () => import('./Pages/post/post.module').then(m => m.PostModule),
+    canActivate: [AngularFireAuthGuard],
+    data: {authGuardPipe: redirectIfEmailNotValidated}
   },
   {
     path: 'profile',
