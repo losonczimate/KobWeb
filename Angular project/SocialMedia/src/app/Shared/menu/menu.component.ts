@@ -34,4 +34,8 @@ export class MenuComponent implements OnInit {
 
   close() {
   }
+
+  open() {
+
+  }
 }

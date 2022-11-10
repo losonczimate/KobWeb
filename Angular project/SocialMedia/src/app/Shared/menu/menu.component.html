@@ -1,4 +1,24 @@
 <!--<p>menu works!</p>-->
+<mat-toolbar fxLayout fxLayoutAlign="space-between center">
+  <span fxFlex="10">
+    KobWeb
+  </span>
+  <span fxFlex="40" *ngIf="this.router.url !== '/login'
+                    && this.router.url !== '/registration'
+                    && this.router.url !== '/support'" style="font-size: 5px">
+    <div id="searchbar" fxLayout fxLayoutAlign="space-between center">
+      <mat-form-field appearance="none" style="width: 100%">
+        <input matInput id="search">
+      </mat-form-field>
+      <mat-icon style="cursor: pointer; margin-right: 2%;">search</mat-icon>
+    </div>
+  </span>
+  <span fxFlex="10" *ngIf="this.router.url !== '/login'
+                    && this.router.url !== '/registration'
+                    && this.router.url !== '/support'">
+    <mat-icon id="toolbaricon" (click)="open()">notifications</mat-icon>
+  </span>
+</mat-toolbar>
 <mat-sidenav-container>
   <mat-sidenav mode="side" #smallnav opened>
     <mat-list role="list" style="padding: 0; height: 100%; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; align-content: space-evenly">
@@ -66,7 +86,7 @@
     </mat-list>
   </mat-sidenav>
 
-  <mat-sidenav-content style="margin-left: 56px" (click)="bignav.close();smallnav.open()">
+  <mat-sidenav-content (click)="bignav.close();smallnav.open()">
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -1,16 +1,16 @@
 <div fxLayout="column" fxLayoutAlign="center center" style="margin-top: 1%">
-  <mat-card fxLayoutAlign="center stretch">
+  <mat-card fxLayoutAlign="space-evenly stretch">
     <mat-card-header fxLayout="column" fxLayoutAlign="space-between start" fxLayoutGap="10px">
       <img mat-card-lg-image class="example-header-image" src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="tile.profilkep" style="margin-right: 4%">
-      <mat-chip-list style="font-size: 10px">
-        <mat-chip *ngIf="!verified" (click)="sendVerificationMail()">E-mail megerősítése</mat-chip>
-      </mat-chip-list>
     </mat-card-header>
     <mat-card-content>
       <mat-list fxLayout="column" dense>
         <mat-list-item>{{nickname}}</mat-list-item>
         <mat-list-item>{{email}}</mat-list-item>
         <mat-list-item>Regisztrált: {{regdatum | customdate}}</mat-list-item>
+        <mat-chip-list style="margin-left: 10%; font-size: 10px">
+          <mat-chip *ngIf="!verified" (click)="sendVerificationMail()">E-mail megerősítése</mat-chip>
+        </mat-chip-list>
       </mat-list>
     </mat-card-content>
   </mat-card>
