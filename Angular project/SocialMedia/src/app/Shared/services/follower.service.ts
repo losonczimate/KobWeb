@@ -28,4 +28,8 @@ export class FollowerService {
     return this.afs.collection<Follower>(this.collectionName).doc(id).delete();
   }
 
+  getById(id: string) {
+    return this.afs.collection<Follower>(this.collectionName).doc(id).valueChanges();
+  }
+
 }
