@@ -5,7 +5,9 @@
   </span>
   <span fxFlex="40" *ngIf="this.router.url !== '/login'
                     && this.router.url !== '/registration'
-                    && this.router.url !== '/support'" style="font-size: 5px">
+                    && this.router.url !== '/support'
+                    && this.router.url !== '/passreset'" style="font-size: 5px">
+
     <div id="searchbar" fxLayout fxLayoutAlign="space-between center">
       <mat-form-field appearance="none" style="width: 100%">
         <input matInput id="search">
