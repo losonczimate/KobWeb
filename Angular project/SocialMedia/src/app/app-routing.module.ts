@@ -38,6 +38,10 @@ const routes: Routes = [
     loadChildren: () => import('./Pages/registration/registration.module').then(m => m.RegistrationModule)
   },
   {
+    path: 'passreset',
+    loadChildren: () => import('./Pages/passreset/passreset.module').then(m => m.PassresetModule)
+  },
+  {
     path: 'login', loadChildren: () => import('./Pages/login/login.module').then(m => m.LoginModule)
   },
   { path: 'advert', loadChildren: () => import('./Pages/advert/advert.module').then(m => m.AdvertModule) }, //kesobb torolni kell

@@ -1,0 +1,19 @@
+<div id="logpage" style="justify-content:space-evenly">
+  <mat-card id="title" [class.mat-elevation-z12]="true">
+    <mat-card-content>
+      <h1>Írd be az email címed!</h1>
+    </mat-card-content>
+  </mat-card>
+  <mat-card [class.mat-elevation-z12]="true" id="matcardkont" style="justify-content:space-evenly">
+    <mat-card-content>
+      <div>
+        <form [formGroup]="PassresetForm" id="passresetform" (ngSubmit)="onSubmit()">
+          <mat-form-field>
+            <input matInput type="text" placeholder="Email" formControlName="email" required>
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit" class="buttons" [class.mat-elevation-z5]="true" style="justify-content:space-evenly">Email küldése</button>
+        </form>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

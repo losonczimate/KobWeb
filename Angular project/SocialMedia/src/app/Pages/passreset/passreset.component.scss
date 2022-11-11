@@ -1,0 +1,40 @@
+#loginpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+#title{
+  margin-left: auto;
+  margin-right: auto;
+  height: 10%;
+  width: 30%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+#loginform {
+  display: inline-grid;
+  align-self: center;
+  margin: 5% auto 0 auto;
+  border-radius: 10px;
+}
+#matcardkont{
+  width: 20%;
+  align-items: center;
+  margin: 5% auto 0 auto;
+  border-radius: 10px;
+}
+
+.buttons {
+  font-size: small;
+  width: content-box;
+  padding: 5px;
+  margin-top: 15px;
+}
