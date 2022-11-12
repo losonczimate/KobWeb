@@ -1,5 +1,6 @@
-<div fxLayout="row" fxLayoutAlign="center">
-  <div fxLayout="column" fxFlex fxLayoutAlign="space-evenly center" style="margin-top: 2%; margin-bottom: 2%">
+<div fxLayout="row" fxLayoutAlign="space-between">
+  <div fxShow.lt-sm="false" fxFlex="7.5" id="fake" style="opacity: 0"></div>
+  <div fxLayout="column" fxLayoutAlign="space-between center" style="width: 100%; margin-top: 2%; margin-bottom: 2%">
 
     <app-post style="width: 100%; margin-top: 1%; margin-bottom: 1%"></app-post>
     <ng-template ngFor let-tile [ngForOf]="tiles" let-i="index">
@@ -64,7 +65,7 @@
       <mat-divider></mat-divider>
     </ng-template>
   </div>
-  <app-advert id="ad" fxFlex="10" [vertad]="true"></app-advert>
+  <app-advert fxShow.lt-sm="false" id="ad" fxFlex="9" [vertad]="true"></app-advert>
 </div>
 
 
