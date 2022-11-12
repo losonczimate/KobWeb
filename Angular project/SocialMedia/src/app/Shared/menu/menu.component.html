@@ -8,12 +8,14 @@
                     && this.router.url !== '/support'
                     && this.router.url !== '/passreset'" style="font-size: 5px">
 
-    <div id="searchbar" fxLayout fxLayoutAlign="space-between center">
-      <mat-form-field appearance="none" style="width: 100%">
-        <input matInput id="search">
-      </mat-form-field>
-      <mat-icon style="cursor: pointer; margin-right: 2%;">search</mat-icon>
-    </div>
+      <div id="searchbar" fxLayout fxLayoutAlign="space-between center">
+        <mat-form-field appearance="none" style="width: 95%">
+            <input matInput type="text" id="search" [(ngModel)]='searchedText'>
+            <button matSuffix mat-icon-button (click)="onSearch()">
+              <mat-icon style="cursor: pointer; margin-right: 5%; width: 97%; font-size: 4em;">search</mat-icon>
+            </button>
+          </mat-form-field>
+      </div>
   </span>
   <span fxFlex="10" *ngIf="this.router.url !== '/login'
                     && this.router.url !== '/registration'

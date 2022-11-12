@@ -9,6 +9,7 @@
         <mat-list-item>{{email}}</mat-list-item>
         <mat-list-item>Regisztrált: {{regdatum | customdate}}</mat-list-item>
         <mat-chip-list style="margin-left: 10%; font-size: 10px">
+          <mat-chip color="primary" selected (click) = "goToKovetesek()">Követések: {{kovetok.length}}</mat-chip>
           <mat-chip *ngIf="!verified" (click)="sendVerificationMail()">E-mail megerősítése</mat-chip>
         </mat-chip-list>
       </mat-list>

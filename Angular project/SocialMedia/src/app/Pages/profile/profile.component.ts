@@ -36,6 +36,7 @@ export class ProfileComponent implements OnInit {
   nickname: string = "";
   email: string = "";
   regdatum: number = 0;
+  kovetok: string[] = [];
   verified: boolean = false;
 
   constructor(private router: Router,private authService: AuthService, private userService: UserService) { }
@@ -48,6 +49,10 @@ export class ProfileComponent implements OnInit {
     })
   }
 
+  goToKovetesek(){
+      this.router.navigateByUrl("/kovetok")
+  }
+
   ngOnInit(): void {
     this.authService.isUserLoggedIn().subscribe(curruser =>{
       if(curruser){
@@ -57,6 +62,7 @@ export class ProfileComponent implements OnInit {
           this.email = currentuser?.email as string;
           this.regdatum = currentuser?.regdatum;
           this.verified = curruser.emailVerified;
+          this.kovetok = currentuser.ismerosok;
           console.log(this.nickname);
           console.log(this.authService.isUserLoggedIn())
         });

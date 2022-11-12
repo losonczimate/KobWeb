@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import firebase from "firebase/compat/app";
 import {AuthService} from "../services/auth.service";
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-menu',
@@ -9,6 +10,8 @@ import {AuthService} from "../services/auth.service";
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
+
+  searchedText='';
 
   @Input() loggedInUser?: firebase.User | null;
 
@@ -23,6 +26,10 @@ export class MenuComponent implements OnInit {
       localStorage.setItem('user', JSON.stringify('null'));
     });
 
+  }
+
+  onSearch(){
+    this.router.navigateByUrl("/kovetok/" + this.searchedText).then(()=>{window.location.reload()})
   }
 
   logout(){

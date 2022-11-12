@@ -19,6 +19,7 @@ import {FIREBASE_OPTIONS} from "@angular/fire/compat";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import {MatButtonModule} from "@angular/material/button";
         MatFormFieldModule,
         MatInputModule,
         MatButtonModule,
+        FormsModule
     ],
 
   providers: [{ provide: FIREBASE_OPTIONS, useValue: environment.firebase }],
