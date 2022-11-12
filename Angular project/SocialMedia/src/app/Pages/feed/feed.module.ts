@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FeedRoutingModule } from './feed-routing.module';
 import { FeedComponent } from './feed.component';
 import {MatIconModule} from "@angular/material/icon";
-import {FlexModule} from "@angular/flex-layout";
+import {ExtendedModule, FlexModule} from "@angular/flex-layout";
 import {MatChipsModule} from "@angular/material/chips";
 import {MatListModule} from "@angular/material/list";
 import {MatGridListModule} from "@angular/material/grid-list";
@@ -22,22 +22,23 @@ import {MatInputModule} from "@angular/material/input";
   declarations: [
     FeedComponent,
   ],
-  imports: [
-    SharedPipeModule,
-    CommonModule,
-    FeedRoutingModule,
-    MatIconModule,
-    MatGridListModule,
-    FlexModule,
-    MatChipsModule,
-    MatListModule,
-    MatCardModule,
-    MatButtonModule,
-    AdvertModule,
-    MatFormFieldModule,
-    MatExpansionModule,
-    PostModule,
-    MatInputModule
-  ]
+    imports: [
+        SharedPipeModule,
+        CommonModule,
+        FeedRoutingModule,
+        MatIconModule,
+        MatGridListModule,
+        FlexModule,
+        MatChipsModule,
+        MatListModule,
+        MatCardModule,
+        MatButtonModule,
+        AdvertModule,
+        MatFormFieldModule,
+        MatExpansionModule,
+        PostModule,
+        MatInputModule,
+        ExtendedModule
+    ]
 })
 export class FeedModule { }

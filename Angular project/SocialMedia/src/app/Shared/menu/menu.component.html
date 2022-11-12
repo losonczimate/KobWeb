@@ -55,19 +55,19 @@
     <mat-list role="list" style="padding: 0; height: 100%; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; align-content: space-evenly">
       <mat-list-item role="listitem" (click)="bignav.close();smallnav.open()">
         <mat-icon>arrow_back_ios</mat-icon>
-        <span>Close</span>
+        <span>Becsukás</span>
       </mat-list-item>
       <mat-list-item *ngIf="!loggedInUser" role="listitem" routerLink="/login" (click)="close();bignav.close();smallnav.open()" [ngStyle]="{'border-bottom': this.router.url === '/login' ? 'solid 5px #9fd35c' : ''}">
         <mat-icon>login</mat-icon>
-        <span>Login</span>
+        <span>Bejelentkezés</span>
       </mat-list-item>
       <mat-list-item *ngIf="loggedInUser" style="color: red" role="listitem" routerLink="/login" (click)="logout();bignav.close();smallnav.open()" [ngStyle]="{'border-bottom': this.router.url === '/login' ? 'solid 5px #9fd35c' : ''}">
         <mat-icon>logout</mat-icon>
-        <span>Logout</span>
+        <span>Kijelentkezés</span>
       </mat-list-item>
       <mat-list-item *ngIf="!loggedInUser" role="listitem" routerLink="/registration" (click)="close();bignav.close();smallnav.open()" [ngStyle]="{'border-bottom': this.router.url === '/registration' ? 'solid 5px #9fd35c' : ''}">
         <mat-icon>app_registration</mat-icon>
-        <span>Registration</span>
+        <span>Regisztráció</span>
       </mat-list-item>
       <mat-list-item *ngIf="loggedInUser && loggedInUser.emailVerified" role="listitem" routerLink="/feed" (click)="close();bignav.close();smallnav.open()" [ngStyle]="{'border-bottom': this.router.url === '/feed' ? 'solid 5px #9fd35c' : ''}">
         <mat-icon>explore</mat-icon>
@@ -75,15 +75,15 @@
       </mat-list-item>
       <mat-list-item *ngIf="loggedInUser" role="listitem" routerLink="/profile" (click)="close();bignav.close();smallnav.open()" [ngStyle]="{'border-bottom': this.router.url === '/profile' ? 'solid 5px #9fd35c' : ''}">
         <mat-icon>account_box</mat-icon>
-        <span>Profile</span>
+        <span>Profil</span>
       </mat-list-item>
       <mat-list-item *ngIf="loggedInUser && loggedInUser.emailVerified" role="listitem" routerLink="/post" (click)="close();bignav.close();smallnav.open()" [ngStyle]="{'border-bottom': this.router.url === '/post' ? 'solid 5px #9fd35c' : ''}">
         <mat-icon>announcement</mat-icon>
-        <span>Post</span>
+        <span>Posztolás</span>
       </mat-list-item>
       <mat-list-item role="listitem" routerLink="/support" (click)="close();bignav.close();smallnav.open()" [ngStyle]="{'border-bottom': this.router.url === '/support' ? 'solid 5px #9fd35c' : ''}">
         <mat-icon>help</mat-icon>
-        <span>Support</span>
+        <span>Segítség</span>
       </mat-list-item>
     </mat-list>
   </mat-sidenav>
