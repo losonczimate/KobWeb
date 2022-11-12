@@ -32,7 +32,8 @@ export class KovetokComponent implements OnInit {
       email: this.currentloggeduser.email as string,
       nev: this.currentloggeduser.nev as string,
       ismerosok: Array.from(this.ismerosok.values()),
-      regdatum: this.currentloggeduser.regdatum
+      regdatum: this.currentloggeduser.regdatum,
+      profileimageURL : this.currentloggeduser.profileimageURL
     }
 
     this.userService.updateUser(UpdatedUser).then( () =>{
@@ -54,7 +55,8 @@ export class KovetokComponent implements OnInit {
       email: this.currentloggeduser.email as string,
       nev: this.currentloggeduser.nev as string,
       ismerosok: Array.from(this.ismerosok.values()),
-      regdatum: this.currentloggeduser.regdatum
+      regdatum: this.currentloggeduser.regdatum,
+      profileimageURL: this.currentloggeduser.profileimageURL
     }
 
     this.userService.updateUser(UpdatedUser).then( () =>{
@@ -95,7 +97,7 @@ export class KovetokComponent implements OnInit {
             this.userService.getIfContains(this.searched).then( searchedusers =>{
               searchedusers.forEach(searcheduser =>{
                 this.userService.getByID(searcheduser.id as string).pipe(first()).subscribe(user =>{
-                  if(user.nev.includes(this.searched)){
+                  if(user.nev.includes(this.searched) || this.searched == ' '){
                   this.users.add(user);}
                 })
               })

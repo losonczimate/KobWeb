@@ -37,6 +37,7 @@ export class ProfileComponent implements OnInit {
   email: string = "";
   regdatum: number = 0;
   kovetok: string[] = [];
+  profilpic: string;
   verified: boolean = false;
 
   constructor(private router: Router,private authService: AuthService, private userService: UserService) { }
@@ -63,6 +64,7 @@ export class ProfileComponent implements OnInit {
           this.regdatum = currentuser?.regdatum;
           this.verified = curruser.emailVerified;
           this.kovetok = currentuser.ismerosok;
+          this.profilpic = currentuser.profileimageURL;
           console.log(this.nickname);
           console.log(this.authService.isUserLoggedIn())
         });

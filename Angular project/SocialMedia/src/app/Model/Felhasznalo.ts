@@ -4,4 +4,5 @@ export interface Felhasznalo {
   nev: string;
   ismerosok: string[];
   regdatum: number;
+  profileimageURL: string;
 }
