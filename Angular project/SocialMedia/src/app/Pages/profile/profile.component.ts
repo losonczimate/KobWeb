@@ -67,6 +67,9 @@ export class ProfileComponent implements OnInit {
           this.profilpic = currentuser.profileimageURL;
           console.log(this.nickname);
           console.log(this.authService.isUserLoggedIn())
+          if (this.router.url == "/profile" && !this.verified){
+            window.alert("Kérlek erősítsd meg e-mail címedet, hogy teljes értékű felhasználóvá válj!");
+          }
         });
       } else {
         this.router.navigateByUrl("/login")
