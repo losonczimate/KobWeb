@@ -7,11 +7,13 @@
     <ng-template ngFor let-post [ngForOf]="posts" let-i="index">
       <mat-card class="example-card" style="margin-top: 1%; margin-bottom: 1%">
         <mat-card-header style="width: 90%; margin-left: auto;margin-right: auto">
-          <mat-card-title> <img mat-card-sm-image="" class="example-header-image" src="{{profilkepek.get(post.postID)}}" alt="profilkep"></mat-card-title>
+          <mat-card-title><img mat-card-sm-image="" class="example-header-image" src="{{profilkepek.get(post.postID)}}"
+                               alt="profilkep"></mat-card-title>
           <mat-card-title>{{post.Posztolo}}</mat-card-title>
           <mat-card-subtitle>{{ (post.idopont | customdate)}}</mat-card-subtitle>
         </mat-card-header>
-        <img style="width: 90%; margin-left: auto;margin-right: auto" mat-card-image src="{{post.kepId}}" alt="tile.kep">
+        <img style="background-color: #d4d4d4; width: 90%; margin-left: auto;margin-right: auto" mat-card-image src="{{post.kepId}}"
+             alt="tile.kep">
         <mat-card-content style="width: 90%; margin-left: auto;margin-right: auto">
           <p>
             {{post.Poszt}}
@@ -19,13 +21,19 @@
         </mat-card-content>
         <mat-card-actions style="width: 90%; margin-left: auto;margin-right: auto">
 
-          <button *ngIf="post.likeolok.indexOf(this.loggedinuser) === -1" matSuffix mat-icon-button (click)="like(post.postID, i)">
-            <!--<mat-icon style="cursor: pointer; margin-right: 5%; width: 97%; ">favorite</mat-icon>-->
+          <button *ngIf="post.likeolok.indexOf(this.loggedinuser) === -1" matSuffix mat-icon-button
+                  (click)="like(post.postID, i)">
+
+            <mat-icon style="cursor: pointer; margin-right: 5%; width: 97%;">favorite</mat-icon>
+              <a>{{post.likeolok.length}}</a>
+
           </button>
-          <button *ngIf="post.likeolok.indexOf(this.loggedinuser) !== -1" matSuffix mat-icon-button (click)="dislike(post.postID, i)">
-            <!--<mat-icon style="cursor: pointer; margin-right: 5%; width: 97%; color: red">favorite</mat-icon>-->
+          <button *ngIf="post.likeolok.indexOf(this.loggedinuser) !== -1" matSuffix mat-icon-button
+                  (click)="dislike(post.postID, i)">
+            <mat-icon style="cursor: pointer; margin-right: 5%; width: 97%; color: red">favorite</mat-icon>
+            <a>{{post.likeolok.length}}</a>
           </button>
-          <a>Likeok: {{post.likeolok.length}}</a>
+
           <!--<button (click)="toggle()" mat-raised-button color="accent">COMMENT</button>-->
         </mat-card-actions>
 
@@ -34,7 +42,7 @@
             <mat-label>Hozzászólás írása...</mat-label>
             <input matInput placeholder="Hozzászólás írása...">
           </mat-form-field>
-          <mat-list *ngFor = "let comment of comments" style="margin-left: 5%; margin-right: auto">
+          <mat-list *ngFor="let comment of comments" style="margin-left: 5%; margin-right: auto">
             <mat-list-item> {{comment.userName}} : {{comment.comment}} </mat-list-item>
            </mat-list>
         </span>
@@ -59,7 +67,7 @@
               </span>
               <br>
               <p>
-                <mat-list *ngFor = "let comment of comments" style="margin-left: auto; margin-right: auto">
+                <mat-list *ngFor="let comment of comments" style="margin-left: auto; margin-right: auto">
                   <mat-list-item>{{comment.userName}}:<br>{{comment.comment}}</mat-list-item>
                 </mat-list>
               </p>
@@ -74,11 +82,6 @@
   </div>
   <app-advert fxShow.lt-sm="false" id="ad" fxFlex="9" [vertad]="true"></app-advert>
 </div>
-
-
-
-
-
 
 
 <!--<mat-form-field class="comment-box" appearance="fill">
