@@ -68,20 +68,20 @@ export class FeedComponent implements OnInit {
 
   ngOnInit(): void {
     this.posts = [];
-    this.authService.isUserLoggedIn().subscribe(curruser => {
+    this.authService.isUserLoggedIn().pipe(first()).subscribe(curruser => {
       if (!curruser) {this.router.navigateByUrl("/login");}
 
       this.loggedinuser=curruser.uid;
 
-      this.userService.getByID(curruser.uid as string).subscribe(currentuser => {
+      this.userService.getByID(curruser.uid as string).pipe(first()).subscribe(currentuser => {
         this.ismerosok = new Set(currentuser?.ismerosok as string[]);
 
-        this.postService.getAll().subscribe(postok =>{
+        this.postService.getAll().pipe(first()).subscribe(postok =>{
             postok.forEach(post =>{
               if(this.ismerosok.has(post.posztoloID)){
                 this.posts.push(post)
 
-                this.userService.getByID(post.posztoloID).subscribe(posztolo =>{
+                this.userService.getByID(post.posztoloID).pipe(first()).subscribe(posztolo =>{
                   this.profilkepek.set(post.postID, posztolo.profileimageURL);
                 })
 
