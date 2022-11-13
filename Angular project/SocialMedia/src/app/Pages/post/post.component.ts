@@ -20,7 +20,7 @@ export class PostComponent implements OnInit {
   fileUrl: string = "";
   userId: string;
   loading: boolean = false;
-  uploadPercentages: Observable<number>;
+  uploadPercentage: number;
 
   postForm = new FormGroup({
     file: new FormControl(''),
@@ -60,24 +60,29 @@ export class PostComponent implements OnInit {
         posztoloID: this.userId
       }
       if (this.postForm.get('file') !== null){
-        this.loading=true;
         let uploadProcess = this.fileUploadService.upload(this.file);
-        uploadProcess.snapshotChanges().pipe(
-          finalize(() =>
-            this.fileUploadService.fileRef.getDownloadURL().subscribe(downloadURL => {
-              this.loading=false;
-              poszt.kepId = downloadURL;
-              this.postService.create(poszt).then(_ => {
-                console.log('Post added successfully with a picture.');
-                this.router.navigateByUrl('/feed');
-              }).catch(error => {
-                console.error(error);
-              })
-          }))
-        ).subscribe();
+        this.loading = true;
+        uploadProcess.percentageChanges().subscribe(percentage => {
+          this.uploadPercentage = Math.round(percentage ? percentage : 0);
+          uploadProcess.snapshotChanges().pipe(
+            finalize(() =>
+              this.fileUploadService.fileRef.getDownloadURL().subscribe(downloadURL => {
+                poszt.kepId = downloadURL;
+                this.postService.create(poszt).then(_ => {
+                  this.loading = false;
+                  console.log('Post added successfully with a picture.');
+                  this.postForm.reset();
+                  this.router.navigateByUrl('/feed');
+                }).catch(error => {
+                  console.error(error);
+                })
+              }))
+          ).subscribe();
+        })
       } else {
         this.postService.create(poszt).then(_ => {
           console.log('Post added successfully without a picture.');
+          this.postForm.reset();
           this.router.navigateByUrl('/feed');
         }).catch(error => {
           console.error(error);

@@ -2,7 +2,7 @@
 <div fxLayout="column" fxLayoutAlign="center center" style="height: 100%">
   <mat-card style="width: 60%; margin-left: auto; margin-right: auto">
     <mat-card *ngIf="loading" fxLayout="column" fxLayoutAlign="center center" style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: rgba(44,44,44,0.5); z-index: 30">
-      <mat-spinner></mat-spinner>
+      <mat-progress-spinner [value]="uploadPercentage"></mat-progress-spinner>
     </mat-card>
     <mat-card-header style="width: 90%; margin-left: auto;margin-right: auto">
       <mat-card-title><img mat-card-sm-image="" class="example-header-image"
