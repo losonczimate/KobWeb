@@ -372,7 +372,7 @@ Felelős: Simon Dániel
 
 Tartam:  5 nap
 
-Erőforrásigény:  2 személynap
+Erőforrásigény:  3 személynap
 
 #### 9.2.8. Bemutató elkészítése
 
@@ -464,7 +464,7 @@ Tartam:  4 nap
 
 Erőforrásigény:  3 személynap
 
-#### 9.3.10.  Profilok kezeléshez tartozó üzleti logika (listázása, módosítása, létrehozása, törlése)
+#### 9.3.10.  Keresőmotor létrehozása
 
 Felelős: Simon Dániel
 
@@ -638,7 +638,7 @@ Felelős: Simon Dániel
 
 Tartam:  4 nap
 
-Erőforrásigény:  4 személynap
+Erőforrásigény:  2 személynap
 
 #### 9.3.32.  Jelszóváltoztatás ürlap GUI létrehozása
 
@@ -661,6 +661,22 @@ Erőforrásigény:  3 személynap
 Felelős: Mindenki
 
 Tartam:  3 nap
+
+Erőforrásigény:  2 személynap/fő
+
+#### 9.3.35. Profil frontend és backend összekötése
+
+Felelős: Simon Dániel
+
+Tartam:  2 nap
+
+Erőforrásigény:  2 személynap/fő
+
+#### 9.3.36. Feed frontend és backend összekötése
+
+Felelős: Simon Dániel
+
+Tartam:  2 nap
 
 Erőforrásigény:  2 személynap/fő
 
@@ -730,7 +746,7 @@ Felelős: Simon Dániel
 
 Tartam:  4 nap
 
-Erőforrásigény:  2 személynap
+Erőforrásigény:  3 személynap
 
 #### 9.4.8. Beviteli mezők tesztelése. (TP, TC, TR)
 
@@ -770,7 +786,7 @@ Az egyes leadások alkalmával rögzített erőforrásigényt, az elvállalt fel
 |                     Orosz Bence          |           1          |             3            |           16          |            3           |    23     |
 |                     Oláh Balázs          |           1          |             3            |           16          |            3           |    23     |
 |                     Papp Lukács Lóránt   |           1          |             3            |           16          |            3           |    23     |
-|                     Simon Dániel         |           1          |             2            |           18          |            2           |    23     |
+|                     Simon Dániel         |           1          |             3            |           18          |            3           |    25     |
 |                     Losonczi Máté        |           1          |             3            |           16          |            3           |    23     |
 
 
@@ -784,7 +800,7 @@ Az egyes leadások alkalmával rögzített erőforrásigényt, az elvállalt fel
 |                     Orosz Bence          |           1          |             1            |           5          |            1           |    8     |
 |                     Oláh Balázs          |           1          |             1            |           5          |            1           |    8     |
 |                     Papp Lukács Lóránt   |           1          |             1            |           5          |            1           |    8     |
-|                     Simon Dániel         |           1          |             1            |           6          |            1           |    9     |
+|                     Simon Dániel         |           1          |             1            |           8          |            1           |    9     |
 |                     Losonczi Máté        |           1          |             1            |           5          |            1           |    8     |
 
 ### 11.3. Részletes költségvetés
