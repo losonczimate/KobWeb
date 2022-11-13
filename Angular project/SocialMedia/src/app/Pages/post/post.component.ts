@@ -6,6 +6,7 @@ import {FileUploadService} from "../../Shared/services/file-upload.service";
 import {FormControl, FormGroup} from "@angular/forms";
 import {PostService} from "../../Shared/services/post.service";
 import {Posztok} from "../../Model/posztok";
+import {finalize, Observable} from "rxjs";
 
 @Component({
   selector: 'app-post',
@@ -19,6 +20,7 @@ export class PostComponent implements OnInit {
   fileUrl: string = "";
   userId: string;
   loading: boolean = false;
+  uploadPercentages: Observable<number>;
 
   postForm = new FormGroup({
     file: new FormControl(''),
@@ -58,33 +60,30 @@ export class PostComponent implements OnInit {
         posztoloID: this.userId
       }
       if (this.postForm.get('file') !== null){
-        this.loading = !this.loading;
-        this.fileUploadService.upload(this.file).subscribe((event:any) => {
-          if (typeof (event) === 'object') {
-            this.fileUrl = event.link;
-            poszt.kepId = this.fileUrl;
-            this.loading = false;
-            this.postService.create(poszt).then(_ => {
-              console.log('Poszt added successfully.');
-              this.router.navigateByUrl('/feed');
-            }).catch(error => {
-              console.error(error);
-            });
-          }
-        });
+        this.loading=true;
+        let uploadProcess = this.fileUploadService.upload(this.file);
+        uploadProcess.snapshotChanges().pipe(
+          finalize(() =>
+            this.fileUploadService.fileRef.getDownloadURL().subscribe(downloadURL => {
+              this.loading=false;
+              poszt.kepId = downloadURL;
+              this.postService.create(poszt).then(_ => {
+                console.log('Post added successfully with a picture.');
+                this.router.navigateByUrl('/feed');
+              }).catch(error => {
+                console.error(error);
+              })
+          }))
+        ).subscribe();
       } else {
         this.postService.create(poszt).then(_ => {
-          console.log('Poszt added successfully.');
+          console.log('Post added successfully without a picture.');
           this.router.navigateByUrl('/feed');
         }).catch(error => {
           console.error(error);
         });
       }
     }
-  }
-
-  fileUpload(){
-
   }
 
   onChange(event) {
