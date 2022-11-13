@@ -49,7 +49,7 @@
           <h3>Nyomj a kész gombra, hogy elküldd az üzenetet!</h3>
           <div fxLayout="row" style="justify-content:flex-start; gap: 1%">
             <button mat-raised-button color="accent" matStepperPrevious [class.mat-elevation-z5]="true">Vissza</button>
-            <button mat-raised-button color="primary" (click)="send()" [class.mat-elevation-z5]="true">Kész</button>
+            <button mat-raised-button color="primary" (click)="send(firstFormGroup.value, secondFormGroup.value)" (click)="stepper.reset()" [class.mat-elevation-z5]="true">Kész</button>
             <button mat-raised-button color="warn" (click)="stepper.reset()" [class.mat-elevation-z5]="true">Reset</button>
           </div>
         </mat-step>
@@ -97,7 +97,7 @@
           <h3>Nyomj a kész gombra, hogy elküldd az üzenetet!</h3>
           <div fxLayout="row" style="justify-content:flex-start; gap: 2%">
             <button mat-raised-button color="accent" matStepperPrevious [class.mat-elevation-z5]="true">Vissza</button>
-            <button mat-raised-button color="primary" (click)="send()" [class.mat-elevation-z5]="true">Kész</button>
+            <button mat-raised-button color="primary" (click)="send(firstFormGroup.value, secondFormGroup.value)" (click)="stepper.reset()" [class.mat-elevation-z5]="true">Kész</button>
             <button mat-raised-button color="warn" (click)="stepper2.reset()" [class.mat-elevation-z5]="true">Reset</button>
           </div>
         </mat-step>

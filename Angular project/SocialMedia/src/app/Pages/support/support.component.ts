@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UntypedFormBuilder, UntypedFormGroup} from '@angular/forms';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-support',
@@ -14,12 +15,33 @@ export class SupportComponent implements OnInit {
     phone: ['']});
   secondFormGroup: UntypedFormGroup = this._formBuilder.group({problem: ['']});
 
-  constructor(private _formBuilder: UntypedFormBuilder) { }
+  isSubmit = true;
+  submitMessage = "";
+
+  constructor(private _formBuilder: UntypedFormBuilder, private afs: AngularFirestore) { }
 
   ngOnInit(): void {
   }
 
-  send(){
+  send(firstFormValue: any, secondFormValue: any){
+    console.log(firstFormValue);
+    console.log(secondFormValue);
 
+    const hiba = {
+      firstname: firstFormValue.firstname,
+      surname: firstFormValue.surname,
+      email: firstFormValue.email,
+      phone: firstFormValue.phone,
+      problem: secondFormValue.problem,
+    }
+
+    this.afs.collection("Hibajelentesek").add(hiba);
+
+    this.submitMessage = "Hibajelentés sikeresen elküldve!";
+    this.showAlert(this.submitMessage);
+  }
+
+  showAlert(withMessage: string) {
+    alert(withMessage);
   }
 }
