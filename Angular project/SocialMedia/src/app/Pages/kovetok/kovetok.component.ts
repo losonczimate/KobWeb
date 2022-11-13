@@ -97,7 +97,7 @@ export class KovetokComponent implements OnInit {
             this.userService.getIfContains(this.searched).then( searchedusers =>{
               searchedusers.forEach(searcheduser =>{
                 this.userService.getByID(searcheduser.id as string).pipe(first()).subscribe(user =>{
-                  if(user.nev.includes(this.searched) || this.searched == ' '){
+                  if(user.nev.toLocaleLowerCase().includes(this.searched.toLocaleLowerCase()) || this.searched == ' '){
                   this.users.add(user);}
                 })
               })
