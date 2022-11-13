@@ -15,6 +15,7 @@ export class FeedComponent implements OnInit {
   show: boolean = false;
   buttonName: any = 'Show';
   panelOpenState = false;
+  userisadmin = false;
 
   ismerosok: Set<string> = new Set<string>();
   loggedinuser;

@@ -36,7 +36,7 @@
         <br>
 
         <!--Csak adminoknak látható gomb, esetleg annak a felhasználónak még aki posztolta-->
-        <button mat-raised-button color="warn" style="cursor: pointer; margin-right: 5%; width: 15%;">Törlés</button>
+        <button *ngIf="userisadmin" mat-raised-button color="warn" style="cursor: pointer; margin-right: 5%; width: 15%;">Törlés</button>
         </mat-card-actions>
 
         <span *ngIf="show">
