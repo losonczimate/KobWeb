@@ -11,6 +11,8 @@ import {MatButtonModule} from "@angular/material/button";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 
 @NgModule({
@@ -20,17 +22,19 @@ import {MatInputModule} from "@angular/material/input";
   exports: [
     PostComponent
   ],
-  imports: [
-    CommonModule,
-    PostRoutingModule,
-    MatFormFieldModule,
-    MatListModule,
-    MatExpansionModule,
-    MatCardModule,
-    MatButtonModule,
-    FlexLayoutModule,
-    MatIconModule,
-    MatInputModule
-  ]
+    imports: [
+        CommonModule,
+        PostRoutingModule,
+        MatFormFieldModule,
+        MatListModule,
+        MatExpansionModule,
+        MatCardModule,
+        MatButtonModule,
+        FlexLayoutModule,
+        MatIconModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatProgressSpinnerModule
+    ]
 })
 export class PostModule { }
