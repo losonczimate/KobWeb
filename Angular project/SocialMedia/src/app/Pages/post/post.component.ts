@@ -57,13 +57,13 @@ export class PostComponent implements OnInit {
         Poszt: this.postForm.get('text')?.value as string,
         Posztolo: this.nickname,
         idopont: Date.now(),
-        kepId: this.fileUrl,
+        kepId: "",
         posztoloID: this.userId,
         likeolok: [],
         commentek: [],
         postID: uuid.v4()
       }
-      if (this.postForm.get('file') !== null){
+      if (this.postForm.get('file').value !== ""){
         let uploadProcess = this.fileUploadService.upload(this.file);
         this.loading = true;
         uploadProcess.percentageChanges().subscribe(percentage => {
