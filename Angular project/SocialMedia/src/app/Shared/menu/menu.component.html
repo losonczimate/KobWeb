@@ -2,7 +2,21 @@
 <meta charset="UTF-8">
 <mat-toolbar fxLayout fxLayoutAlign="space-between center" class="felsosor">
   <span fxFlex="10">
-    <img class="kobweb_img" src="../../../assets/kobweb_logo.png" alt="kobweb_logo" style="padding-top: 12px; scale: 55%" fxLayout fxLayoutAlign="start center" routerLink="/feed">
+    <img fxShow.lt-xl="false" fxShow class="kobweb_img" src="../../../assets/kobweb_logo.png" alt="kobweb_logo"
+         style="padding-top: 12px; width: 100%"
+         routerLink="/feed">
+    <img fxShow.lt-lg="false" fxShow="false" fxShow.lt-xl  class="kobweb_img" src="../../../assets/kobweb_logo.png" alt="kobweb_logo"
+         style="padding-top: 12px; width: 125%"
+         routerLink="/feed">
+    <img fxShow.lt-md="false" fxShow="false" fxShow.lt-lg  class="kobweb_img" src="../../../assets/kobweb_logo.png" alt="kobweb_logo"
+         style="padding-top: 12px; width: 150%"
+         routerLink="/feed">
+    <img fxShow.lt-sm="false" fxShow="false" fxShow.lt-md class="kobweb_img" src="../../../assets/kobweb_logo.png" alt="kobweb_logo"
+         style="padding-top: 12px; width: 200%"
+         routerLink="/feed">
+    <img fxShow="false" fxShow.lt-sm class="kobweb_img" src="../../../assets/kobweb_logo.png" alt="kobweb_logo"
+         style="padding-top: 12px; width: 250%"
+         routerLink="/feed">
   </span>
   <span fxFlex="40" *ngIf="this.router.url !== '/login'
                     && this.router.url !== '/registration'
