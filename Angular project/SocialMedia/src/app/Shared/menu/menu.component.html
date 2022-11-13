@@ -21,8 +21,17 @@
   <span fxFlex="10" *ngIf="this.router.url !== '/login'
                     && this.router.url !== '/registration'
                     && this.router.url !== '/support'">
-    <mat-icon id="toolbaricon" (click)="open()">notifications</mat-icon>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>notifications</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu">
+      <mat-list *ngFor="let notification of notifications">
+        <mat-list-item> {{notification.notificName}} {{notification.notificAction}} </mat-list-item>
+      </mat-list>
+    </mat-menu>
   </span>
+  
 </mat-toolbar>
 <mat-sidenav-container [hasBackdrop]="false">
   <mat-sidenav mode="side" #smallnav opened>
