@@ -11,6 +11,13 @@ import {FormControl, FormGroup} from "@angular/forms";
 })
 export class MenuComponent implements OnInit {
 
+  notifications: any[] = [
+    { notificName: "Valaki", notificAction: "likeolta"},
+    { notificName: "Feri", notificAction: "megosztotta"},
+    { notificName: "Orbán", notificAction: "kommentelt"},
+    { notificName: "Teszt", notificAction: "Teszt"}
+  ]
+
   searchedText='';
 
   @Input() loggedInUser?: firebase.User | null;
@@ -45,4 +52,5 @@ export class MenuComponent implements OnInit {
   open() {
 
   }
+
 }
