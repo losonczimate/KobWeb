@@ -75,6 +75,7 @@ export class FeedComponent implements OnInit {
 
       this.userService.getByID(curruser.uid as string).pipe(first()).subscribe(currentuser => {
         this.ismerosok = new Set(currentuser?.ismerosok as string[]);
+        this.ismerosok.add(this.loggedinuser);
 
         this.postService.getAll().pipe(first()).subscribe(postok =>{
             postok.forEach(post =>{
