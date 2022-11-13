@@ -4,6 +4,9 @@ import {UserService} from "../../Shared/services/user.service";
 import {getAuth} from "@angular/fire/auth";
 import {AuthService} from "../../Shared/services/auth.service";
 import {Router} from "@angular/router";
+import {first} from "rxjs";
+import {Posztok} from "../../Model/posztok";
+import {PostService} from "../../Shared/services/post.service";
 
 export interface Tile {
   //ide kell majd 2 adattag:
@@ -22,16 +25,11 @@ export interface Tile {
 //Dinamikusan kell majd feltolteni a tiles tombot, az adatbazisbol lekerdezett kepekkel.
 export class ProfileComponent implements OnInit {
 
-  tiles: Tile[] = [
-    {text: 'One', color: 'lightblue'},
-    {text: 'Two', color: 'lightgreen'},
-    {text: 'Three', color: 'lightpink'},
-    {text: 'Four', color: '#DDBDF1'},
-    {text: 'One', color: 'lightblue'},
-    {text: 'Two', color: 'lightgreen'},
-    {text: 'Three', color: 'lightpink'},
-    {text: 'Four', color: '#DDBDF1'},
-  ];
+  loggedinuser;
+  profilkepek: Map<string,string> = new Map<string, string>();
+
+  posts: Posztok[] = [];
+
 
   nickname: string = "";
   email: string = "";
@@ -39,8 +37,9 @@ export class ProfileComponent implements OnInit {
   kovetok: string[] = [];
   profilpic: string;
   verified: boolean = false;
+  kovetokszama: number = 0;
 
-  constructor(private router: Router,private authService: AuthService, private userService: UserService) { }
+  constructor(private postService:PostService,private router: Router,private authService: AuthService, private userService: UserService) { }
 
   sendVerificationMail(){
     return this.authService.currentuser().then((user) => {
@@ -65,11 +64,34 @@ export class ProfileComponent implements OnInit {
           this.verified = curruser.emailVerified;
           this.kovetok = currentuser.ismerosok;
           this.profilpic = currentuser.profileimageURL;
-          console.log(this.nickname);
-          console.log(this.authService.isUserLoggedIn())
           if (this.router.url == "/profile" && !this.verified){
             window.alert("Kérlek erősítsd meg e-mail címedet, hogy teljes értékű felhasználóvá válj!");
           }
+
+          this.userService.getAll().subscribe(users =>{
+            this.kovetokszama=0;
+            users.forEach(user =>{
+              if(user.ismerosok.indexOf(curruser.uid) !== -1){
+                this.kovetokszama+= 1;
+              }
+            })
+          })
+
+          this.postService.getAll().pipe(first()).subscribe(postok =>{
+            postok.forEach(post =>{
+              if(post.posztoloID == curruser.uid){
+                this.posts.push(post)
+
+                this.userService.getByID(post.posztoloID).pipe(first()).subscribe(posztolo =>{
+                  this.profilkepek.set(post.postID, posztolo.profileimageURL);
+                })
+
+
+
+              }
+            })
+          })
+
         });
       } else {
         this.router.navigateByUrl("/login")
