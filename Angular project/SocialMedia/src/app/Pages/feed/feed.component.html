@@ -32,9 +32,11 @@
                   (click)="dislike(post.postID, i)">
             <mat-icon style="cursor: pointer; margin-right: 5%; width: 97%; color: red">favorite</mat-icon>
             <a>{{post.likeolok.length}}</a>
-          </button>
+        </button>
+        <br>
 
-          <!--<button (click)="toggle()" mat-raised-button color="accent">COMMENT</button>-->
+        <!--Csak adminoknak látható gomb, esetleg annak a felhasználónak még aki posztolta-->
+        <button mat-raised-button color="warn" style="cursor: pointer; margin-right: 5%; width: 15%;">Törlés</button>
         </mat-card-actions>
 
         <span *ngIf="show">
