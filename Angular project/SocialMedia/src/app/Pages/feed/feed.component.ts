@@ -18,6 +18,7 @@ export class FeedComponent implements OnInit {
 
   ismerosok: Set<string> = new Set<string>();
   loggedinuser;
+  profilkepek: Map<string,string> = new Map<string, string>();
 
   posts: Posztok[] = [];
 
@@ -72,6 +73,11 @@ export class FeedComponent implements OnInit {
             postok.forEach(post =>{
               if(this.ismerosok.has(post.posztoloID)){
                 this.posts.push(post)
+
+                this.userService.getByID(post.posztoloID).pipe(first()).subscribe(posztolo =>{
+                  this.profilkepek.set(post.postID, posztolo.profileimageURL);
+                  console.log(this.profilkepek.get(post.postID))
+                })
 
 
 

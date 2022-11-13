@@ -59,7 +59,6 @@ export class PostComponent implements OnInit {
         idopont: Date.now(),
         kepId: this.fileUrl,
         posztoloID: this.userId,
-        posztoloPPURL: this.profilpic,
         likeolok: [],
         commentek: [],
         postID: uuid.v4()

@@ -7,7 +7,7 @@
     <ng-template ngFor let-post [ngForOf]="posts" let-i="index">
       <mat-card class="example-card" style="margin-top: 1%; margin-bottom: 1%">
         <mat-card-header style="width: 90%; margin-left: auto;margin-right: auto">
-          <mat-card-title> <img mat-card-sm-image="" class="example-header-image" src="{{post.posztoloPPURL}}" alt="profilkep"></mat-card-title>
+          <mat-card-title> <img mat-card-sm-image="" class="example-header-image" src="{{profilkepek.get(post.postID)}}" alt="profilkep"></mat-card-title>
           <mat-card-title>{{post.Posztolo}}</mat-card-title>
           <mat-card-subtitle>{{ (post.idopont | customdate)}}</mat-card-subtitle>
         </mat-card-header>

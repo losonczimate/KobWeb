@@ -39,7 +39,7 @@ export class RegistrationComponent implements OnInit {
             id: cred.user?.uid as string,
             email: this.regForm.get('email')?.value as string,
             nev: this.regForm.get('nickname')?.value as string,
-            ismerosok: [],
+            ismerosok: [cred.user.uid],
             regdatum: Date.now(),
             profileimageURL: "https://firebasestorage.googleapis.com/v0/b/rf1-2022-kobweb.appspot.com/o/ProfilePics%2Fbasicprofilpic.png?alt=media&token=6d1a73fc-e76a-480b-931d-2b692f649e94"
           }

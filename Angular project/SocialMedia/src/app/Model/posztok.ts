@@ -4,7 +4,6 @@ export interface Posztok {
   idopont: number; //0 kedveles, //1 kovetes
   kepId: string;
   posztoloID: string;
-  posztoloPPURL: string;
   likeolok: string[];
   commentek: string[];
   postID: string;
