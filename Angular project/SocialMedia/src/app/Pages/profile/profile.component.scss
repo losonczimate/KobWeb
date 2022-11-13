@@ -33,3 +33,22 @@ mat-chip{
     font-size: 2vw;
   }
 }
+
+.example-card {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.example-header-image {
+  border-radius: 50%;
+}
+
+mat-card-header{
+  //height: 1000%;
+}
+
+.comment-box {
+  width: 100%;
+}
+

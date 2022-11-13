@@ -11,56 +11,26 @@
         <mat-list-item>Regisztrált: {{regdatum | customdate}}</mat-list-item>
         <mat-chip-list style="margin-left: 10%; font-size: 10px">
           <mat-chip color="primary" selected (click) = "goToKovetesek()">Követések: {{kovetok.length}}</mat-chip>
+          <mat-chip color="primary" selected >Követők: {{kovetokszama}}</mat-chip>
           <mat-chip *ngIf="!verified" (click)="sendVerificationMail()">E-mail megerősítése</mat-chip>
         </mat-chip-list>
       </mat-list>
     </mat-card-content>
   </mat-card>
-  <hr>
-  <mat-grid-list fxShow.lt-xl="false" fxShow cols="4" rowHeight="1:1" gutterSize="2em" style="width: 65%">
-    <mat-grid-tile
-      *ngFor="let tile of tiles"
-      [colspan]="1"
-      [rowspan]="1"
-      [style.background]="tile.color">
-      {{tile.text}}
-    </mat-grid-tile>
-  </mat-grid-list>
-  <mat-grid-list fxShow.lg fxShow.lt-lg="false" fxShow="false" cols="4" rowHeight="1:1" gutterSize="2em" style="width: 67%">
-    <mat-grid-tile
-      *ngFor="let tile of tiles"
-      [colspan]="1"
-      [rowspan]="1"
-      [style.background]="tile.color">
-      {{tile.text}}
-    </mat-grid-tile>
-  </mat-grid-list>
-  <mat-grid-list fxShow.lt-lg fxShow.lt-md="false" fxShow="false" cols="4" rowHeight="1:1" gutterSize="2em" style="width: 80%">
-    <mat-grid-tile
-      *ngFor="let tile of tiles"
-      [colspan]="1"
-      [rowspan]="1"
-      [style.background]="tile.color">
-      {{tile.text}}
-    </mat-grid-tile>
-  </mat-grid-list>
-  <mat-grid-list fxShow.lt-md fxShow.lt-sm="false" fxShow="false" cols="2" rowHeight="1:1" gutterSize="2em" style="width: 70%">
-    <mat-grid-tile
-      *ngFor="let tile of tiles"
-      [colspan]="1"
-      [rowspan]="1"
-      [style.background]="tile.color">
-      {{tile.text}}
-    </mat-grid-tile>
-  </mat-grid-list>
-  <mat-grid-list fxShow.lt-sm fxShow="false" cols="2" rowHeight="1:1" gutterSize="1em" style="width: 70%">
-    <mat-grid-tile
-      *ngFor="let tile of tiles"
-      [colspan]="1"
-      [rowspan]="1"
-      [style.background]="tile.color">
-      {{tile.text}}
-    </mat-grid-tile>
-  </mat-grid-list>
 </div>
-
+  <hr>
+  <ng-template ngFor let-post [ngForOf]="posts" let-i="index">
+    <mat-card class="example-card" style="margin-top: 1%; margin-bottom: 1%">
+      <mat-card-header style="width: 90%; margin-left: auto;margin-right: auto">
+        <mat-card-title> <img mat-card-sm-image="" class="example-header-image" src="{{profilkepek.get(post.postID)}}" alt="profilkep"></mat-card-title>
+        <mat-card-title>{{post.Posztolo}}</mat-card-title>
+        <mat-card-subtitle>{{ (post.idopont | customdate)}}</mat-card-subtitle>
+      </mat-card-header>
+      <img style="background-color: #d4d4d4;width: 90%; margin-left: auto;margin-right: auto" mat-card-image src="{{post.kepId}}" alt="tile.kep">
+      <mat-card-content style="width: 90%; margin-left: auto;margin-right: auto">
+        <p>
+          {{post.Poszt}}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </ng-template>
