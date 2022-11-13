@@ -14,7 +14,8 @@ export class MenuComponent implements OnInit {
   notifications: any[] = [
     { notificName: "Valaki", notificAction: "likeolta"},
     { notificName: "Feri", notificAction: "megosztotta"},
-    { notificName: "Orbán", notificAction: "kommentelt"}
+    { notificName: "Orbán", notificAction: "kommentelt"},
+    { notificName: "Teszt", notificAction: "Teszt"}
   ]
 
   searchedText='';
