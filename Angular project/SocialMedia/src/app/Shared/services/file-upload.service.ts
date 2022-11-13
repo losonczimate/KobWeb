@@ -1,20 +1,20 @@
 import { Injectable } from '@angular/core';
 import {finalize, Observable} from "rxjs";
 import {AngularFireStorage} from "@angular/fire/compat/storage";
+import * as uuid from 'uuid';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FileUploadService {
-  filePath: string = "/PostPics/";
+  basePath: string = "/PostPics/";
   fileRef;
-  // uploadPercent: Observable<number>;
-  // downloadURL: Observable<string>;
 
   constructor(private afs:AngularFireStorage) { }
 
   upload(file){
-    this.fileRef = this.afs.ref(this.filePath);
-    return this.afs.upload(this.filePath + file.name, file);
+    const filepath = this.basePath + uuid.v4();
+    this.fileRef = this.afs.ref(filepath);
+    return this.afs.upload(filepath, file);
   }
 }
