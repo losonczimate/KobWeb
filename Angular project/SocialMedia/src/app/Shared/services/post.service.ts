@@ -17,7 +17,7 @@ export class PostService {
   }
 
   getAll() {
-    return this.afs.collection<Posztok>(this.postCollectionName).valueChanges();
+    return this.afs.collection<Posztok>(this.postCollectionName, ref => ref.orderBy("idopont", "desc")).valueChanges();
   }
   //ez mind szép és jó, de getAllkéne ezek helyett :)
 

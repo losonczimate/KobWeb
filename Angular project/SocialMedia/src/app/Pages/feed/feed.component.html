@@ -19,8 +19,13 @@
         </mat-card-content>
         <mat-card-actions style="width: 90%; margin-left: auto;margin-right: auto">
 
-          <button mat-raised-button color="primary" (click)="like(post.postID)">LIKE</button>
-          <button mat-raised-button color="warn" (click)="dislike(post.postID)">DISLIKE</button>
+          <button *ngIf="post.likeolok.indexOf(this.loggedinuser) === -1" matSuffix mat-icon-button (click)="like(post.postID, i)">
+            <!--<mat-icon style="cursor: pointer; margin-right: 5%; width: 97%; ">favorite</mat-icon>-->
+          </button>
+          <button *ngIf="post.likeolok.indexOf(this.loggedinuser) !== -1" matSuffix mat-icon-button (click)="dislike(post.postID, i)">
+            <!--<mat-icon style="cursor: pointer; margin-right: 5%; width: 97%; color: red">favorite</mat-icon>-->
+          </button>
+          <a>Likeok: {{post.likeolok.length}}</a>
           <!--<button (click)="toggle()" mat-raised-button color="accent">COMMENT</button>-->
         </mat-card-actions>
 

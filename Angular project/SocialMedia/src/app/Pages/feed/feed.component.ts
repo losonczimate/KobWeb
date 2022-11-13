@@ -36,18 +36,19 @@ export class FeedComponent implements OnInit {
 
   constructor(private postService: PostService ,private userService:UserService ,private router: Router , private authService:AuthService) { }
 
-  like(id: string){
+  like(id: string, indexofpost: number){
     this.postService.getPoszt(id).valueChanges().pipe(first()).subscribe(post =>{
       if(!post.likeolok.includes(this.loggedinuser)) {
         var ujlikolok = post.likeolok;
         ujlikolok.push(this.loggedinuser);
 
-        this.postService.editPosztLikes(id, ujlikolok)
+        this.postService.editPosztLikes(id, ujlikolok).then(()=>{this.posts[indexofpost] = post})
+
       }
     })
   }
 
-  dislike(id: string){
+  dislike(id: string, indexofpost: number){
     this.postService.getPoszt(id).valueChanges().pipe(first()).subscribe(post =>{
       if(post.likeolok.includes(this.loggedinuser)) {
         var ujlikolok = post.likeolok;
@@ -55,28 +56,33 @@ export class FeedComponent implements OnInit {
         const index = ujlikolok.indexOf(this.loggedinuser,0)
         ujlikolok.splice(index,1);
 
-        this.postService.editPosztLikes(id, ujlikolok)
+        //post.likeolok.splice(index,1)
+
+        this.postService.editPosztLikes(id, ujlikolok).then(()=>{this.posts[indexofpost] = post})
+
+
+
       }
     })
   }
 
   ngOnInit(): void {
-    this.authService.isUserLoggedIn().pipe(first()).subscribe(curruser => {
+    this.posts = [];
+    this.authService.isUserLoggedIn().subscribe(curruser => {
       if (!curruser) {this.router.navigateByUrl("/login");}
 
       this.loggedinuser=curruser.uid;
 
-      this.userService.getByID(curruser.uid as string).pipe(first()).subscribe(currentuser => {
+      this.userService.getByID(curruser.uid as string).subscribe(currentuser => {
         this.ismerosok = new Set(currentuser?.ismerosok as string[]);
 
-        this.postService.getAll().pipe(first()).subscribe(postok =>{
+        this.postService.getAll().subscribe(postok =>{
             postok.forEach(post =>{
               if(this.ismerosok.has(post.posztoloID)){
                 this.posts.push(post)
 
-                this.userService.getByID(post.posztoloID).pipe(first()).subscribe(posztolo =>{
+                this.userService.getByID(post.posztoloID).subscribe(posztolo =>{
                   this.profilkepek.set(post.postID, posztolo.profileimageURL);
-                  console.log(this.profilkepek.get(post.postID))
                 })
 
 
