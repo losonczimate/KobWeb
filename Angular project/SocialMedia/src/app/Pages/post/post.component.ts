@@ -7,6 +7,7 @@ import {FormControl, FormGroup} from "@angular/forms";
 import {PostService} from "../../Shared/services/post.service";
 import {Posztok} from "../../Model/posztok";
 import {finalize, Observable} from "rxjs";
+import * as uuid from 'uuid';
 
 @Component({
   selector: 'app-post',
@@ -55,9 +56,13 @@ export class PostComponent implements OnInit {
       const poszt: Posztok = {
         Poszt: this.postForm.get('text')?.value as string,
         Posztolo: this.nickname,
-        idopont: new Date(),
+        idopont: Date.now(),
         kepId: this.fileUrl,
-        posztoloID: this.userId
+        posztoloID: this.userId,
+        posztoloPPURL: this.profilpic,
+        likeolok: [],
+        commentek: [],
+        postID: uuid.v4()
       }
       if (this.postForm.get('file') !== null){
         let uploadProcess = this.fileUploadService.upload(this.file);

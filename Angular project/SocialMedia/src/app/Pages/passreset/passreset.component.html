@@ -10,7 +10,7 @@
       <div>
         <form [formGroup]="PassresetForm" id="passresetform" (ngSubmit)="onSubmit()">
           <mat-form-field>
-            <input matInput type="text" placeholder="Email" formControlName="email" required>
+            <input matInput type="email" placeholder="Email" formControlName="email" required>
           </mat-form-field>
           <button mat-raised-button color="primary" type="submit" class="buttons" [class.mat-elevation-z5]="true">Email küldése</button>
         </form>
