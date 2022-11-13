@@ -4,22 +4,23 @@
   <div fxLayout="column" fxLayoutAlign="space-between center" style="width: 100%; margin-top: 2%; margin-bottom: 2%">
 
     <app-post style="width: 100%; margin-top: 1%; margin-bottom: 1%"></app-post>
-    <ng-template ngFor let-tile [ngForOf]="tiles" let-i="index">
+    <ng-template ngFor let-post [ngForOf]="posts" let-i="index">
       <mat-card class="example-card" style="margin-top: 1%; margin-bottom: 1%">
         <mat-card-header style="width: 90%; margin-left: auto;margin-right: auto">
-          <mat-card-title> <img mat-card-sm-image="" class="example-header-image" src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="tile.profilkep"></mat-card-title>
-          <mat-card-title>{{tile.name}}</mat-card-title>
-          <mat-card-subtitle>{{ (tile.datemade | customdate)}}</mat-card-subtitle>
+          <mat-card-title> <img mat-card-sm-image="" class="example-header-image" src="{{post.posztoloPPURL}}" alt="profilkep"></mat-card-title>
+          <mat-card-title>{{post.Posztolo}}</mat-card-title>
+          <mat-card-subtitle>{{ (post.idopont | customdate)}}</mat-card-subtitle>
         </mat-card-header>
-        <img style="width: 90%; margin-left: auto;margin-right: auto" mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="tile.kep">
+        <img style="width: 90%; margin-left: auto;margin-right: auto" mat-card-image src="{{post.kepId}}" alt="tile.kep">
         <mat-card-content style="width: 90%; margin-left: auto;margin-right: auto">
           <p>
-            {{tile.text}}
+            {{post.Poszt}}
           </p>
         </mat-card-content>
         <mat-card-actions style="width: 90%; margin-left: auto;margin-right: auto">
-          <button mat-raised-button color="warn">LIKE</button>
-          <button mat-raised-button color="primary">SHARE</button>
+
+          <button mat-raised-button color="primary" (click)="like(post.postID)">LIKE</button>
+          <button mat-raised-button color="warn" (click)="dislike(post.postID)">DISLIKE</button>
           <!--<button (click)="toggle()" mat-raised-button color="accent">COMMENT</button>-->
         </mat-card-actions>
 

@@ -1,7 +1,11 @@
 export interface Posztok {
   Poszt: string;
   Posztolo: string;
-  idopont: Date; //0 kedveles, //1 kovetes
+  idopont: number; //0 kedveles, //1 kovetes
   kepId: string;
   posztoloID: string;
+  posztoloPPURL: string;
+  likeolok: string[];
+  commentek: string[];
+  postID: string;
 }

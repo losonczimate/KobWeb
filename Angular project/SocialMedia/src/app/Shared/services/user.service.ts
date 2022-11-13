@@ -5,7 +5,6 @@ import {
   doc, docData, deleteDoc, updateDoc, DocumentReference, setDoc, query, where, startAt, endAt, getDocs, orderBy
 } from '@angular/fire/firestore';
 import {Observable} from "rxjs";
-import {user} from "@angular/fire/auth";
 
 @Injectable({
   providedIn: 'root'
