@@ -10,7 +10,7 @@ const redirectIfEmailNotValidated = () => pipe(emailVerified, map(emailVerified 
   else{
     return ['profile'];
   }
-}))
+}));
 
 const routes: Routes = [
   {
