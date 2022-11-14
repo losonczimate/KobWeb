@@ -21,6 +21,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {FormsModule} from "@angular/forms";
 import {MatMenuModule} from '@angular/material/menu';
+import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -48,7 +49,7 @@ import {MatMenuModule} from '@angular/material/menu';
         MatMenuModule
     ],
 
-  providers: [{ provide: FIREBASE_OPTIONS, useValue: environment.firebase }],
+  providers: [{ provide: FIREBASE_OPTIONS, useValue: environment.firebase }, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   exports: [],
   bootstrap: [AppComponent]
 })
