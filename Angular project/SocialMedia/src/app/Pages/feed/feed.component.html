@@ -81,12 +81,12 @@
                   <mat-list-item *ngFor="let comment of commentsbypost[post.postID]"
                                  style="height: initial;margin: 15px auto 15px auto" fxLayout="column">
                     <div fxLayout="row">
-                      <div style="align-self: flex-start; margin-right: 4%"><img mat-list-avatar class="example-header-image" src="{{comment[1]}}" alt="profilkep"></div>
-                      <div fxLayout="column">
+                      <div style="align-self: flex-start; margin-right: 15px"><img mat-list-avatar class="example-header-image" src="{{comment[1]}}" alt="profilkep"></div>
+                      <div  fxLayout="column">
                         <div mat-line style="font-weight: 700;">{{comment[0]}}</div>
                         <div mat-line style="font-size: 10px;">{{comment[3] | customdate}}</div>
                         <div mat-line
-                            style="height: initial;word-wrap: break-word; white-space: pre-wrap;font-weight: 400;margin-bottom: 15px">{{comment[2]}}</div>
+                            style=";height: initial; overflow-wrap: anywhere; hyphens: auto; white-space: pre-wrap;font-weight: 400;margin-bottom: 15px">{{comment[2]}}</div>
                       </div>
                       <mat-divider></mat-divider>
                     </div>
