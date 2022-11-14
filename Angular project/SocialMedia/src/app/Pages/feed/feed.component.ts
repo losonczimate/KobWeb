@@ -131,7 +131,18 @@ export class FeedComponent implements OnInit {
                         ujkomment.push(userwhocommented.profileimageURL);
                         ujkomment.push(comment.comment);
                         ujkomment.push(comment.date);
-                        this.commentsbypost[post.postID].push(ujkomment)
+
+                        for(let i=0 ; i <= this.commentsbypost[post.postID].length; i++){
+                          if(i == this.commentsbypost[post.postID].length){
+                            this.commentsbypost[post.postID].push(ujkomment);
+                            break;
+                          }
+
+                          if(ujkomment[3] < this.commentsbypost[post.postID][3]){
+                            this.commentsbypost[post.postID].splice(i, 0, ujkomment);
+                            break;
+                          }
+                        }
                       })
 
 
