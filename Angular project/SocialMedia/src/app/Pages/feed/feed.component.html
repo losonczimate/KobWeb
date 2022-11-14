@@ -77,18 +77,19 @@
               </span>
               <br>
               <p>
-                <mat-list>
+                <mat-list fxLayout="column">
                   <mat-list-item *ngFor="let comment of commentsbypost[post.postID]"
-                                 style="align-content: start;height: initial;margin: 15px auto 15px auto">
-                    <img mat-list-avatar class="example-header-image" src="{{comment[1]}}" alt="profilkep">
-                    <div mat-line style="font-weight: 700;">{{comment[0]}}</div>
-                    <div mat-line style="font-size: 10px;">{{comment[3] | customdate}}</div>
-                    <div mat-line
-                         style="height: initial;word-wrap: break-word; white-space: pre-wrap;font-weight: 400;margin-bottom: 15px">{{comment[2]}}</div>
-                    <mat-divider></mat-divider>
+                                 style="height: initial;margin: 15px auto 15px auto" fxLayout="column">
+                    <div fxLayout="column">
+                      <div><img mat-list-avatar class="example-header-image" src="{{comment[1]}}" alt="profilkep"></div>
+                      <div mat-line style="font-weight: 700;">{{comment[0]}}</div>
+                      <div mat-line style="font-size: 10px;">{{comment[3] | customdate}}</div>
+                      <div mat-line
+                           style="height: initial;word-wrap: break-word; white-space: pre-wrap;font-weight: 400;margin-bottom: 15px">{{comment[2]}}</div>
+                      <mat-divider></mat-divider>
+                    </div>
                   </mat-list-item>
-              </mat-list>
-
+                </mat-list>
               </p>
             </mat-expansion-panel>
           </mat-accordion>
