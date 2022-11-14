@@ -12,7 +12,9 @@
           <mat-card-title>{{post.Posztolo}}</mat-card-title>
           <mat-card-subtitle>{{ (post.idopont | customdate)}}</mat-card-subtitle>
         </mat-card-header>
-        <img *ngIf="post.kepId !== ''" style="background-color: #d4d4d4; width: 90%; margin-left: auto;margin-right: auto" mat-card-image src="{{post.kepId}}"
+        <img *ngIf="post.kepId !== ''"
+             style="background-color: #d4d4d4; width: 90%; margin-left: auto;margin-right: auto" mat-card-image
+             src="{{post.kepId}}"
              alt="tile.kep">
         <mat-card-content style="width: 90%; margin-left: auto;margin-right: auto">
           <p>
@@ -25,18 +27,20 @@
                   (click)="like(post.postID, i)">
 
             <mat-icon style="cursor: pointer; margin-right: 5%; width: 97%;">favorite</mat-icon>
-              <a>{{post.likeolok.length}}</a>
+            <a>{{post.likeolok.length}}</a>
 
           </button>
           <button *ngIf="post.likeolok.indexOf(this.loggedinuser) !== -1" matSuffix mat-icon-button
                   (click)="dislike(post.postID, i)">
             <mat-icon style="cursor: pointer; margin-right: 5%; width: 97%; color: red">favorite</mat-icon>
             <a>{{post.likeolok.length}}</a>
-        </button>
-        <br>
+          </button>
+          <br>
 
-        <!--Csak adminoknak látható gomb, esetleg annak a felhasználónak még aki posztolta-->
-        <button *ngIf="userisadmin" mat-raised-button color="warn" style="cursor: pointer; margin-right: 5%; width: 15%;">Törlés</button>
+          <!--Csak adminoknak látható gomb, esetleg annak a felhasználónak még aki posztolta-->
+          <button *ngIf="userisadmin" mat-raised-button color="warn"
+                  style="cursor: pointer; margin-right: 5%; width: 15%;">Törlés
+          </button>
         </mat-card-actions>
 
         <!--
@@ -64,23 +68,26 @@
 
               <mat-form-field appearance="outline" style="width: 100%; height: 10%;">
                 <mat-label>Írd le, mire gondolsz!</mat-label>
-                <textarea matInput type="text" id="search" [(ngModel)]='comments[i]' ></textarea>
+                <textarea matInput type="text" id="search" [(ngModel)]='comments[i]'></textarea>
               </mat-form-field>
               <span style="width: 100%" fxLayout fxLayoutGap="2%">
-                <button mat-raised-button (click)="onComment(post.postID, i)" type="button" color="primary">Közzétesz</button>
+                <button mat-raised-button (click)="onComment(post.postID, i)" type="button"
+                        color="primary">Közzétesz</button>
                 <button mat-raised-button (click)="comments[i]=''" color="warn">Mégse</button>
               </span>
               <br>
               <p>
                 <mat-list>
-                  <mat-list-item *ngFor="let comment of commentsbypost[post.postID]" style="align-content: start;height: initial; margin-left: auto; margin-right: auto">
+                  <mat-list-item *ngFor="let comment of commentsbypost[post.postID]"
+                                 style="align-content: start;height: initial;margin: 15px auto 15px auto">
                     <img mat-list-avatar class="example-header-image" src="{{comment[1]}}" alt="profilkep">
-                    <div mat-line style = "font-weight: 700;">{{comment[0]}}</div>
-                    <div mat-line style = "font-size: 10px;">{{comment[3] | customdate}}</div>
-                    <div mat-line style = "height: initial;word-wrap: break-word; white-space: pre-wrap;font-weight: 400;">{{comment[2]}}</div>
+                    <div mat-line style="font-weight: 700;">{{comment[0]}}</div>
+                    <div mat-line style="font-size: 10px;">{{comment[3] | customdate}}</div>
+                    <div mat-line
+                         style="height: initial;word-wrap: break-word; white-space: pre-wrap;font-weight: 400;margin-bottom: 15px">{{comment[2]}}</div>
                     <mat-divider></mat-divider>
                   </mat-list-item>
-                </mat-list>
+              </mat-list>
 
               </p>
             </mat-expansion-panel>
