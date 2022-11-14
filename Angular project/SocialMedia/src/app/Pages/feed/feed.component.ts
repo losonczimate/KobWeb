@@ -138,7 +138,7 @@ export class FeedComponent implements OnInit {
                             break;
                           }
 
-                          if(ujkomment[3] < this.commentsbypost[post.postID][3]){
+                          if(ujkomment[3] < this.commentsbypost[post.postID][i][3]){
                             this.commentsbypost[post.postID].splice(i, 0, ujkomment);
                             break;
                           }
