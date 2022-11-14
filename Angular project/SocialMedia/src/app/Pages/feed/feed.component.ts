@@ -40,12 +40,12 @@ export class FeedComponent implements OnInit {
   constructor(private fb: FormBuilder, private commentService: CommentService,private postService: PostService ,private userService:UserService ,private router: Router , private authService:AuthService) { }
 
   onComment(postID: string, index: number){
-    if(this.comments[index] === ""){return;}
+    if(this.comments[index] === "" || this.comments[index].trim() === ""){return;}
     let commentID = uuid.v4();
 
     const comment: Comment = {
       commentId: commentID,
-      comment: this.comments[index],
+      comment: this.comments[index].trim(),
       userID: this.loggedinuser,
       date: Date.now()
     }

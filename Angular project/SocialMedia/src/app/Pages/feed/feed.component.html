@@ -73,11 +73,11 @@
               <br>
               <p>
                 <mat-list>
-                  <mat-list-item *ngFor="let comment of commentsbypost[post.postID]" style="margin-left: auto; margin-right: auto">
+                  <mat-list-item *ngFor="let comment of commentsbypost[post.postID]" style="align-content: start;height: initial; margin-left: auto; margin-right: auto">
                     <img mat-list-avatar class="example-header-image" src="{{comment[1]}}" alt="profilkep">
                     <div mat-line style = "font-weight: 700;">{{comment[0]}}</div>
                     <div mat-line style = "font-size: 10px;">{{comment[3] | customdate}}</div>
-                    <div mat-line style = "font-weight: 400;">{{comment[2]}}</div>
+                    <div mat-line style = "height: initial;word-wrap: break-word; white-space: pre-wrap;font-weight: 400;">{{comment[2]}}</div>
                     <mat-divider></mat-divider>
                   </mat-list-item>
                 </mat-list>
