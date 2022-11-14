@@ -25,8 +25,8 @@ export class PostService {
     return this.afs.collection<Posztok>(this.postCollectionName).doc(postId);
   }
 
-  editPoszt(postId: string, newPost: string) {
-    return this.afs.collection(this.postCollectionName).doc(postId).update({Poszt:newPost});
+  editPosztComments(postId: string, newComments: string[]) {
+    return this.afs.collection(this.postCollectionName).doc(postId).update({commentek:newComments});
   }
 
   editPosztLikes(postId: string, newlikeolok: string[]) {

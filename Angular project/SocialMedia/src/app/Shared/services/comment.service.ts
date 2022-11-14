@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {AngularFirestore, DocumentChangeAction} from "@angular/fire/compat/firestore";
 import { Comment } from '../../Model/comment';
+import {Posztok} from "../../Model/posztok";
 
 @Injectable({
   providedIn: 'root'
@@ -13,20 +14,23 @@ export class CommentService {
   constructor(private afs: AngularFirestore) { }
 
   create(comment: Comment) {
-    comment.commentId = this.afs.createId();
-    return this.afs.collection(this.postCollectionName).doc(comment.postId).collection<Comment>(this.commentCollectionName).doc(comment.commentId).set(comment);
+    return this.afs.collection(this.commentCollectionName).doc(comment.commentId).set(comment);
   }
 
-  getComments(postId: string) {
-    return this.afs.collection(this.postCollectionName).doc(postId).collection<Comment>(this.commentCollectionName).valueChanges();
+  getComment(commentid: string) {
+    return this.afs.collection(this.commentCollectionName).doc(commentid).valueChanges();
+  }
+
+  getIfPostID(postID:string){
+   // return this.afs.collection<Comment>(this.commentCollectionName, ref => ref.where("").orderBy("idopont", "desc")).valueChanges();
   }
 
   editComment(comment: Comment) {
-    return this.afs.collection(this.postCollectionName).doc(comment.postId).collection<Comment>(this.commentCollectionName).doc(comment.commentId).update(comment);
+    return this.afs.collection(this.commentCollectionName).doc(comment.commentId).update(comment);
   }
 
   delete(comment: Comment) {
-    return this.afs.collection(this.postCollectionName).doc(comment.postId).collection<Comment>(this.commentCollectionName).doc(comment.commentId).delete();
+    return this.afs.collection(this.commentCollectionName).doc(comment.commentId).delete();
   }
 }
 
@@ -47,7 +51,7 @@ export class CommentService {
     // Testing comment backend DELETE mukodik
     // const comment: Comment = {
     //     postId: 'MSLMYbmSk14JylU6H25C',
-    //     commentId: 'p2mQ8X3eP5Jl0UAo4O0O', 
+    //     commentId: 'p2mQ8X3eP5Jl0UAo4O0O',
     //     comment: "be szartam",
     //     username: "pistike",
     //     date: new Date()
@@ -62,7 +66,7 @@ export class CommentService {
     // Testing comment backend EDITCOMMENT mukodik
     // const comment: Comment = {
     //   postId: 'MSLMYbmSk14JylU6H25C',
-    //   commentId: 'pByJEChAY1esRY6UBTdh', 
+    //   commentId: 'pByJEChAY1esRY6UBTdh',
     //   comment: "gym crush nem beszel velem",
     //   username: "pistike",
     //   date: new Date()

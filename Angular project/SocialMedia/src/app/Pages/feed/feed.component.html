@@ -39,6 +39,7 @@
         <button *ngIf="userisadmin" mat-raised-button color="warn" style="cursor: pointer; margin-right: 5%; width: 15%;">Törlés</button>
         </mat-card-actions>
 
+        <!--
         <span *ngIf="show">
           <mat-form-field id="comment-box" appearance="legacy" style="margin-left: 5%; margin-right: auto">
             <mat-label>Hozzászólás írása...</mat-label>
@@ -48,6 +49,7 @@
             <mat-list-item> {{comment.userName}} : {{comment.comment}} </mat-list-item>
           </mat-list>
         </span>
+        -->
 
         <span>
           <mat-accordion>
@@ -59,19 +61,26 @@
                 <mat-panel-description>
                 </mat-panel-description>
               </mat-expansion-panel-header>
+
               <mat-form-field appearance="outline" style="width: 100%; height: 10%;">
                 <mat-label>Írd le, mire gondolsz!</mat-label>
-                <textarea matInput required rows="1"></textarea>
+                <input matInput type="text" id="search" [(ngModel)]='comments[i]' >
               </mat-form-field>
               <span style="width: 100%" fxLayout fxLayoutGap="2%">
-                <button mat-raised-button type="submit" color="primary">Közzétesz</button>
-                <button mat-raised-button type="reset" color="warn">Mégse</button>
+                <button mat-raised-button (click)="onComment(post.postID, i)" type="button" color="primary">Közzétesz</button>
+                <button mat-raised-button (click)="comments[i]=''" color="warn">Mégse</button>
               </span>
               <br>
               <p>
-                <mat-list *ngFor="let comment of comments" style="margin-left: auto; margin-right: auto">
-                  <mat-list-item>{{comment.userName}}:<br>{{comment.comment}}</mat-list-item>
+                <mat-list>
+                  <mat-list-item *ngFor="let comment of commentsbypost[post.postID]" style="margin-left: auto; margin-right: auto">
+                    <img mat-list-avatar class="example-header-image" src="{{comment[1]}}" alt="profilkep">
+                    <div mat-line>{{comment[0]}}:</div>
+                    <div mat-line>{{comment[3] | customdate}}</div>
+                    {{comment[2]}}
+                  </mat-list-item>
                 </mat-list>
+
               </p>
             </mat-expansion-panel>
           </mat-accordion>
