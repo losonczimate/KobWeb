@@ -55,7 +55,15 @@ export class FeedComponent implements OnInit {
 
       this.postService.editPosztComments(postID, post.commentek).then(() =>{
         this.commentService.create(comment).then(() => {
-          this.comments[index]= "";
+          this.userService.getByID(this.loggedinuser).pipe(first()).subscribe(userwhocommented =>{
+            this.comments[index]= "";
+            let ujkomment = [];
+            ujkomment.push(userwhocommented.nev);
+            ujkomment.push(userwhocommented.profileimageURL);
+            ujkomment.push(comment.comment);
+            ujkomment.push(comment.date);
+            this.commentsbypost[post.postID].push(ujkomment)
+          })
         });
       })
     })
