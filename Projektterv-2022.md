@@ -86,7 +86,7 @@ Mik a megrendelő és a felhasználók igényei? Miért van szükség a projektr
  - Kommentelés, követés és like-olás funckió:
 	- A social media platformok nagy része a kommentelés/követés és az ún. like-olás. Így tudunk interaktálni más személyekkel az oldalon.
  - Regisztrált felhasználóknak saját profil:
-	- Lesz külön oldala az adott felhasználónak, ahol megjelenik a saját profilképe, adatai. Itt tud majd módosítani is rajtuk ha szeretne.
+	- Lesz külön oldala az adott felhasználónak, ahol megjelenik a saját profilképe, adatai, képei. Saját követéseit és követőit fogja látni. Profilképet lehet változtatni.
  - Poszt készítése:
 	- Regisztrált és belépett felhasználók tudnak posztot csinálni, ami tartalmaz egy képet és leírást a poszthoz kapcsolódóan. Más felhasználók tudnak reagálni és kommentelni a poszt alatt.
  - Posztok és kommentek pontos időpontja:
@@ -232,6 +232,12 @@ A projekt hetente ülésezik, hogy megvitassák az azt megelőző hét problém�
  - Hely: Discord.
  - Résztvevők: Juhász István, Papp Lukács, Gila Valter, Simon Dániel, Oláh Balázs, Bondár Kristóf, Losonczi Máté
  - Érintett témák:  Használt technológiák átbeszélése, szerepek felosztása.
+
+6. Megbeszélés:
+ - Időpont: 2022.11.13.
+ - Hely: Discord.
+ - Résztvevők: Juhász István, Papp Lukács, Gila Valter, Simon Dániel, Oláh Balázs(írásban), Bondár Kristóf, Losonczi Máté
+ - Érintett témák:  Végső simítások projekt bemutatása előtt, általános megbeszélés.
 
 ```
 A memókat ebben a dokumentumban kell vezetni a teljes projekt során, amely tartalmazza a következőket: 
@@ -404,9 +410,9 @@ Erőforrásigény:  4 személynap
 
 Felelős: Bodnár Kristóf
 
-Tartam:  4 nap
+Tartam:  3 nap
 
-Erőforrásigény:  4 személynap
+Erőforrásigény:  3 személynap
 
 #### 9.3.3.  Vendég munkamenethez szükséges adatok létrehozása az adatbázisban
 
@@ -508,7 +514,7 @@ Erőforrásigény:  3 személynap
 
 Felelős: Bodnár Kristóf
 
-Tartam:  4 nap
+Tartam:  3 nap
 
 Erőforrásigény:  3 személynap
 
@@ -620,7 +626,7 @@ Erőforrásigény:  3 személynap
 
 Felelős: Bodnár Kristóf
 
-Tartam:  4 nap
+Tartam:  3 nap
 
 Erőforrásigény:  3 személynap
 
@@ -675,6 +681,14 @@ Erőforrásigény:  2 személynap/fő
 #### 9.3.36. Feed frontend és backend összekötése
 
 Felelős: Simon Dániel
+
+Tartam:  2 nap
+
+Erőforrásigény:  2 személynap/fő
+
+#### 9.3.37 E-mail sablon készítése, és felhasználók korlátozása backendben
+
+Felelős: Bondár Kristóf
 
 Tartam:  2 nap
 
