@@ -1,10 +1,6 @@
 import { Injectable } from '@angular/core';
 import {AngularFirestore} from "@angular/fire/compat/firestore";
 import {Posztok} from "../../Model/posztok";
-import {Image} from "../../Model/image";
-
-import firebase from "firebase/compat/app"
-const FieldValue = firebase.firestore.FieldValue;
 
 @Injectable({
   providedIn: 'root'
@@ -15,11 +11,7 @@ export class PostService {
 
   constructor(private afs: AngularFirestore) { }
 
-  async create(poszt: Posztok) {
-    const postRef = this.afs.collection(this.postCollectionName).doc('PostCount_doc');
-    await postRef.update({
-      postCount: FieldValue.increment(1)
-    });
+  create(poszt: Posztok) {
     return this.afs.collection(this.postCollectionName).doc(poszt.postID).set(poszt);
   }
 
@@ -40,11 +32,11 @@ export class PostService {
     return this.afs.collection(this.postCollectionName).doc(postId).update({likeolok:newlikeolok});
   }
 
-  async delete(postId: string) {
-    const postRef = this.afs.collection(this.postCollectionName).doc('PostCount_doc');
-    await postRef.update({
-      postCount: FieldValue.increment(-1)
-    });
+  delete(postId: string) {
+    // const postRef = this.afs.collection(this.postCollectionName).doc('PostCount_doc');
+    // await postRef.update({
+    //   postCount: FieldValue.increment(-1)
+    // });
     return this.afs.collection(this.postCollectionName).doc(postId).delete();
   }
 

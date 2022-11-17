@@ -4,8 +4,8 @@ import {UserService} from "../../Shared/services/user.service";
 import {AuthService} from "../../Shared/services/auth.service";
 import {Felhasznalo} from "../../Model/Felhasznalo";
 import {Router} from "@angular/router";
-import { Location } from '@angular/common';
-import {finalize} from "rxjs";
+import {Location} from '@angular/common';
+import {finalize, Observable} from "rxjs";
 import {FileUploadService} from "../../Shared/services/file-upload.service";
 
 @Component({
@@ -18,7 +18,7 @@ export class RegistrationComponent implements OnInit {
   fileUrl: string = "";
   userId: string;
   loading: boolean = false;
-  uploadPercentage: number;
+  uploadPercentages: Observable<number>;
 
   regForm = new FormGroup({
     email: new FormControl(''),
@@ -32,15 +32,15 @@ export class RegistrationComponent implements OnInit {
               private router: Router,
               private authService: AuthService,
               private userService: UserService,
-              private fileUploadService:FileUploadService) {
+              private fileUploadService: FileUploadService) {
   }
 
   ngOnInit(): void {
   }
 
-  onSubmit(){
+  onSubmit() {
 
-    if(this.regForm.valid) {
+    if (this.regForm.valid) {
 
       if (this.regForm.get("password")?.value == this.regForm.get("rePassword")?.value) {
 
@@ -55,24 +55,23 @@ export class RegistrationComponent implements OnInit {
             profileimageURL: "https://firebasestorage.googleapis.com/v0/b/rf1-2022-kobweb.appspot.com/o/ProfilePics%2Fbasicprofilpic.png?alt=media&token=6d1a73fc-e76a-480b-931d-2b692f649e94"
           }
 
-          if (this.regForm.get('file').value !== ""){
+          if (this.regForm.get('file').value !== "") {
             let uploadProcess = this.fileUploadService.upload(this.file);
             this.loading = true;
-            uploadProcess.percentageChanges().subscribe(percentage => {
-              this.uploadPercentage = Math.round(percentage ? percentage : 0);
-              uploadProcess.snapshotChanges().pipe(
-                finalize(() =>
-                  this.fileUploadService.fileRef.getDownloadURL().subscribe(downloadURL => {
-                    user.profileimageURL = downloadURL;
+            this.uploadPercentages = uploadProcess.percentageChanges()
+            uploadProcess.snapshotChanges().pipe(
+              finalize(() =>
+                this.fileUploadService.fileRef.getDownloadURL().pipe(
+                  finalize(() => {
                     this.userService.create(user).then(_ => {
                       console.log('User added successfully with picture.');
                       this.router.navigateByUrl('/profile');
                     }).catch(error => {
                       console.error(error);
                     });
-                  }))
-              ).subscribe();
-            })
+                  })
+                ).subscribe(downloadURL => user.profileimageURL = downloadURL))
+            ).subscribe();
           } else {
             this.userService.create(user).then(_ => {
               console.log('User added successfully without picture.');

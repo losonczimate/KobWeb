@@ -6,8 +6,11 @@ import {FileUploadService} from "../../Shared/services/file-upload.service";
 import {FormControl, FormGroup} from "@angular/forms";
 import {PostService} from "../../Shared/services/post.service";
 import {Posztok} from "../../Model/posztok";
-import {finalize, Observable} from "rxjs";
+import {finalize, first, Observable} from "rxjs";
 import * as uuid from 'uuid';
+import {AngularFirestore} from "@angular/fire/compat/firestore";
+import firebase from "firebase/compat/app";
+const FieldValue = firebase.firestore.FieldValue;
 
 @Component({
   selector: 'app-post',
@@ -21,7 +24,7 @@ export class PostComponent implements OnInit {
   fileUrl: string = "";
   userId: string;
   loading: boolean = false;
-  uploadPercentage: number;
+  uploadPercentages: Observable<number>;
 
   postForm = new FormGroup({
     file: new FormControl(''),
@@ -32,7 +35,8 @@ export class PostComponent implements OnInit {
               private userService:UserService,
               private router:Router,
               private fileUploadService:FileUploadService,
-              private postService: PostService) { }
+              private postService: PostService,
+              private afs: AngularFirestore) { }
 
   ngOnInit(): void {
     this.authService.isUserLoggedIn().subscribe(curruser =>{
@@ -66,13 +70,17 @@ export class PostComponent implements OnInit {
       if (this.postForm.get('file').value !== ""){
         let uploadProcess = this.fileUploadService.upload(this.file);
         this.loading = true;
-        uploadProcess.percentageChanges().subscribe(percentage => {
-          this.uploadPercentage = Math.round(percentage ? percentage : 0);
-          uploadProcess.snapshotChanges().pipe(
-            finalize(() =>
-              this.fileUploadService.fileRef.getDownloadURL().subscribe(downloadURL => {
-                poszt.kepId = downloadURL;
-                this.postService.create(poszt).then(_ => {
+        this.uploadPercentages = uploadProcess.percentageChanges()
+        uploadProcess.snapshotChanges().pipe(
+          finalize(() =>
+            this.fileUploadService.fileRef.getDownloadURL().pipe(
+              finalize(() => {
+                this.postService.create(poszt).then(async _ => {
+                  console.log("lefut a posztolas");
+                  const postRef = this.afs.collection('Posztok').doc('PostCount_doc');
+                  await postRef.update({
+                    postCount: FieldValue.increment(1)
+                  });
                   this.loading = false;
                   console.log('Post added successfully with a picture.');
                   this.postForm.reset();
@@ -80,9 +88,9 @@ export class PostComponent implements OnInit {
                 }).catch(error => {
                   console.error(error);
                 })
-              }))
-          ).subscribe();
-        })
+              })
+            ).subscribe(downloadURL => poszt.kepId = downloadURL))
+        ).subscribe();
       } else {
         this.postService.create(poszt).then(_ => {
           console.log('Post added successfully without a picture.');

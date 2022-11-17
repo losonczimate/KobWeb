@@ -2,8 +2,10 @@
 <div fxLayout="column" fxLayoutAlign="center center" style="height: 100%">
   <mat-card style="width: 60%; margin-left: auto; margin-right: auto">
     <mat-card *ngIf="loading" fxLayout="column" fxLayoutAlign="center center" style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: rgba(44,44,44,0.5); z-index: 30">
-      <mat-progress-spinner [value]="uploadPercentage"></mat-progress-spinner>
+      <h1 style="position: absolute; margin-top: 1.5%; color: #ffffff; text-shadow: 2px 2px 0 #000000;">{{uploadPercentages | async}} %</h1>
+      <mat-progress-spinner [value]="uploadPercentages | async"></mat-progress-spinner>
     </mat-card>
+
     <mat-card-header style="width: 90%; margin-left: auto;margin-right: auto">
       <mat-card-title><img mat-card-sm-image="" class="example-header-image"
                            src="{{profilpic}}" alt="tile.profilkep">
