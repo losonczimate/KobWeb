@@ -798,7 +798,7 @@ Az egyes leadások alkalmával rögzített erőforrásigényt, az elvállalt fel
 |                     Juhász István        |           1          |             3            |           16          |            3           |    23     |
 |                     Gila Valter          |           1          |             3            |           16          |            3           |    23     |
 |                     Orosz Bence          |           1          |             3            |           16          |            3           |    23     |
-|                     Oláh Balázs          |           1          |             3            |           16          |            3           |    23     |
+|                     Oláh Balázs          |           1          |             3            |           10          |            6           |    20     |
 |                     Papp Lukács Lóránt   |           1          |             3            |           16          |            3           |    23     |
 |                     Simon Dániel         |           1          |             3            |           10          |            6           |    20     |
 |                     Losonczi Máté        |           1          |             3            |           16          |            3           |    23     |
