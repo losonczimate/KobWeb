@@ -26,7 +26,7 @@ export class FeedComponent implements OnInit {
   profilkepek: Map<string,string> = new Map<string, string>();
 
   posts: Posztok[] = [];
-
+  postCount: number = 0;
 
   comments = []
   commentsbypost: Map<String, Comment[]> = new Map<String, Comment[]>();
@@ -101,6 +101,11 @@ export class FeedComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    //megnezi, hogy a korabban lekert postok mennyisege megegyezik-e az adatbazisban eltarolt darabszammal (minden posztot nez)
+    this.postService.getCount().pipe(first()).subscribe(count => {
+      if (count.get('postCount') === this.postCount) return;
+    })
+
     this.posts = [];
 
 
@@ -115,6 +120,7 @@ export class FeedComponent implements OnInit {
 
         this.postService.getAll().pipe(first()).subscribe(postok =>{
             postok.forEach(post =>{
+              this.postCount++;
               if(this.ismerosok.has(post.posztoloID)){
                 this.posts.push(post)
                 this.comments.push("")

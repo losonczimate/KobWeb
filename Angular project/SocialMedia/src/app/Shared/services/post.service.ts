@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import {AngularFirestore, DocumentChangeAction} from "@angular/fire/compat/firestore";
 import {Posztok} from "../../Model/posztok";
 import {Image} from "../../Model/image";
+import firebase from "firebase/compat";
+import FieldValue = firebase.firestore.FieldValue;
+import {Firestore} from "@angular/fire/firestore";
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +15,11 @@ export class PostService {
 
   constructor(private afs: AngularFirestore) { }
 
-  create(poszt: Posztok) {
+  async create(poszt: Posztok) {
+    const postRef = this.afs.collection(this.postCollectionName).doc('PostCount_doc');
+    await postRef.update({
+      postCount: FieldValue.increment(1)
+    });
     return this.afs.collection(this.postCollectionName).doc(poszt.postID).set(poszt);
   }
 
@@ -33,8 +40,17 @@ export class PostService {
     return this.afs.collection(this.postCollectionName).doc(postId).update({likeolok:newlikeolok});
   }
 
-  delete(postId: string) {
+  async delete(postId: string) {
+    const postRef = this.afs.collection(this.postCollectionName).doc('PostCount_doc');
+    await postRef.update({
+      postCount: FieldValue.increment(-1)
+    });
     return this.afs.collection(this.postCollectionName).doc(postId).delete();
+  }
+
+  //Balazs belenyul, hogy tonkretegye a kodot, Puszi!
+  getCount(){
+    return this.afs.collection(this.postCollectionName).doc('PostCount_doc').get();
   }
 }
 
