@@ -15,7 +15,6 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 
-
 @NgModule({
   declarations: [
     PostComponent
@@ -36,7 +35,7 @@ import {MatProgressBarModule} from "@angular/material/progress-bar";
         MatInputModule,
         ReactiveFormsModule,
         MatProgressSpinnerModule,
-        MatProgressBarModule
+        MatProgressBarModule,
     ]
 })
 export class PostModule { }

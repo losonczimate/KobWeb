@@ -34,6 +34,10 @@ const routes: Routes = [
     loadChildren: () => import('./Pages/profile/profile.module').then(m => m.ProfileModule)
   },
   {
+    path: 'profileedit',
+    loadChildren: () => import('./Pages/profileedit/profileedit.module').then(m => m.ProfileeditModule)
+  },
+  {
     path: 'registration',
     loadChildren: () => import('./Pages/registration/registration.module').then(m => m.RegistrationModule)
   },

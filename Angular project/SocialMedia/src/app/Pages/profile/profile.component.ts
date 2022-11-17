@@ -53,6 +53,10 @@ export class ProfileComponent implements OnInit {
       this.router.navigateByUrl("/kovetok")
   }
 
+  goToProfileEdit(){
+    this.router.navigateByUrl("/profileedit");
+  }
+
   ngOnInit(): void {
     this.authService.isUserLoggedIn().subscribe(curruser =>{
       if(curruser){
@@ -85,13 +89,9 @@ export class ProfileComponent implements OnInit {
                 this.userService.getByID(post.posztoloID).pipe(first()).subscribe(posztolo =>{
                   this.profilkepek.set(post.postID, posztolo.profileimageURL);
                 })
-
-
-
               }
             })
           })
-
         });
       } else {
         this.router.navigateByUrl("/login")

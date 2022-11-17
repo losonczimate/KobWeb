@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import {AngularFirestore, DocumentChangeAction} from "@angular/fire/compat/firestore";
+import {AngularFirestore} from "@angular/fire/compat/firestore";
 import {Posztok} from "../../Model/posztok";
 import {Image} from "../../Model/image";
-import firebase from "firebase/compat";
-import FieldValue = firebase.firestore.FieldValue;
-import {Firestore} from "@angular/fire/firestore";
+
+import firebase from "firebase/compat/app"
+const FieldValue = firebase.firestore.FieldValue;
 
 @Injectable({
   providedIn: 'root'
