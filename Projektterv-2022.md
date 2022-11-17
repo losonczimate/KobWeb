@@ -814,7 +814,7 @@ Az egyes leadások alkalmával rögzített erőforrásigényt, az elvállalt fel
 |                     Orosz Bence          |           1          |             1            |           5          |            1           |    8     |
 |                     Oláh Balázs          |           1          |             1            |           5          |            1           |    8     |
 |                     Papp Lukács Lóránt   |           1          |             1            |           5          |            1           |    8     |
-|                     Simon Dániel         |           1          |             1            |           8          |            1           |    9     |
+|                     Simon Dániel         |           1          |             1            |           8          |            1           |    11    |
 |                     Losonczi Máté        |           1          |             1            |           5          |            1           |    8     |
 
 ### 11.3. Részletes költségvetés
