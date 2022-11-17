@@ -800,7 +800,7 @@ Az egyes leadások alkalmával rögzített erőforrásigényt, az elvállalt fel
 |                     Orosz Bence          |           1          |             3            |           16          |            3           |    23     |
 |                     Oláh Balázs          |           1          |             3            |           16          |            3           |    23     |
 |                     Papp Lukács Lóránt   |           1          |             3            |           16          |            3           |    23     |
-|                     Simon Dániel         |           1          |             3            |           20          |            3           |    27     |
+|                     Simon Dániel         |           1          |             3            |           10          |            6           |    20     |
 |                     Losonczi Máté        |           1          |             3            |           16          |            3           |    23     |
 
 
