@@ -7,13 +7,14 @@ import * as uuid from 'uuid';
   providedIn: 'root'
 })
 export class FileUploadService {
-  basePath: string = "/PostPics/";
+  basePathPost: string = "/PostPics/";
+  basePathProfile: string = "/ProfilePics/";
   fileRef;
 
   constructor(private afs:AngularFireStorage) { }
 
   upload(file){
-    const filepath = this.basePath + uuid.v4();
+    const filepath = this.basePathPost + uuid.v4();
     this.fileRef = this.afs.ref(filepath);
     return this.afs.upload(filepath, file);
   }
