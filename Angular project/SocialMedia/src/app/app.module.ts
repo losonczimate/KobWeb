@@ -28,7 +28,7 @@ import {MatChipsModule} from "@angular/material/chips";
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
   ],
   imports: [
     BrowserModule,

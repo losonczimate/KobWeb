@@ -34,6 +34,9 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  goToLoginWithPhoneNumber(){
+    this.router.navigateByUrl('/loginphonenumber')
+  }
 
   goToReg() {
     this.router.navigateByUrl('/registration')

@@ -24,6 +24,9 @@
         <mat-form-field>
           <input matInput type="password" placeholder="Jelszó mégegyszer" formControlName="rePassword" required>
         </mat-form-field>
+        <mat-form-field>
+          <input matInput type="tel" placeholder="Telefonszám" formControlName="phonenumber" required>
+        </mat-form-field>
         <mat-form-field appearance="outline" style="width: 100%">
           <input #upload (change)="uploadbar.onchange; onChange($event)" hidden type="file" formControlName="file" accept=".jpeg,.jpg,.png"/>
           <input #uploadbar (click)="upload.click()" matInput placeholder="Kép feltöltése (opcionális)"

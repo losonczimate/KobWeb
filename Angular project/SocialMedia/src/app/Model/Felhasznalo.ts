@@ -5,4 +5,5 @@ export interface Felhasznalo {
   ismerosok: string[];
   regdatum: number;
   profileimageURL: string;
+  telefonszam: string;
 }

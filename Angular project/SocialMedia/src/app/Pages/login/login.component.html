@@ -16,13 +16,13 @@
           <mat-form-field>
             <input matInput type="password" placeholder="Jelszó" formControlName="password" required>
           </mat-form-field>
-
           <button mat-raised-button color="primary" type="submit" class="buttons" [class.mat-elevation-z5]="true">
             Bejelentkezés
           </button>
-
-
         </form>
+        <button mat-raised-button color="primary" class="buttons" [class.mat-elevation-z4]="true" (click)="goToLoginWithPhoneNumber()">
+          Bejelentkezés telefonszámmal
+        </button>
         <button mat-raised-button color="primary" class="buttons" [class.mat-elevation-z5]="true" (click)="goToReg()">Ha
           nincs fiókod, regisztrálj!
         </button>

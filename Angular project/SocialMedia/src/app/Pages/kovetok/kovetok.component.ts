@@ -33,7 +33,8 @@ export class KovetokComponent implements OnInit {
       nev: this.currentloggeduser.nev as string,
       ismerosok: Array.from(this.ismerosok.values()),
       regdatum: this.currentloggeduser.regdatum,
-      profileimageURL : this.currentloggeduser.profileimageURL
+      profileimageURL : this.currentloggeduser.profileimageURL,
+      telefonszam: this.currentloggeduser.telefonszam,
     }
 
     this.userService.updateUser(UpdatedUser).then( () =>{
@@ -56,7 +57,8 @@ export class KovetokComponent implements OnInit {
       nev: this.currentloggeduser.nev as string,
       ismerosok: Array.from(this.ismerosok.values()),
       regdatum: this.currentloggeduser.regdatum,
-      profileimageURL: this.currentloggeduser.profileimageURL
+      profileimageURL: this.currentloggeduser.profileimageURL,
+      telefonszam: this.currentloggeduser.telefonszam,
     }
 
     this.userService.updateUser(UpdatedUser).then( () =>{
