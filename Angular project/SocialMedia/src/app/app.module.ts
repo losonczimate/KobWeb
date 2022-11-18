@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from './app.component';
 import {initializeApp, provideFirebaseApp} from '@angular/fire/app';
@@ -24,13 +24,12 @@ import {MatMenuModule} from '@angular/material/menu';
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 import {MatCardModule} from "@angular/material/card";
 import {MatChipsModule} from "@angular/material/chips";
-import { OtpComponent } from './Pages/otp/otp.component';
+import {NgOtpInputModule} from "ng-otp-input";
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    OtpComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,11 +51,13 @@ import { OtpComponent } from './Pages/otp/otp.component';
     FormsModule,
     MatMenuModule,
     MatCardModule,
-    MatChipsModule
+    MatChipsModule,
+    NgOtpInputModule
   ],
 
   providers: [{ provide: FIREBASE_OPTIONS, useValue: environment.firebase }, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   exports: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}
