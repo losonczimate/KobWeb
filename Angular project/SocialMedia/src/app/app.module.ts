@@ -24,11 +24,13 @@ import {MatMenuModule} from '@angular/material/menu';
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 import {MatCardModule} from "@angular/material/card";
 import {MatChipsModule} from "@angular/material/chips";
+import { OtpComponent } from './Pages/otp/otp.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
+    OtpComponent,
   ],
   imports: [
     BrowserModule,
