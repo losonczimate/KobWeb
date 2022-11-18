@@ -7,7 +7,8 @@
   </mat-card>
   <mat-card [class.mat-elevation-z12]="true" id="matcardkont" style="justify-content:space-evenly">
     <mat-card *ngIf="loading" fxLayout="column" fxLayoutAlign="center center" style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: rgba(44,44,44,0.5); z-index: 30">
-      <mat-progress-spinner [value]="uploadPercentage"></mat-progress-spinner>
+      <h1 style="position: absolute; margin-top: 1.5%; color: #ffffff; text-shadow: 2px 2px 0 #000000;">{{uploadPercentages | async}} %</h1>
+      <mat-progress-spinner [value]="uploadPercentages | async"></mat-progress-spinner>
     </mat-card>
     <mat-card-content>
       <form [formGroup]="regForm" id="regform" (ngSubmit)="onSubmit()">

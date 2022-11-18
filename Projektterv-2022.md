@@ -795,12 +795,12 @@ Az egyes leadások alkalmával rögzített erőforrásigényt, az elvállalt fel
 |                     Név                    | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
 |:------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:-----------:|
 |                     Bondár Kristóf       |           1          |             3            |           16          |            3           |    23     |
-|                     Juhász István        |           1          |             3            |           16          |            3           |    23     |
+|                     Juhász István        |           2          |             3            |           10          |            6           |    20     |
 |                     Gila Valter          |           1          |             3            |           16          |            3           |    23     |
 |                     Orosz Bence          |           1          |             3            |           16          |            3           |    23     |
 |                     Oláh Balázs          |           1          |             3            |           16          |            3           |    23     |
-|                     Papp Lukács Lóránt   |           1          |             3            |           16          |            3           |    23     |
-|                     Simon Dániel         |           1          |             3            |           18          |            3           |    25     |
+|                     Papp Lukács Lóránt   |           2          |             3            |           10          |            5           |    20     |
+|                     Simon Dániel         |           1          |             3            |           10          |            6           |    27     |
 |                     Losonczi Máté        |           1          |             3            |           16          |            3           |    23     |
 
 
@@ -814,7 +814,7 @@ Az egyes leadások alkalmával rögzített erőforrásigényt, az elvállalt fel
 |                     Orosz Bence          |           1          |             1            |           5          |            1           |    8     |
 |                     Oláh Balázs          |           1          |             1            |           5          |            1           |    8     |
 |                     Papp Lukács Lóránt   |           1          |             1            |           5          |            1           |    8     |
-|                     Simon Dániel         |           1          |             1            |           8          |            1           |    9     |
+|                     Simon Dániel         |           1          |             1            |           8          |            1           |    11    |
 |                     Losonczi Máté        |           1          |             1            |           5          |            1           |    8     |
 
 ### 11.3. Részletes költségvetés
