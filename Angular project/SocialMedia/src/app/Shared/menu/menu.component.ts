@@ -14,6 +14,7 @@ import { first, Observable } from 'rxjs';
 })
 export class MenuComponent implements OnInit {
 
+  //Tomb az ertesiteseknek
   notifications: Notification[] = [
 
   ]
@@ -28,6 +29,7 @@ export class MenuComponent implements OnInit {
     this.authService.isUserLoggedIn().subscribe(user => {
       this.loggedInUser = user;
       localStorage.setItem('user', JSON.stringify(this.loggedInUser));
+      //Lekerjuk az adatbazisbol az osszes ertesitest es taroljuk a tombunkben.
       this.notificationService.getAll(this.loggedInUser.uid).pipe(first()).subscribe(notifications => {
         notifications.forEach(noti => {
           this.notifications.push(noti);
@@ -44,6 +46,9 @@ export class MenuComponent implements OnInit {
     this.router.navigateByUrl("/kovetok/" + this.searchedText).then(()=>{window.location.reload()})
   }
 
+  //Ha a torles gombra kattintunk akkor ez a fuggveny hivodik meg
+  //1, Kitoroljuk az adatbazisbol az ertesitest
+  //2, Majd kitoroljuk a tombunkbol is.
   onDelete(noti: Notification) {
     this.notificationService.delete(noti);
     const index = this.notifications.indexOf(noti, 0);

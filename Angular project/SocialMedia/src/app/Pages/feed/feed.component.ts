@@ -66,6 +66,7 @@ export class FeedComponent implements OnInit {
             ujkomment.push(comment.date);
             this.commentsbypost[post.postID].push(ujkomment)
 
+            //Letrehozok egy uj notificationt
             const noti: Notification = {
               postId: post.postID,
               notificationId: '',
@@ -77,6 +78,7 @@ export class FeedComponent implements OnInit {
               ertesites: undefined
             };
 
+            //Meghivom a notificationService notification create fuggvenyet.
             this.notificationService.create(noti);
           })
         });
@@ -93,6 +95,8 @@ export class FeedComponent implements OnInit {
 
         this.postService.editPosztLikes(id, ujlikolok).then(()=>{this.posts[indexofpost] = post})
 
+        //Letrehozok egy uj notificationt
+
         const noti: Notification = {
           postId: post.postID,
           notificationId: '',
@@ -104,6 +108,7 @@ export class FeedComponent implements OnInit {
           ertesites: undefined
         };
 
+        //Meghivom a notificationService notification create fuggvenyet.
         this.notificationService.create(noti);
       }
     })
