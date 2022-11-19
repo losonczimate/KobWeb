@@ -132,6 +132,14 @@ export class FeedComponent implements OnInit {
     })
   }
 
+  didClickDelete(post: Posztok) {
+    this.postService.delete(post.postID);
+    const index = this.posts.indexOf(post, 0);
+    if (index > -1) {
+      this.posts.splice(index, 1);
+    }
+  }
+
   ngOnInit(): void {
     //megnezi, hogy a korabban lekert postok mennyisege megegyezik-e az adatbazisban eltarolt darabszammal (minden posztot nez)
     this.postService.getCount().pipe(first()).subscribe(count => {

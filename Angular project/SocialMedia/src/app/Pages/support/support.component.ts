@@ -22,6 +22,7 @@ export class SupportComponent implements OnInit {
 
   constructor(private _formBuilder: UntypedFormBuilder, private afs: AngularFirestore, private auth: AuthService) { }
 
+  //Megnezzuk hogy be van e jelentkezve a felhasznalo, ha igen, akkor automatikusan kitoltjuk az email reszt.
   ngOnInit(): void {
     this.auth.isUserLoggedIn().pipe().subscribe(curruser => {
       if (curruser) {

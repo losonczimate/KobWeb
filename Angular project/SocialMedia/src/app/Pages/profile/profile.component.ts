@@ -49,6 +49,14 @@ export class ProfileComponent implements OnInit {
     })
   }
 
+  didClickDelete(post: Posztok) {
+    this.postService.delete(post.postID);
+    const index = this.posts.indexOf(post, 0);
+    if (index > -1) {
+      this.posts.splice(index, 1);
+    }
+  }
+
   goToKovetesek(){
       this.router.navigateByUrl("/kovetok")
   }

@@ -12,6 +12,7 @@
           <mat-card-title>{{post.Posztolo}}</mat-card-title>
           <mat-card-subtitle>{{ (post.idopont | customdate)}}</mat-card-subtitle>
         </mat-card-header>
+        <button *ngIf="loggedinuser == post.posztoloID" mat-raised-button (click)="didClickDelete(post)" color="warn" style="position: absolute; float: right; top: 25px; right: 25px;">Törlés</button>
         <img *ngIf="post.kepId !== ''"
              style="background-color: #d4d4d4; width: 90%; margin-left: auto;margin-right: auto" mat-card-image
              src="{{post.kepId}}"

@@ -9,6 +9,7 @@ import {MatChipsModule} from "@angular/material/chips";
 import {MatListModule} from "@angular/material/list";
 import {SharedPipeModule} from "../../Shared/shared-pipe/shared-pipe.module";
 import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {MatCardModule} from "@angular/material/card";
     MatListModule,
     SharedPipeModule,
     FlexLayoutModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ]
 })
 export class ProfileModule { }
