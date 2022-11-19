@@ -4,6 +4,8 @@ import {AuthService} from "../../Shared/services/auth.service";
 import {UserService} from "../../Shared/services/user.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {first, take} from "rxjs";
+import { Notification } from '../../Model/notification';
+import { NotificationsService } from '../../Shared/services/notifications.service';
 
 @Component({
   selector: 'app-kovetok',
@@ -21,7 +23,7 @@ export class KovetokComponent implements OnInit {
   searched: string = '';
 
 
-  constructor(private authService: AuthService, private userService: UserService, private router: Router,private actRoute: ActivatedRoute) { }
+  constructor(private authService: AuthService, private notificationService: NotificationsService,private userService: UserService, private router: Router,private actRoute: ActivatedRoute) { }
 
   kikovetes(ToBeRemovedUserId: string){
 
@@ -67,6 +69,17 @@ export class KovetokComponent implements OnInit {
       //location.reload()
     });
 
+    const notification: Notification = {
+      postId: '',
+      notificationId: '',
+      type: 1,
+      username: '',
+      ertesitestKapoUsernameId: ToBeAddedUserId,
+      ertesitestAdoUsernameId: '',
+      date: new Date(),
+      ertesites: undefined
+    }
+    this.notificationService.create(notification);
 
   }
 

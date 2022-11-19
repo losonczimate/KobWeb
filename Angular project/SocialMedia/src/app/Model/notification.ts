@@ -6,4 +6,5 @@ export interface Notification {
     ertesitestKapoUsernameId: string;
     ertesitestAdoUsernameId: string;
     date: Date;
+    ertesites: String
 }

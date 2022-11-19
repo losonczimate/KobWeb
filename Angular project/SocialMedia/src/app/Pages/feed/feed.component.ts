@@ -9,6 +9,8 @@ import {FormArray, FormBuilder, FormControl, FormGroup} from "@angular/forms";
 import * as uuid from 'uuid';
 import {Comment} from "../../Model/comment";
 import {CommentService} from "../../Shared/services/comment.service";
+import { NotificationsService } from '../../Shared/services/notifications.service';
+import { Notification } from '../../Model/notification';
 
 @Component({
   selector: 'app-feed',
@@ -37,7 +39,7 @@ export class FeedComponent implements OnInit {
     this.show = !this.show;
   }
 
-  constructor(private fb: FormBuilder, private commentService: CommentService,private postService: PostService ,private userService:UserService ,private router: Router , private authService:AuthService) { }
+  constructor(private fb: FormBuilder, private notificationService: NotificationsService, private commentService: CommentService,private postService: PostService ,private userService:UserService ,private router: Router , private authService:AuthService) { }
 
   onComment(postID: string, index: number){
     if(this.comments[index] === "" || this.comments[index].trim() === ""){return;}
@@ -63,6 +65,19 @@ export class FeedComponent implements OnInit {
             ujkomment.push(comment.comment);
             ujkomment.push(comment.date);
             this.commentsbypost[post.postID].push(ujkomment)
+
+            const noti: Notification = {
+              postId: post.postID,
+              notificationId: '',
+              type: 2,
+              username: '',
+              ertesitestKapoUsernameId: post.posztoloID,
+              ertesitestAdoUsernameId: '',
+              date: new Date(),
+              ertesites: undefined
+            };
+
+            this.notificationService.create(noti);
           })
         });
       })
@@ -78,6 +93,18 @@ export class FeedComponent implements OnInit {
 
         this.postService.editPosztLikes(id, ujlikolok).then(()=>{this.posts[indexofpost] = post})
 
+        const noti: Notification = {
+          postId: post.postID,
+          notificationId: '',
+          type: 0,
+          username: '',
+          ertesitestKapoUsernameId: post.posztoloID,
+          ertesitestAdoUsernameId: '',
+          date: new Date(),
+          ertesites: undefined
+        };
+
+        this.notificationService.create(noti);
       }
     })
   }
