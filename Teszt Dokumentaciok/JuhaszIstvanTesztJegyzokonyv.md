@@ -1,4 +1,4 @@
-# Tesztjegyzőkönyv-`Poszt kedvelés backend, Értesitések CRUD,  `
+# Tesztjegyzőkönyv-Poszt kedvelés backend, Értesitések CRUD,
 
 Az alábbi tesztdokumentum a 2022_IB153I-9_C projekthez tartozó 9.3.12. Kommentelési lehetőség backend létrehozása funkcióihoz készült. Felelőse: Juhász István 
 Az alábbi tesztdokumentum a 2022_IB153I-9_C projekthez tartozó 9.3.21. Kedvelési lehetőség backend létrehozása funkcióihoz készült. Felelőse: Juhász István 
