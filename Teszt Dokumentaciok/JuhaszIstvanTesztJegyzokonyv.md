@@ -67,6 +67,7 @@ Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.3.26. Ért
 - Bemenet: postId: string
 - Művelet: Poszt kedvelése. 
 - Elvárt kimenet: Felkerül a kedvelés az adott posztra az adatbázisban.
+-                
 
 #### 2.2.2. TC-02
 - TP: TP-02
@@ -83,21 +84,22 @@ Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.3.26. Ért
 - Bemenet: Notification interface.
 - Művelet: Értesités létrehozása.
 - Elvárt kimenet: Létrejön egy értesités dokumentum az adatbázisban.
+-                 A kedvelt felhasználónak létrejön egy új értesités a főoldalon.
 
 #### 2.3.2. TC-02
 - TP: TP-03
 - Leírás: getAll funkció tesztelése
 - Bemenet: userId: string
 - Művelet: Összes értesités lekérése a bejelentkezett felhasználónak.
-- Elvárt kimenet: Megkapjuk az összes értesitést a bejelentkezett felhasználónak.
-
+- Elvárt kimenet: Megkapjuk az összes értesitést a bejelentkezett felhasználónak backend oldalon.
+-                 A bejelentkezett felhasználónak megjelennek az értesitések a frontend oldalon.
 #### 2.3.3. TC-03
 - TP: TP-03
 - Leírás: delete funkció tesztelése
 - Bemenet: Notification interface
 - Művelet: Értesités törlése.
 - Elvárt kimenet: A kitörölt értesités kitörlődik az adatbázisból.
-
+-                 A bejelentkezett felhasználónak kitörlődik a törölt éretsités a frontend oldalon.
 ## 3. Tesztriportok (TR)
 
 ### 3.1. Kommentelés funkció tesztriportjai
@@ -141,13 +143,17 @@ Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.3.26. Ért
 - TP: TP-03
     1. lépés: create functiont meghivtam.
     2. lépés: létrejött a megfelelő értesités az adatbázisban.
+    3. lépés: létrejött a megfelelő értesités a frontend oldalon.
 
 #### 3.3.2. TR-02 (TC-02)
 - TP: TP-03
     1. lépés: getAll functiont meghivtam.
-    2. lépés: megkaptam az összes kedvelést a bejelentkezett felhasználónak.
+    2. lépés: megkaptam az összes értesités a bejelentkezett felhasználónak.
+    3. lépés: létrejött az összes értesités a bejelentkezett felhasználónak frontend oldalon.
+
 
 #### 3.3.3. TR-03 (TC-03)
 - TP: TP-03
     1. lépés: delete functiont meghivtam.
     2. lépés: a megfelelő értesités kitörlődött az adatbázisból.
+    3. lépés: a megfelelő értesités kitörlődött a frontend oldalról.
