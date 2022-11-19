@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {UntypedFormBuilder, UntypedFormGroup} from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { AuthService } from '../../Shared/services/auth.service';
+import { first } from 'rxjs';
 
 @Component({
   selector: 'app-support',
@@ -18,9 +20,14 @@ export class SupportComponent implements OnInit {
   isSubmit = true;
   submitMessage = "";
 
-  constructor(private _formBuilder: UntypedFormBuilder, private afs: AngularFirestore) { }
+  constructor(private _formBuilder: UntypedFormBuilder, private afs: AngularFirestore, private auth: AuthService) { }
 
   ngOnInit(): void {
+    this.auth.isUserLoggedIn().pipe().subscribe(curruser => {
+      if (curruser) {
+        this.firstFormGroup.get('email').patchValue(curruser.email);
+      };
+    });
   }
 
   send(firstFormValue: any, secondFormValue: any){
