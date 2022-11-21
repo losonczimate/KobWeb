@@ -13,7 +13,6 @@ import {update} from "@angular/fire/database";
 import {uploadBytes} from "@angular/fire/storage";
 
 const storage = getStorage();
-const storageRef = ref(storage, 'ProfilePics')
 
 
 @Component({
@@ -65,6 +64,7 @@ export class ProfileeditComponent implements OnInit {
       const updatedUser = doc(this.fs, `${this.collectionName}/${curruser.uid}`);
       if (this.profileeditForm.valid) {
         if (this.profileeditForm.get('file')?.value !== "") {
+          const storageRef = ref(storage, `ProfilePics/`)
           uploadBytes(ref(storageRef, this.profileeditForm.get('file')?.value as string),this.file).then((snapshot) => {
             getDownloadURL(snapshot.ref).then(downloadURL => {
               updateDoc(updatedUser,{profileimageURL: downloadURL as string}).then(() => {
