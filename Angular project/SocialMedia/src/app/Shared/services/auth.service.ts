@@ -30,6 +30,14 @@ export class AuthService {
     return firebase.auth().signInWithEmailAndPassword(email, password);
   }
 
+  loginWithPhone(phoneNumber: any, reCaptchaVerifier: any) {
+    return firebase.auth().signInWithPhoneNumber(phoneNumber, reCaptchaVerifier);
+  }
+
+  loginWithCred(cred: firebase.auth.AuthCredential){
+    return firebase.auth().signInWithCredential(cred);
+  }
+
   signup(email: string, password: string) {
     return this.auth.createUserWithEmailAndPassword(email, password);
   }

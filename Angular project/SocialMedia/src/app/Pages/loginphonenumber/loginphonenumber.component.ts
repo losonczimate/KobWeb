@@ -29,7 +29,7 @@ export class LoginphonenumberComponent implements OnInit {
     if(this.phoneForm.valid){
       if(this.phoneForm.get('phonenumber')?.value){
         this.phoneNumber = this.phoneForm.get('phonenumber')?.value;
-        firebase.auth().signInWithPhoneNumber(this.phoneNumber, this.reCaptchaVerifier).then((conf) => {
+        this.authService.loginWithPhone(this.phoneNumber, this.reCaptchaVerifier).then((conf) => {
           localStorage.setItem('verificationId', JSON.stringify(conf.verificationId));
           this.router.navigateByUrl('/otp');
         }).catch(error => {
