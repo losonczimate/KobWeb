@@ -25,6 +25,7 @@ import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 import {MatCardModule} from "@angular/material/card";
 import {MatChipsModule} from "@angular/material/chips";
 import {NgOtpInputModule} from "ng-otp-input";
+import { OtpComponent } from './Pages/otp/otp.component';
 
 @NgModule({
   declarations: [

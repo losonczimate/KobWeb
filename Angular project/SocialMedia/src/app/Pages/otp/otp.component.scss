@@ -1,0 +1,21 @@
+#otppage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-width: 100%;
+}
+
+#matcardkont{
+  max-width: 100%;
+  align-items: center;
+  margin: 15px auto 15px auto;
+  border-radius: 10px;
+}
+
+.buttons{
+  display: flex;
+  font-size: small;
+  border-radius:10px;
+  margin: 15px auto 15px auto;
+}

@@ -52,6 +52,9 @@ const routes: Routes = [
     path: 'loginphonenumber', loadChildren: () => import('./Pages/loginphonenumber/loginphonenumber.module').then(m => m.LoginphonenumberModule)
   },
   {
+    path: 'otp', loadChildren: () => import('./Pages/otp/otp.module').then(m => m.OtpModule)
+  },
+  {
     path: 'kovetok', loadChildren: () => import('./Pages/kovetok/kovetok.module').then(m => m.KovetokModule)
   },
   { path: 'advert', loadChildren: () => import('./Pages/advert/advert.module').then(m => m.AdvertModule) }, //kesobb torolni kell

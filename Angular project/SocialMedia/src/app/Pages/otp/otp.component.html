@@ -1,0 +1,9 @@
+<meta charset="UTF-8">
+<div id="otppage" fxLayout="column" fxLayoutAlign="center start">
+  <mat-card [class.mat-elevation-z12]="true" id="matcardkont">
+    <mat-card-content>
+      <ng-otp-input (onInputChange)="onOtpChange($event)"></ng-otp-input>
+      <button mat-raised-button color="warn" class="buttons" [class.mat-elevation-z4]="true" (click)="goToLogin()">Vissza</button>
+    </mat-card-content>
+  </mat-card>
+</div>

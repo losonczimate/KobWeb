@@ -5,7 +5,6 @@ import {AuthService} from "../../Shared/services/auth.service";
 import firebase from "firebase/compat/app";
 import 'firebase/auth';
 import 'firebase/firestore';
-import { AngularFireAuth } from "@angular/fire/compat/auth";
 
 @Component({
   selector: 'app-loginphonenumber',
