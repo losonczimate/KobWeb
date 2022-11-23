@@ -18,4 +18,8 @@ export class FileUploadService {
     this.fileRef = this.afs.ref(filepath);
     return this.afs.upload(filepath, file);
   }
+
+  delete(url){
+    return this.afs.storage.refFromURL(url).delete();
+  }
 }

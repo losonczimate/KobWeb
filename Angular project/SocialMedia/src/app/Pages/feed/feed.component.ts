@@ -1,4 +1,4 @@
-import { Component,Input, OnInit } from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
 import {AuthService} from "../../Shared/services/auth.service";
 import {Router} from "@angular/router";
 import {first} from "rxjs";
@@ -32,7 +32,6 @@ export class FeedComponent implements OnInit {
 
   comments = []
   commentsbypost: Map<String, Comment[]> = new Map<String, Comment[]>();
-
 
   toggle() {
     this.buttonName = "COMMENT";
