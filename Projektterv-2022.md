@@ -462,7 +462,7 @@ Tartam:  4 nap
 
 Erőforrásigény:  3 személynap
 
-#### 9.3.9.  Felhasználók kereséséhez kapcsolódó GUI megvalósítása
+#### 9.3.9.  Bejelentkezéshez tartozó GUI megvalósítása
 
 Felelős: Losonczi Máté
 
@@ -502,7 +502,7 @@ Tartam:  4 nap
 
 Erőforrásigény:  4 személynap
 
-#### 9.3.14.  Hirfolyam kezeléshez kapcsolódó GUI megvalósítás
+#### 9.3.14.   Lájkolások számánának kimutatásához tartozó GUI  megvalósítás
 
 Felelős: Losonczi Máté
 
@@ -648,7 +648,7 @@ Erőforrásigény:  2 személynap
 
 #### 9.3.32.  Jelszóváltoztatás ürlap GUI létrehozása
 
-Felelős: Simon Dániel
+Felelős: Losonczi Máté
 
 Tartam:  4 nap
 
