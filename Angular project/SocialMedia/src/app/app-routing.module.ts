@@ -59,13 +59,15 @@ const routes: Routes = [
   },
   { path: 'advert', loadChildren: () => import('./Pages/advert/advert.module').then(m => m.AdvertModule) }, //kesobb torolni kell
   {
-    path: '**',
-    redirectTo: '/login'
-  },
-  {
     path: '',
     redirectTo: '/login',
     pathMatch: 'full'
+  },
+  { path: 'not-found', loadChildren: () => import('./Pages/not-found/not-found.module').then(m => m.NotFoundModule)
+  },
+  {
+    path: '**', //ez tolt be legutoljara
+    redirectTo: '/not-found'
   }
 ];
 
