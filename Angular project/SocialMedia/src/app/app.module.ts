@@ -26,11 +26,12 @@ import {MatCardModule} from "@angular/material/card";
 import {MatChipsModule} from "@angular/material/chips";
 import {NgOtpInputModule} from "ng-otp-input";
 import { OtpComponent } from './Pages/otp/otp.component';
+import { AdminpanelComponent } from './Pages/adminpanel/adminpanel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
