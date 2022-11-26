@@ -88,7 +88,7 @@
                         <div mat-line style="font-size: 10px;">{{comment[3] | customdate}}</div>
                         <!--Módosításnál valami olyasmi kellene, hogy visszadobja a komment író mezőbe a már meglévő kommentet és azt át lehet írni, törléskor meg valami pop-up cucc hogy biztos
                         törölni szeretné-e a kommentet?-->
-                        <div mat-line style="font-size: 12px;"><a style = "cursor: pointer; margin-right: 5px; text-decoration: underline;">Módosít</a> <a style = "cursor: pointer; margin-right: 5px; text-decoration: underline;">Törlés</a></div>
+                        <div mat-line style="font-size: 12px;"><a style = "cursor: pointer; margin-right: 5px; text-decoration: underline;">Módosít</a> <a (click)="delComment()" style = "cursor: pointer; margin-right: 5px; text-decoration: underline;">Törlés</a></div>
 
                         <div mat-line
                              style = ";height: initial; overflow-wrap: anywhere; hyphens: auto; white-space: pre-wrap;font-weight: 400;margin-bottom: 15px">{{comment[2]}}</div>

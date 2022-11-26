@@ -17,6 +17,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {PostModule} from "../post/post.module";
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule} from "@angular/forms";
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import {FormsModule} from "@angular/forms";
         PostModule,
         MatInputModule,
         ExtendedModule,
-        FormsModule
+        FormsModule,
+        MatSnackBarModule
     ]
 })
 export class FeedModule { }
