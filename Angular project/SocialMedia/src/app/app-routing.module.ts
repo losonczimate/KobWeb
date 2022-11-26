@@ -38,6 +38,9 @@ const routes: Routes = [
     loadChildren: () => import('./Pages/profileedit/profileedit.module').then(m => m.ProfileeditModule)
   },
   {
+    path: 'adminpanel', loadChildren: () => import('./Pages/adminpanel/adminpanel.module').then(m => m.AdminpanelModule)
+  },
+  {
     path: 'registration',
     loadChildren: () => import('./Pages/registration/registration.module').then(m => m.RegistrationModule)
   },

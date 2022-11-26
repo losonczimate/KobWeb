@@ -11,6 +11,7 @@ import {getStorage, ref, deleteObject, getDownloadURL} from "firebase/storage";
 import {Firestore, doc, updateDoc} from "@angular/fire/firestore";
 import {update} from "@angular/fire/database";
 import {uploadBytes} from "@angular/fire/storage";
+import {MatRadioChange} from "@angular/material/radio";
 
 const storage = getStorage();
 
@@ -24,12 +25,17 @@ export class ProfileeditComponent implements OnInit {
   file: File = null;
   nickname: string = "";
   profilpic: string = "";
+  isRequested = false;
 
   collectionName = "Felhasznalo";
 
   profileeditForm = new FormGroup({
     file: new FormControl(''),
     nickname: new FormControl(''),
+  });
+  adminRequestForm = new FormGroup({
+    isRequested: new FormControl(''),
+    validation: new FormControl('')
   });
 
   constructor(private authService: AuthService,
@@ -86,5 +92,18 @@ export class ProfileeditComponent implements OnInit {
         }
       }
     })
+  }
+
+  onSubmitAdmin() {
+    if (this.adminRequestForm.get('isRequested').value && this.adminRequestForm.get('validation').value === "Kobold2022") {
+      this.authService.currentuser().then(curruser => {
+        const updatedUser = doc(this.fs, `${this.collectionName}/${curruser.uid}`);
+        updateDoc(updatedUser,{role: "admin"}).then(() => {
+          this.router.navigateByUrl("/profile");
+        }).catch(error => {
+          console.error(error);
+        })
+      })
+    }
   }
 }
