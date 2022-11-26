@@ -6,4 +6,5 @@ export interface Felhasznalo {
   regdatum: number;
   profileimageURL: string;
   telefonszam: string;
+  role: string;
 }

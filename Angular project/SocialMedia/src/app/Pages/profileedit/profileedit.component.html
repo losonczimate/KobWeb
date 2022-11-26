@@ -1,9 +1,9 @@
 <meta charset="UTF-8">
 <div fxLayout="column" fxFlexFill fxLayoutAlign="center start" style="margin-top: 1%; justify-content: space-evenly">
-  <mat-card id="matcardkont" style="justify-content: space-evenly">
-    <mat-card-content fxLayout="row" fxLayoutAlign="start center"dense>
+  <mat-card class="matcardkont" style="justify-content: space-evenly">
+    <mat-card-content fxLayout="row" fxLayoutAlign="start center" dense>
       <img mat-card-lg-image class="example-header-image" src="{{profilpic}}" alt="tile.profilkep" style="margin-right: 4%" loading="lazy">
-      <form [formGroup]="profileeditForm" id="profileeditform" (ngSubmit)="onSubmit()">
+      <form [formGroup]="profileeditForm" class="profileeditform" (ngSubmit)="onSubmit()">
         <mat-form-field>
           <input #upload (change)="uploadbar.onchange; onChange($event)" hidden type="file" formControlName="file" accept=".jpeg,.jpg,.png"/>
           <input #uploadbar (click)="upload.click()" matInput placeholder="Új profilkép" [value]="upload.value"/>
@@ -17,6 +17,27 @@
     <mat-card-footer fxLayout="row" fxLayoutAlign="space-between none" [style.margin-left.px]="10" [style.margin-right.px]="10" [style.margin-bottom.px]="5">
       <button mat-raised-button color="warn" type="button" [class.mat-elevation-z5]="true" (click)="goToProfile()">Vissza</button>
       <button mat-raised-button fxLayoutAlign="end" color="primary" type="submit" [class.mat-elevation-z5]="true" (click)="onSubmit()">Mentés</button>
+      <button mat-icon-button [matMenuTriggerFor]="admin" aria-label="Example icon-button with a menu">
+        <mat-icon>expand_more</mat-icon>
+      </button>
     </mat-card-footer>
   </mat-card>
+  <mat-menu #admin>
+    <mat-list (click)="$event.stopPropagation()">
+      <mat-list-item style="margin-top: 15%" fxLayoutAlign="center">
+        <form [formGroup]="adminRequestForm" fxLayout="column" fxLayoutAlign="center center">
+          <mat-checkbox formControlName="isRequested">
+            Admin szeretnék lenni
+          </mat-checkbox>
+          <mat-form-field style="margin-top: 4%">
+            <input matInput type="password" placeholder="Titkos jelszó" formControlName="validation">
+          </mat-form-field>
+        </form>
+      </mat-list-item>
+      <mat-list-item style="margin-top: 5%; margin-bottom: 5%" fxLayout="column" fxLayoutAlign="center center">
+        <button mat-raised-button color="primary" type="submit" [class.mat-elevation-z5]="true" (click)="onSubmitAdmin()">Mentés</button>
+      </mat-list-item>
+    </mat-list>
+  </mat-menu>
+
 </div>

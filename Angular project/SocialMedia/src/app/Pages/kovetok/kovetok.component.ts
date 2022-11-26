@@ -37,6 +37,7 @@ export class KovetokComponent implements OnInit {
       regdatum: this.currentloggeduser.regdatum,
       profileimageURL : this.currentloggeduser.profileimageURL,
       telefonszam: this.currentloggeduser.telefonszam,
+      role: this.currentloggeduser.role
     }
 
     this.userService.updateUser(UpdatedUser).then( () =>{
@@ -61,6 +62,7 @@ export class KovetokComponent implements OnInit {
       regdatum: this.currentloggeduser.regdatum,
       profileimageURL: this.currentloggeduser.profileimageURL,
       telefonszam: this.currentloggeduser.telefonszam,
+      role: this.currentloggeduser.role
     }
 
     this.userService.updateUser(UpdatedUser).then( () =>{
