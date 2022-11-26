@@ -21,7 +21,7 @@
   </div>
 </div>
 
-<div id="vertad" *ngIf="vertad==true" style="z-index: 2; background-size: 100% 100vh" [style.background-image]="'url(' + picUrl + ')'">
+<div id="vertad" *ngIf="vertad==true" style="z-index: 2; background-size: 100% calc(100vh/2)" [style.background-image]="'url(' + picUrl + ')'">
   <div style="position: fixed; z-index: 10" (click)="vertad = false">
     <mat-icon id="cancel">not_interested</mat-icon>
   </div>

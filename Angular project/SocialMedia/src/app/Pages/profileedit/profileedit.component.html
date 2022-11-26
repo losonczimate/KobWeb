@@ -2,7 +2,7 @@
 <div fxLayout="column" fxFlexFill fxLayoutAlign="center start" style="margin-top: 1%; justify-content: space-evenly">
   <mat-card id="matcardkont" style="justify-content: space-evenly">
     <mat-card-content fxLayout="row" fxLayoutAlign="start center"dense>
-      <img mat-card-lg-image class="example-header-image" src="{{profilpic}}" alt="tile.profilkep" style="margin-right: 4%">
+      <img mat-card-lg-image class="example-header-image" src="{{profilpic}}" alt="tile.profilkep" style="margin-right: 4%" loading="lazy">
       <form [formGroup]="profileeditForm" id="profileeditform" (ngSubmit)="onSubmit()">
         <mat-form-field>
           <input #upload (change)="uploadbar.onchange; onChange($event)" hidden type="file" formControlName="file" accept=".jpeg,.jpg,.png"/>
