@@ -2,7 +2,7 @@
 <div fxLayout="column" fxLayoutAlign="start center" style="margin-top: 1%">
   <mat-card fxLayoutAlign="space-evenly stretch">
     <mat-card-header fxLayout="column" fxLayoutAlign="space-between start" fxLayoutGap="10px">
-      <img mat-card-lg-image class="example-header-image" src="{{profilpic}}" alt="tile.profilkep" style="margin-right: 4%">
+      <img mat-card-lg-image class="example-header-image" src="{{profilpic}}" alt="tile.profilkep" style="margin-right: 4%" loading="lazy">
     </mat-card-header>
     <mat-card-content>
       <mat-list fxLayout="column" fxLayoutAlign="start start" dense>
@@ -22,17 +22,17 @@
   <hr>
   <ng-template ngFor let-post [ngForOf]="posts" let-i="index">
     <mat-card class="example-card" style="margin-top: 1%; margin-bottom: 1%">
-      
-      
+
+
       <mat-card-header style="width: 90%; margin-left: auto;margin-right: auto">
-        
-        <mat-card-title> <img mat-card-sm-image="" class="example-header-image" src="{{profilkepek.get(post.postID)}}" alt="profilkep"></mat-card-title>
+
+        <mat-card-title> <img mat-card-sm-image="" class="example-header-image" src="{{profilkepek.get(post.postID)}}" alt="profilkep" loading="lazy"></mat-card-title>
         <mat-card-title>{{post.Posztolo}}</mat-card-title>
         <mat-card-subtitle>{{ (post.idopont | customdate)}}</mat-card-subtitle>
         <button mat-raised-button (click)="didClickDelete(post)" color="warn" style="position: absolute; float: right; top: 25px; right: 25px;">Törlés</button>
       </mat-card-header>
-      
-      <img style="background-color: #d4d4d4;width: 90%; margin-left: auto;margin-right: auto" mat-card-image src="{{post.kepId}}" alt="tile.kep">
+
+      <img style="background-color: #d4d4d4;width: 90%; margin-left: auto;margin-right: auto" mat-card-image src="{{post.kepId}}" alt="tile.kep" loading="lazy">
       <mat-card-content style="width: 90%; margin-left: auto;margin-right: auto">
         <p>
           {{post.Poszt}}
