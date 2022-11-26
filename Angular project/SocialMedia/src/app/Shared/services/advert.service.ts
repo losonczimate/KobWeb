@@ -13,4 +13,11 @@ export class AdvertService {
   getAll(){
     return this.afs.collection<Hirdetes>(this.collectionName).valueChanges();
   }
+
+  getAllVertical(){
+    return this.afs.collection<Hirdetes>(this.collectionName, ref => ref.where("isVertical", "==", true)).valueChanges();
+  }
+  getAllHorizontal(){
+    return this.afs.collection<Hirdetes>(this.collectionName, ref => ref.where("isVertical", "==", false)).valueChanges();
+  }
 }

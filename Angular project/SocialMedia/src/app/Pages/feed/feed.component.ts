@@ -144,7 +144,6 @@ export class FeedComponent implements OnInit {
     this.postService.getCount().pipe(first()).subscribe(count => {
       if (count.get('postCount') === this.postCount) return;
     })
-
     this.posts = [];
 
 
