@@ -33,9 +33,8 @@ export class FeedComponent implements OnInit {
   comments = []
   commentsbypost: Map<String, Comment[]> = new Map<String, Comment[]>();
 
-  toggle() {
-    this.buttonName = "COMMENT";
-    this.show = !this.show;
+  delComment() {
+    
   }
 
   constructor(private fb: FormBuilder, private notificationService: NotificationsService, private commentService: CommentService,private postService: PostService ,private userService:UserService ,private router: Router , private authService:AuthService) { }
