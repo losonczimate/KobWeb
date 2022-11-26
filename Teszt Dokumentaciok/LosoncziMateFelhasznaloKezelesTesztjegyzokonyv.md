@@ -1,9 +1,8 @@
-# Tesztjegyzőkönyv:- `Regisztrációs grafikus interfész elkészítése, Bejelentkezés grafikus interfész elkészítése,Jelszóváltoztatás oldal grafikus interfésze, Kedvelés láthatóságának elkészítése`
+# Tesztjegyzőkönyv:- `Regisztrációs grafikus interfész elkészítése, Bejelentkezés grafikus interfész elkészítése,Jelszóváltoztatás oldal grafikus interfésze, Hírfolyamhoz tartozó grafikus interfész`
 
-Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.3.30. Regisztrációhoz tartozó GUI` funkcióihoz készült. Felelőse: `Losonczi Máté`
+Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.3.9. Bejelentkezéshez tartozó GUI` funkcióihoz készült. Felelőse: `Losonczi Máté`
 Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.3.14. Kedvelések megjelenítése` funkcióihoz készült. Felelőse: `Losonczi Máté`
-Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.3.9. Bejelentkezéshez tartozó GUI` funkcióihoz készült. Felelőse: `Losonczi Máté` 
-Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.3.32. Jelszómódosításhoz tartozó GUI` funkcióihoz készült. Felelőse: `Losonczi Máté` 
+Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.3.32. Értesitések kezeléséhez tartozó üzleti logika` funkcióihoz készült. Felelőse: `Losonczi Máté` 
 
 ## 1. Teszteljárások (TP)
 
