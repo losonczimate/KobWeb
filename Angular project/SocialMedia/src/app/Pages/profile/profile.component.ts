@@ -30,7 +30,7 @@ export class ProfileComponent implements OnInit {
 
   posts: Posztok[] = [];
 
-
+  role: string = "";
   nickname: string = "";
   email: string = "";
   regdatum: number = 0;
@@ -76,6 +76,7 @@ export class ProfileComponent implements OnInit {
           this.verified = curruser.emailVerified;
           this.kovetok = currentuser.ismerosok;
           this.profilpic = currentuser.profileimageURL;
+          this.role = currentuser.role;
           if (this.router.url == "/profile" && !this.verified){
             window.alert("Kérlek erősítsd meg e-mail címedet, hogy teljes értékű felhasználóvá válj!");
           }

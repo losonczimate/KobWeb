@@ -13,7 +13,13 @@ mat-grid-list{
 }
 
 mat-chip{
-  font-size: 1vw;
+  font-size: 0.7vw;
+}
+
+@media only screen and (max-width: 1920px){
+  mat-chip{
+    font-size: 1vw;
+  }
 }
 
 @media only screen and (max-width: 1279px){
