@@ -125,13 +125,13 @@ export class KovetokComponent implements OnInit {
 
         });
       } else {
-        this.router.navigateByUrl("/login")
+        this.router.navigateByUrl("/login");
       }
     })
 
   }
 
-  ProfilraIranyit() {
-    this.router.navigateByUrl("/profilnezo");
+  ProfilraIranyit(user: Felhasznalo) {
+    this.router.navigate(['profilnezo'], { state: { felhasznalo: user } });
   }
 }
