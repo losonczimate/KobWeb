@@ -50,6 +50,17 @@ Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.4.8. Bevit
   3. lépés: Email, teljes név, probléma részletei, telefonszám
   4. lépés: Küldés gombra kattintás után email értesítés 
 
+### 1.6. Poszt alatt kommentelés beviteli mezői
+- Azonosító: TP-06
+- Tesztesetek: TC-01
+- Leírás: Poszt alatt kommentelés lehetősége, bevitt adatok helyes megjelenítése
+  1. lépés: Bejelentkezés
+  2. lépés: Feedre navigálás(ha nincs poszt akkor poszt létrehozás)
+  3. lépés: Egy poszt alatt Kommentek megtekintése funkció megnyitása
+  4. lépés: Komment írása 
+  5. lépés: Küldés gomb nyomás
+
+
 ## 2. Teszesetek (TC)
 
 ### 2.1. Bejelentkezés beviteli mezők helyességének tesztesetei
@@ -118,6 +129,15 @@ Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.4.8. Bevit
 - Bemenet: Segítség oldal beviteli mezőinek kitöltése
 - Művelet: Küldés gomb kattintás
 - Elvárt kimenet: Értesítő email küldése a megkapott segítségkérésről
+
+### 2.6. Poszt alatt kommentelés beviteli mezőinek tesztesete
+
+#### 2.6.1. TC-01
+- TP: TP-06
+- Leírás: Poszt alatt kommentelés mezőinek helyes kitöltése és sikeres elküldése
+- Bemenet: Komment megírása
+- Művelet: Küldés gomb kattintás
+- Elvárt kimenet: A poszt alatt megjelenik a kommentben írt szöveg helyesen
 
 ## 3. Tesztriportok (TR)
 
@@ -201,3 +221,16 @@ Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.4.8. Bevit
   4. lépés: Küldés gombra kattintás
   5. lépés: Email értesítés a megkapott visszajelzésről
   6. lépés: Megkapott email, sikeres segítség kérés 
+
+
+### 3.6. Poszt alatt kommentelés beviteli mezőinek tesztriportja
+
+#### 3.6.1. TR-01 (TC-01)
+- TP: TP-06
+  1. lépés: Bejelentkezés
+  2. lépés: Feed oldalra navigálás
+  3. lépés: Poszt keresése, ha nincs létrehozunk egyet: Ez egy teszt poszt
+  4. lépés: Kommentek megtekintése gomb kattintása
+  5. lépés: Komment írása: teszt komment
+  6. lépés: Küldés gombra kattintás
+  7. lépés: Poszt alatt sikeres kommentelés, beviteli mezők helyesen adták át az adatot 
