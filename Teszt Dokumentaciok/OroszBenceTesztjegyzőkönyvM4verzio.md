@@ -41,6 +41,15 @@ Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.4.8. Bevit
     3. lépés: Keresni kívánt felasználó teljes, vagy kezdetleges neve
     4. lépés: Enter lenyomása
 
+### 1.5. Segítség oldal sikeres kitöltése
+- Azonosító: TP-05
+- Tesztesetek: TC-01
+- Leírás: Segítség oldalon adatok beírása után sikeres email értesíő küldés
+  1. lépés: Segítség oldalra navigálás
+  2. lépés: Adatok helyes kitöltése, ahol szükséges
+  3. lépés: Email, teljes név, probléma részletei, telefonszám
+  4. lépés: Küldés gombra kattintás után email értesítés 
+
 ## 2. Teszesetek (TC)
 
 ### 2.1. Bejelentkezés beviteli mezők helyességének tesztesetei
@@ -93,13 +102,22 @@ Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.4.8. Bevit
 
 ### 2.4. Felhasználók keresése keresősávval tesztesete
 
-#### 2.3.1. TC-01
+#### 2.4.1. TC-01
 - TP: TP-04
 - Leírás: Felhasználó keresése a keresősáv használatáaval
 - Bemenet: Keresősávba írás
 - Művelet: Enter lenyomással a kívánt felhasználókat kilistázza
 - Elvárt kimenet: Azokat a felhasználókat listázza ki, akik nevében szerepel a keresni kívánt szöveg
 
+
+### 2.5. Segítség oldal sikeres kitöltésének tesztesete
+
+#### 2.5.1. TC-01
+- TP: TP-05
+- Leírás: Segítség oldal adatainak helyes megadása után visszajelzés küldése
+- Bemenet: Segítség oldal beviteli mezőinek kitöltése
+- Művelet: Küldés gomb kattintás
+- Elvárt kimenet: Értesítő email küldése a megkapott segítségkérésről
 
 ## 3. Tesztriportok (TR)
 
@@ -171,3 +189,15 @@ Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.4.8. Bevit
   4. lépés: Enter megnyomása
   5. lépés: Keresni kívánt szöveget (vagy szövegrészletet) tartalmazó felhasználónevek kilistázása
   6. lépés: Eredmény: teszt1, teszt2, sikeres keresés beviteli mezővel
+  
+
+### 3.5. Segítség oldal sikeres kitöltésének tesztriportja
+
+#### 3.5.1. TR-01 (TC-01)
+- TP: TP-05
+  1. lépés: Segítségoldalra navigálás
+  2. lépés: Adatok kitöltése: Teszt Elek, teszt1@gmail.com, 06701231234
+  3. lépés: Probléma leírása: Ez egy sima teszt
+  4. lépés: Küldés gombra kattintás
+  5. lépés: Email értesítés a megkapott visszajelzésről
+  6. lépés: Megkapott email, sikeres segítség kérés 
