@@ -36,7 +36,6 @@ export class AdvertComponent implements OnInit {
           this.horizAdverts.push(advert);
         });
       });
-      this.picUrl = this.horizAdverts[1].kepId;
     } else if (this.vertad == true) {
       //Vertical ad loading
       this.advertService.getAllVertical().pipe(first(), finalize(() => {

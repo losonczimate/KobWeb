@@ -23,6 +23,7 @@ export class FeedComponent implements OnInit {
   buttonName: any = 'Show';
   panelOpenState = false;
   userisadmin = false;
+  topad: boolean = false;
 
   ismerosok: Set<string> = new Set<string>();
   loggedinuser;
@@ -144,6 +145,7 @@ export class FeedComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.topad = Math.random() <= 0.5;
     //megnezi, hogy a korabban lekert postok mennyisege megegyezik-e az adatbazisban eltarolt darabszammal (minden posztot nez)
     this.postService.getCount().pipe(first()).subscribe(count => {
       if (count.get('postCount') === this.postCount) return;
