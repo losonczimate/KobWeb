@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { ProfilnezoRoutingModule } from './profilnezo-routing.module';
 import { ProfilnezoComponent } from './profilnezo.component';
+import {MatCardModule} from "@angular/material/card";
+import {MatListModule} from "@angular/material/list";
+import {MatChipsModule} from "@angular/material/chips";
+import {FlexLayoutModule, FlexModule} from "@angular/flex-layout";
 
 
 @NgModule({
@@ -11,7 +15,12 @@ import { ProfilnezoComponent } from './profilnezo.component';
   ],
   imports: [
     CommonModule,
-    ProfilnezoRoutingModule
+    ProfilnezoRoutingModule,
+    MatCardModule,
+    MatListModule,
+    MatChipsModule,
+    FlexModule,
+    FlexLayoutModule
   ]
 })
 export class ProfilnezoModule { }

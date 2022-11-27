@@ -12,6 +12,12 @@ export class ProfilnezoComponent implements OnInit {
 
   constructor(private router: Router) {
     this.user=this.router.getCurrentNavigation().extras.state['felhasznalo'];
+    if (this.user.kovetokszama==undefined){
+      this.user.kovetokszama=0;
+    }
+    if(this.user.telefonszam==undefined){
+      this.user.telefonszam="Nincs megadva.";
+    }
   }
 
   ngOnInit(): void {

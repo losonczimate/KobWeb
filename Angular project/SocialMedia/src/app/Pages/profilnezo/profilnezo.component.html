@@ -1,7 +1,32 @@
 <div>
-  <p>Profilnezo megy</p><br/>
-  <p>Felhasználó neve: {{user.nev}}</p>
-  <p>Telefonszáma: {{user.telefonszam}}</p><p *ngIf="user.telefonszam==null">Nincs telefonszám megadva.</p>
-  <p>Követők száma:{{user.kovetokszama}}</p><p *ngIf="user.kovetokszama==0">0</p>
-  <p>Szerepköre:{{user.role}}</p>
+  <mat-card fxLayoutAlign="space-evenly stretch">
+    <mat-card-header fxShow.lt-sm="false" fxShow fxLayout="column" fxLayoutAlign="space-between start" fxLayoutGap="10px">
+      <img mat-card-lg-image class="example-header-image" src="{{user.profileimageURL}}" alt="tile.profilkep" style="margin-right: 4%" loading="lazy">
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list fxLayout="column" fxLayoutAlign="start center">
+        <img fxShow.lt-sm="true" fxShow="false" mat-card-lg-image class="example-header-image" src="{{user.profileimageURL}}" alt="tile.profilkep" style="margin-right: 4%" loading="lazy">
+        <div fxLayout="row" fxShow.lt-sm="false" fxShow>
+          <div>
+            <mat-list-item>Felhasználónév: {{user.nev}}</mat-list-item>
+            <mat-list-item>Email: {{user.email}}</mat-list-item>
+          </div>
+          <div>
+            <mat-list-item>Jogosultság: {{user.role}}</mat-list-item>
+            <mat-list-item>Telefonszám: {{user.telefonszam}}</mat-list-item>
+          </div>
+        </div>
+        <div fxShow="false" fxShow.lt-sm>
+          <mat-list-item>Felhasználónév: {{user.nev}}</mat-list-item>
+          <mat-list-item>Email: {{user.email}}</mat-list-item>
+          <mat-list-item>Jogosultság: {{user.role}}</mat-list-item>
+          <mat-list-item>Telefonszám: {{user.telefonszam}}</mat-list-item>
+        </div>
+        <mat-chip-list fxLayout="row" fxLayoutAlign="space-between" style="margin-left: 3%; font-size: 10px">
+          <mat-chip color="primary" selected> Követők: {{user.kovetokszama}} </mat-chip>
+          <mat-chip color="primary" selected> Követés: {{user.ismerosok.length}} </mat-chip>
+        </mat-chip-list>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
 </div>
