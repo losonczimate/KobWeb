@@ -1,9 +1,0 @@
-felh.nev  email               jelszo
-
-teszt1    teszt1@gmail.com    teszt1
-mako      mako@okam.hu        makott
-double    front@end.us        omen11
-Boar      em@gmail.com        emboar01
-vivien    grrf@gmail.com      beka07
-ibuprofen head@ache.hu        martir
-necro     ddd@drr.com         right99
