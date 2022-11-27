@@ -7,6 +7,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatListModule} from "@angular/material/list";
 import {MatChipsModule} from "@angular/material/chips";
 import {FlexLayoutModule, FlexModule} from "@angular/flex-layout";
+import {SharedPipeModule} from "../../Shared/shared-pipe/shared-pipe.module";
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {FlexLayoutModule, FlexModule} from "@angular/flex-layout";
     MatListModule,
     MatChipsModule,
     FlexModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    SharedPipeModule
   ]
 })
 export class ProfilnezoModule { }
