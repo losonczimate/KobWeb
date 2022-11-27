@@ -8,4 +8,4 @@ const routes: Routes = [{ path: '', component: AdminpanelComponent }];
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class FeedRoutingModule { }
+export class AdminpanelRoutingModule { }
