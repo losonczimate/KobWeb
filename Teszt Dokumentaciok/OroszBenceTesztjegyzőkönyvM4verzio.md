@@ -23,8 +23,17 @@ Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.4.8. Bevit
   3. lépés: Telefonszám megadása
   4. lépés: Kód küldése gombra nyomás
 
-### 1.3. 
+### 1.3. Regisztráció beviteli mezők helyessége
 - Azonosító: TP-03
+- Tesztesetek: TC-01, TC-02
+- Leírás: Sikeresen elküldi a mezők tartalmát, ahol kötelező a kitöltés ott akkor enged tovább, amikor van helyes adat írva
+  1. lépés: Bejelentkezés oldalra navigálás
+  2. lépés: Regisztráció gombra nyomás
+  3. lépés: Felhasználónév, email, jelszó kétszeres, telefonszám megadása
+  4. lépés: Regisztráció gombra nyomás
+
+### 1.4. 
+- Azonosító: TP-04
 - Tesztesetek: TC-01
 - Leírás: 
     1. lépés: 
@@ -65,6 +74,22 @@ Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.4.8. Bevit
 - Művelet: Kód küldése gombra kattintás, ami után egy SMS üzenetben kapunk egy bejelentkező kódot
 - Elvárt kimenet: Kód megadása után sikeres bejelentkezés, az felhasználó feedjére átirányítás
 
+### 2.3. Regisztráció beviteli mezők helyességének tesztesetei
+
+#### 2.3.1. TC-01
+- TP: TP-03
+- Leírás: Beviteli mezők csak megfelelő inputot fogadnak el
+- Bemenet: felhasználónév: email: jelszó(2x): telefonszám:
+- Művelet: Az adatokat regisztráció gomb hatására létrehozza az adatbázisban és ellenőrzi a jelszó helyes ismétlését
+- Elvárt kimenet: Sikeres regisztráció, feedre átirányítás
+
+#### 2.3.2. TC-02
+- TP: TP-03
+- Leírás: Beviteli mezők csak megfelelő inputot fogadnak el
+- Bemenet: felhasználónév: email: jelszó(2x): telefonszám: 
+- Művelet: Az adatokat regisztráció gomb hatására létrehozza az adatbázisban és ellenőrzi a jelszó helyes ismétlését
+- Elvárt kimenet: Sikeres regisztráció, feedre átirányítás
+
 ### 2.3. tesztesete
 
 #### 2.3.1. TC-01
@@ -98,23 +123,25 @@ Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.4.8. Bevit
 
 #### 3.2.1. TR-01 (TC-01)
 - TP: TP-02
-    1. lépés: 
-    2. lépés: 
-    3. lépés: 
-    4. lépés: 
-    5. lépés: 
+    1. lépés: Bejelentkezés oldalra navigálás
+    2. lépés: Bejelentkezés telefonszámmal gombra nyomás, ez elnavigál a megfelelő oldalra
+    3. lépés: Telefonszám megadása 06701231234
+    4. lépés: Kód küldése gombra nyomás
+    5. lépés: Pár perc múlva megkapjuk a belépési kódot 
+    6. lépés: Kód beírása után sikeres bejelentkezés, teszt1 feedre irányítás (helyes felhasználó)
 
 #### 3.2.2. TR-02 (TC-02)
 - TP: TP-02
-    1. lépés: 
-    2. lépés: 
-    3. lépés: 
-    4. lépés: 
-    5. lépés: 
+    1. lépés: Bejelentkezés oldalra navigálás
+    2. lépés: Bejelentkezés telefonszámmal gombra nyomás, ez elnavigál a megfelelő oldalra
+    3. lépés: Telefonszám megadása 06709879876
+    4. lépés: Kód küldése gombra nyomás
+    5. lépés: Pár perc múlva megkapjuk a belépési kódot
+    6. lépés: Kód beírása után sikeres bejelentkezés, teszt1 feedre irányítás (helyes felhasználó)
 
-### 3.2. tesztriportja
+### 3.3. tesztriportja
 
-#### 3.2.1. TR-01 (TC-01)
+#### 3.3.1. TR-01 (TC-01)
 - TP: TP-03
     1. lépés: 
     2. lépés: 

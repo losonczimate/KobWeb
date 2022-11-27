@@ -116,9 +116,9 @@ Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.3.1. Felha
   4. lépés: Firebase adatbázisbeli adatok ellenőrzése
   5. lépés: A felhasználóhoz sikeresen létrejött a követések attribútumon belül az új "teszt1" ID
 
-### 3.2. Értesítési adatok tesztriportja
+### 3.3. Értesítési adatok tesztriportja
 
-#### 3.2.1. TR-01 (TC-01)
+#### 3.3.1. TR-01 (TC-01)
 - TP: TP-03
   1. lépés: Belépés "mako@okam.hu" emaillel és jelszóval
   2. lépés: "teszt1" felhasználóra keresés
