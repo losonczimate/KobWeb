@@ -1,8 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {UserService} from "../../Shared/services/user.service";
 import {AuthService} from "../../Shared/services/auth.service";
 import {Felhasznalo} from "../../Model/Felhasznalo";
-import {AngularFirestore} from "@angular/fire/compat/firestore";
 import firebase from "firebase/compat/app";
 
 
@@ -45,12 +44,6 @@ export class AdminpanelComponent implements OnInit {
       window.location.reload();
     }).catch(error => {
       console.log(error);
-    })
-  }
-
-  deleteUser(felhasznalo: Felhasznalo) {
-    this.userService.deleteUser(felhasznalo).then(() => {
-
     })
   }
 }

@@ -16,7 +16,6 @@
           <ng-template #banned>
             <mat-icon style="margin-left: 2%" *ngIf="users.role !== 'admin' && users.isBanned" (click)="unBanUser(users)">done_outline</mat-icon>
           </ng-template>
-          <mat-icon style="margin-left: 1%" *ngIf="users.role !== 'admin'">cancel</mat-icon>
         </mat-list-item>
       </mat-list>
     </mat-card-content>
