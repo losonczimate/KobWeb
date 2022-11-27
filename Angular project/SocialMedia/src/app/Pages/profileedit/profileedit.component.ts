@@ -29,6 +29,8 @@ export class ProfileeditComponent implements OnInit {
   isRequested = false;
 
   collectionName = "Felhasznalo";
+  loggedinuser: Felhasznalo;
+
 
   profileeditForm = new FormGroup({
     file: new FormControl(''),
@@ -52,6 +54,7 @@ export class ProfileeditComponent implements OnInit {
     this.authService.isUserLoggedIn().subscribe(curruser => {
       if (curruser) {
         this.userService.getByID(curruser.uid as string).subscribe(currentuser => {
+          this.loggedinuser = currentuser;
           this.nickname = currentuser?.nev as string;
           this.profilpic = currentuser?.profileimageURL;
         })
@@ -93,6 +96,24 @@ export class ProfileeditComponent implements OnInit {
           })
         }
       }
+    })
+  }
+
+  deleteUser() {
+    this.authService.currentuser().then(curruser => {
+      if (curruser) {
+        this.afs.collection<Felhasznalo>(this.collectionName).doc(`${curruser.uid}`).delete().then(() => {
+          curruser.delete().then(() => {
+            console.log("Succesful deletion");
+          }).catch(error => {
+            console.log(error);
+          })
+        }).catch(error => {
+          console.log(error);
+        })
+      }
+    }).catch(error => {
+      console.log(error);
     })
   }
 

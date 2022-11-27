@@ -24,7 +24,10 @@
   </mat-card>
   <mat-menu #admin>
     <mat-list (click)="$event.stopPropagation()">
-      <mat-list-item style="margin-top: 15%" fxLayoutAlign="center">
+      <mat-list-item style="margin-top: 1%" fxLayoutAlign="center">
+        <button mat-raised-button color="primary" type="button" [class.mat-elevation-z5]="true" (click)="deleteUser()">Fiók törlése</button>
+      </mat-list-item>
+      <mat-list-item style="margin-top: 15%" fxLayoutAlign="center" *ngIf="loggedinuser.role !== 'admin'">
         <form [formGroup]="adminRequestForm" fxLayout="column" fxLayoutAlign="center center">
           <mat-checkbox formControlName="isRequested">
             Admin szeretnék lenni
@@ -34,7 +37,7 @@
           </mat-form-field>
         </form>
       </mat-list-item>
-      <mat-list-item style="margin-top: 5%; margin-bottom: 5%" fxLayout="column" fxLayoutAlign="center center">
+      <mat-list-item style="margin-top: 5%; margin-bottom: 5%" fxLayout="column" fxLayoutAlign="center center" *ngIf="loggedinuser.role !== 'admin'">
         <button mat-raised-button color="primary" type="submit" [class.mat-elevation-z5]="true" (click)="onSubmitAdmin()">Mentés</button>
       </mat-list-item>
     </mat-list>
