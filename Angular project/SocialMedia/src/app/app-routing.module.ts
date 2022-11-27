@@ -68,6 +68,7 @@ const routes: Routes = [
   },
   { path: 'not-found', loadChildren: () => import('./Pages/not-found/not-found.module').then(m => m.NotFoundModule)
   },
+  { path: 'profilnezo', loadChildren: () => import('./Pages/profilnezo/profilnezo.module').then(m => m.ProfilnezoModule) },
   {
     path: '**', //ez tolt be legutoljara
     redirectTo: '/not-found'
