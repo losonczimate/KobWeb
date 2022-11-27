@@ -79,14 +79,14 @@ Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.4.8. Bevit
 #### 2.3.1. TC-01
 - TP: TP-03
 - Leírás: Beviteli mezők csak megfelelő inputot fogadnak el
-- Bemenet: felhasználónév: email: jelszó(2x): telefonszám:
+- Bemenet: felhasználónév:Teszt1 email:teszt1@gmail.com jelszó(2x):teszt1 telefonszám:06701231234
 - Művelet: Az adatokat regisztráció gomb hatására létrehozza az adatbázisban és ellenőrzi a jelszó helyes ismétlését
 - Elvárt kimenet: Sikeres regisztráció, feedre átirányítás
 
 #### 2.3.2. TC-02
 - TP: TP-03
 - Leírás: Beviteli mezők csak megfelelő inputot fogadnak el
-- Bemenet: felhasználónév: email: jelszó(2x): telefonszám: 
+- Bemenet: felhasználónév:Teszt2 email:teszt2@gmail.com jelszó(2x):teszt2 telefonszám:06709879876 
 - Művelet: Az adatokat regisztráció gomb hatására létrehozza az adatbázisban és ellenőrzi a jelszó helyes ismétlését
 - Elvárt kimenet: Sikeres regisztráció, feedre átirányítás
 
@@ -139,14 +139,24 @@ Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.4.8. Bevit
     5. lépés: Pár perc múlva megkapjuk a belépési kódot
     6. lépés: Kód beírása után sikeres bejelentkezés, teszt1 feedre irányítás (helyes felhasználó)
 
-### 3.3. tesztriportja
+### 3.3. Regisztráció beviteli mezők helyességének tesztriportja
 
 #### 3.3.1. TR-01 (TC-01)
 - TP: TP-03
-    1. lépés: 
-    2. lépés: 
-    3. lépés: 
-    4. lépés: 
-    5. lépés: 
+    1. lépés: Bejelentkezéshez navigálás
+    2. lépés: Regisztráció gombra nyomás
+    3. lépés: Felhasználónév, email, jelszó (2x), telefonszám beírása
+    4. lépés: Teszt1, teszt1@gmail.com, teszt1, teszt1, 07601231234
+    5. lépés: Regisztráció gombra nyomás
+    6. lépés: Sikeres regisztráció, felhasználó feedjére átirányítás
+
+#### 3.3.2. TR-02 (TC-02)
+- TP: TP-03
+    1. lépés: Bejelentkezéshez navigálás
+    2. lépés: Regisztráció gombra nyomás
+    3. lépés: Felhasználónév, email, jelszó (2x), telefonszám beírása
+    4. lépés: Teszt2, teszt2@gmail.com, teszt2, teszt2, 06709879876
+    5. lépés: Regisztráció gombra nyomás
+    6. lépés: Sikeres regisztráció, felhasználó feedjére átirányítás
 
     
