@@ -78,6 +78,9 @@
       <mat-list-item *ngIf="loggedInUser && loggedInUser.emailVerified" role="listitem" routerLink="/post" (click)="close()" [ngStyle]="{'border-bottom': this.router.url === '/post' ? 'solid 5px #9fd35c' : ''}">
         <mat-icon>announcement</mat-icon>
       </mat-list-item>
+      <mat-list-item style="color:darkred" *ngIf="loggedInUser && loggedInUser.emailVerified && this.userRole === 'admin'" role="listitem" routerLink="/adminpanel" (click)="close()" [ngStyle]="{'border-bottom': this.router.url === '/post' ? 'solid 5px #9fd35c' : ''}">
+        <mat-icon>build</mat-icon>
+      </mat-list-item>
       <mat-list-item role="listitem" routerLink="/support" (click)="close()" [ngStyle]="{'border-bottom': this.router.url === '/support' ? 'solid 5px #9fd35c' : ''}">
         <mat-icon>help</mat-icon>
       </mat-list-item>
@@ -113,6 +116,10 @@
       <mat-list-item *ngIf="loggedInUser && loggedInUser.emailVerified" role="listitem" routerLink="/post" (click)="close();bignav.close();smallnav.open()" [ngStyle]="{'border-bottom': this.router.url === '/post' ? 'solid 5px #9fd35c' : ''}">
         <mat-icon>announcement</mat-icon>
         <span>Posztolás</span>
+      </mat-list-item>
+      <mat-list-item *ngIf="loggedInUser && loggedInUser.emailVerified && this.userRole === 'admin'" role="listitem" routerLink="/adminpanel" (click)="close();bignav.close();smallnav.open()" [ngStyle]="{'border-bottom': this.router.url === '/post' ? 'solid 5px #9fd35c' : ''}">
+        <mat-icon style="color:darkred">build</mat-icon>
+        <span>Admin</span>
       </mat-list-item>
       <mat-list-item role="listitem" routerLink="/support" (click)="close();bignav.close();smallnav.open()" [ngStyle]="{'border-bottom': this.router.url === '/support' ? 'solid 5px #9fd35c' : ''}">
         <mat-icon>help</mat-icon>

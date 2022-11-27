@@ -32,6 +32,17 @@ export class UserService {
     return setDoc(userDocRef, Felhasznalo);
   }
 
+  banUser(Felhasznalo: Felhasznalo) {
+    const bannedUserRef = doc(this.fs, `${this.collectionName}/${Felhasznalo.id}`);
+    return setDoc(bannedUserRef,{disabled: true});
+  }
+
+  unBanUser(Felhasznalo: Felhasznalo) {
+    const unBannedUserRef = doc(this.fs, `${this.collectionName}/${Felhasznalo.id}`);
+    return setDoc(unBannedUserRef,{disabled: false});
+  }
+
+
   deleteUser(Felhasznalo: Felhasznalo) {
     const bookDocRef = doc(this.fs, this.collectionName +'/' + Felhasznalo.id);
     return deleteDoc(bookDocRef);

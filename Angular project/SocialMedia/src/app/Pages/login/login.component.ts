@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/Shared/services/auth.service';
+import {getAuth} from "@angular/fire/auth";
 
 @Component({
   selector: 'app-login',
@@ -28,6 +29,11 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     this.authService.login(this.LoginForm.get('email')?.value as string, this.LoginForm.get('password')?.value as string).then(cred => {
       console.log(cred);
+      const auth = getAuth().currentUser.reload();
+      auth.then(() => {
+      }).catch(error => {
+        console.log(error);
+      })
       this.router.navigateByUrl('/profile');
     }).catch(error => {
       console.error(error);

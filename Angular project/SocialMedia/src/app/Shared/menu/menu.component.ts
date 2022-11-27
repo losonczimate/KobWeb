@@ -6,6 +6,7 @@ import {FormControl, FormGroup} from "@angular/forms";
 import { NotificationsService } from '../services/notifications.service';
 import { Notification } from '../../Model/notification';
 import { first, Observable } from 'rxjs';
+import {UserService} from "../services/user.service";
 
 @Component({
   selector: 'app-menu',
@@ -20,14 +21,18 @@ export class MenuComponent implements OnInit {
   ]
 
   searchedText='';
+  userRole: string = '';
 
   @Input() loggedInUser?: firebase.User | null;
 
-  constructor(public router: Router, private authService: AuthService, private notificationService: NotificationsService) { }
+  constructor(public router: Router, private authService: AuthService, private notificationService: NotificationsService, private userService: UserService) { }
 
   ngOnInit() {
     this.authService.isUserLoggedIn().subscribe(user => {
       this.loggedInUser = user;
+      this.userService.getByID(this.loggedInUser.uid).subscribe(curruser => {
+        this.userRole = curruser.role;
+      })
       localStorage.setItem('user', JSON.stringify(this.loggedInUser));
       //Lekerjuk az adatbazisbol az osszes ertesitest es taroljuk a tombunkben.
       this.notificationService.getAll(this.loggedInUser.uid).pipe(first()).subscribe(notifications => {
@@ -39,7 +44,7 @@ export class MenuComponent implements OnInit {
       console.error(error);
       localStorage.setItem('user', JSON.stringify('null'));
     });
-    
+
   }
 
   onSearch(){
