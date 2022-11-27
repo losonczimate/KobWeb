@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-import {Felhasznalo} from "../../Model/Felhasznalo";
 
 @Component({
   selector: 'app-profilnezo',
