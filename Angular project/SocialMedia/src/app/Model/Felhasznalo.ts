@@ -7,4 +7,5 @@ export interface Felhasznalo {
   profileimageURL: string;
   telefonszam: string;
   role: string;
+  isBanned: boolean;
 }
