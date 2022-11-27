@@ -398,7 +398,7 @@ Ennek a feladatnak az a célja, hogy egy működő prototípust hozzunk létre, 
 
 Részfeladatai a következők:
 
-#### 9.3.1.  Felhasználói munkamenethez szükséges adatok létrehozása az adatbázisban
+#### 9.3.1.  Felhasználói és vendég munkamenethez szükséges adatok létrehozása az adatbázisban
 
 Felelős: Orosz Bence
 
@@ -413,14 +413,6 @@ Felelős: Bodnár Kristóf
 Tartam:  3 nap
 
 Erőforrásigény:  3 személynap
-
-#### 9.3.3.  Vendég munkamenethez szükséges adatok létrehozása az adatbázisban
-
-Felelős: Orosz Bence
-
-Tartam:  4 nap
-
-Erőforrásigény:  4 személynap
 
 #### 9.3.4.  Felhasználói munkamenethez kapcsolódó GUI megvalósítása
 
@@ -769,6 +761,14 @@ Felelős: Orosz Bence
 Tartam:  4 nap
 
 Erőforrásigény:  3 személynap
+
+#### 9.4.9. Nem elérhető oldalak, más profiloldalak elérhetőségének kezelése.
+
+Felelős: Orosz Bence
+
+Tartam:  4 nap
+
+Erőforrásigény:  4 személynap
 
 ```
 Működő végleges program, a frissített tesztelési dokumentációval. A 3. mérföldkőhöz képest funkiconálisan többet kell tudnia az oldalnak.
