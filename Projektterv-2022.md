@@ -398,7 +398,7 @@ Ennek a feladatnak az a célja, hogy egy működő prototípust hozzunk létre, 
 
 Részfeladatai a következők:
 
-#### 9.3.1.  Felhasználói munkamenethez szükséges adatok létrehozása az adatbázisban
+#### 9.3.1.  Felhasználói és vendég munkamenethez szükséges adatok létrehozása az adatbázisban
 
 Felelős: Orosz Bence
 
@@ -413,14 +413,6 @@ Felelős: Bodnár Kristóf
 Tartam:  3 nap
 
 Erőforrásigény:  3 személynap
-
-#### 9.3.3.  Vendég munkamenethez szükséges adatok létrehozása az adatbázisban
-
-Felelős: Orosz Bence
-
-Tartam:  4 nap
-
-Erőforrásigény:  4 személynap
 
 #### 9.3.4.  Felhasználói munkamenethez kapcsolódó GUI megvalósítása
 
@@ -694,6 +686,29 @@ Tartam:  2 nap
 
 Erőforrásigény:  2 személynap/fő
 
+#### 9.3.38. Posztolás és képfeltöltés backend megvalósítása
+
+Felelős: Oláh Balázs
+
+Tartam:  2 nap
+
+Erőforrásigény:  2 személynap/fő
+
+#### 9.3.39. Menüsávok és az azokhoz tartozó routingok megvalósítása
+
+Felelős: Oláh Balázs
+
+Tartam:  2 nap
+
+Erőforrásigény:  2 személynap/fő
+
+#### 9.3.40. Globális színséma, téma, a weboldal arculatának megtervezése
+
+Felelős: Oláh Balázs
+
+Tartam:  1 nap
+
+Erőforrásigény:  1 személynap/fő
 
 ```
 A feladatokat a 3.2-es pont figyelembevételével érdemes meghatározni és lehető legrészletesebben definiálni a feladatokat és a felelőseit. 
@@ -770,6 +785,14 @@ Tartam:  4 nap
 
 Erőforrásigény:  3 személynap
 
+#### 9.4.9. Nem elérhető oldalak, más profiloldalak elérhetőségének kezelése.
+
+Felelős: Orosz Bence
+
+Tartam:  4 nap
+
+Erőforrásigény:  4 személynap
+
 ```
 Működő végleges program, a frissített tesztelési dokumentációval. A 3. mérföldkőhöz képest funkiconálisan többet kell tudnia az oldalnak.
 
@@ -812,7 +835,7 @@ Az egyes leadások alkalmával rögzített erőforrásigényt, az elvállalt fel
 |                     Juhász István        |           1          |             1            |           5          |            1           |    8     |
 |                     Gila Valter          |           1          |             1            |           5          |            1           |    8     |
 |                     Orosz Bence          |           1          |             1            |           5          |            1           |    8     |
-|                     Oláh Balázs          |           1          |             1            |           5          |            1           |    8     |
+|                     Oláh Balázs          |           1          |             1            |           8          |            1           |    11    |
 |                     Papp Lukács Lóránt   |           1          |             1            |           5          |            1           |    8     |
 |                     Simon Dániel         |           1          |             1            |           8          |            1           |    11    |
 |                     Losonczi Máté        |           1          |             1            |           5          |            1           |    8     |
