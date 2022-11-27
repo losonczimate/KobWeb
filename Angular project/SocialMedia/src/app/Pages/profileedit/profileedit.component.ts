@@ -12,6 +12,7 @@ import {Firestore, doc, updateDoc} from "@angular/fire/firestore";
 import {update} from "@angular/fire/database";
 import {uploadBytes} from "@angular/fire/storage";
 import {MatRadioChange} from "@angular/material/radio";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 const storage = getStorage();
 
@@ -43,7 +44,8 @@ export class ProfileeditComponent implements OnInit {
               private router: Router,
               private fileUploadService: FileUploadService,
               private afs: AngularFirestore,
-              private fs: Firestore) {
+              private fs: Firestore,
+              public snackBar: MatSnackBar) {
   }
 
   ngOnInit(): void {
@@ -99,6 +101,9 @@ export class ProfileeditComponent implements OnInit {
       this.authService.currentuser().then(curruser => {
         const updatedUser = doc(this.fs, `${this.collectionName}/${curruser.uid}`);
         updateDoc(updatedUser,{role: "admin"}).then(() => {
+          this.snackBar.open("Sikeresen admin lettél!", "Ok", {
+            duration: 2000,
+          });
           this.router.navigateByUrl("/profile");
         }).catch(error => {
           console.error(error);
