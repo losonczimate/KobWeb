@@ -26,7 +26,8 @@ import {MatCardModule} from "@angular/material/card";
 import {MatChipsModule} from "@angular/material/chips";
 import {NgOtpInputModule} from "ng-otp-input";
 import { OtpComponent } from './Pages/otp/otp.component';
-import { AdminpanelComponent } from './Pages/adminpanel/adminpanel.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { AdminpanelComponent } from './Pages/adminpanel/adminpanel.component';
     MatMenuModule,
     MatCardModule,
     MatChipsModule,
-    NgOtpInputModule
+    NgOtpInputModule,
+    MatSnackBarModule
   ],
 
   providers: [{ provide: FIREBASE_OPTIONS, useValue: environment.firebase }, {provide: LocationStrategy, useClass: HashLocationStrategy}],

@@ -131,4 +131,7 @@ export class KovetokComponent implements OnInit {
 
   }
 
+  ProfilraIranyit() {
+    this.router.navigateByUrl("/profilnezo");
+  }
 }

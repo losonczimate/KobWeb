@@ -3,7 +3,7 @@
   <mat-card class="example-card" style="margin-top: 1%; margin-bottom: 1%">
     <mat-card-header style="width: 90%; margin-left: auto;margin-right: auto">
       <mat-card-title> <img mat-card-sm-image="" class="example-header-image" src="{{user.profileimageURL}}" alt="tile.profilkep" loading="lazy"></mat-card-title>
-      <mat-card-title>{{user.nev}}</mat-card-title>
+      <mat-card-title id ="usname" (click)="ProfilraIranyit()">{{user.nev}}</mat-card-title>
       <mat-card-subtitle>Regisztrálás ideje: {{ (user.regdatum | customdate)}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-actions style="width: 90%; margin-left: auto;margin-right: auto">

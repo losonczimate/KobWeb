@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, Output} from '@angular/core';
+import {Component, inject, Input, OnInit, Output} from '@angular/core';
 import {AuthService} from "../../Shared/services/auth.service";
 import {Router} from "@angular/router";
 import {first} from "rxjs";
@@ -11,6 +11,7 @@ import {Comment} from "../../Model/comment";
 import {CommentService} from "../../Shared/services/comment.service";
 import { NotificationsService } from '../../Shared/services/notifications.service';
 import { Notification } from '../../Model/notification';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-feed',
@@ -33,11 +34,15 @@ export class FeedComponent implements OnInit {
   comments = []
   commentsbypost: Map<String, Comment[]> = new Map<String, Comment[]>();
 
-  delComment() {
-    
-  }
+  constructor(private fb: FormBuilder, private notificationService: NotificationsService, private commentService: CommentService,private postService: PostService ,private userService:UserService ,private router: Router , private authService:AuthService, public snackBar: MatSnackBar) { }
 
-  constructor(private fb: FormBuilder, private notificationService: NotificationsService, private commentService: CommentService,private postService: PostService ,private userService:UserService ,private router: Router , private authService:AuthService) { }
+
+  delComment(message = "Törölte a kommentet", action = "Ok") {
+    let snack = this.snackBar;
+    snack.open(message, action, {
+      duration: 2000,
+    });
+  }
 
   onComment(postID: string, index: number){
     if(this.comments[index] === "" || this.comments[index].trim() === ""){return;}
@@ -154,6 +159,7 @@ export class FeedComponent implements OnInit {
       this.userService.getByID(curruser.uid as string).pipe(first()).subscribe(currentuser => {
         this.ismerosok = new Set(currentuser?.ismerosok as string[]);
         this.ismerosok.add(this.loggedinuser);
+        this.userisadmin = currentuser.role === "admin";
 
         this.postService.getAll().pipe(first()).subscribe(postok =>{
             postok.forEach(post =>{
@@ -174,6 +180,8 @@ export class FeedComponent implements OnInit {
                         ujkomment.push(userwhocommented.profileimageURL);
                         ujkomment.push(comment.comment);
                         ujkomment.push(comment.date);
+                        ujkomment.push(userwhocommented.id);
+
 
                         for(let i=0 ; i <= this.commentsbypost[post.postID].length; i++){
                           if(i == this.commentsbypost[post.postID].length){
