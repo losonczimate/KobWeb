@@ -55,7 +55,8 @@ export class RegistrationComponent implements OnInit {
             regdatum: Date.now(),
             profileimageURL: "https://firebasestorage.googleapis.com/v0/b/rf1-2022-kobweb.appspot.com/o/ProfilePics%2Fbasicprofilpic.png?alt=media&token=6d1a73fc-e76a-480b-931d-2b692f649e94",
             telefonszam: this.regForm.get('phonenumber')?.value as string,
-            role: "user"
+            role: "user",
+            isBanned: false
           }
 
           if (this.regForm.get('file').value !== "") {

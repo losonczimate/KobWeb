@@ -32,19 +32,25 @@ export class AdminpanelComponent implements OnInit {
     })
   }
 
-  banUser(bannedUser: Felhasznalo) {
-    this.userService.banUser(bannedUser).then(() => {
+  banUser(felhasznalo: Felhasznalo) {
+    this.userService.banUser(felhasznalo).then(() => {
+      window.location.reload()
+    }).catch(error => {
+      console.log(error);
+    })
+  }
+
+  unBanUser(felhasznalo: Felhasznalo) {
+    this.userService.unBanUser(felhasznalo).then(() => {
       window.location.reload();
     }).catch(error => {
       console.log(error);
     })
   }
 
-  unBanUser(unBannedUser: Felhasznalo) {
-    this.userService.unBanUser(unBannedUser).then(() => {
-      window.location.reload();
-    }).catch(error => {
-      console.log(error);
+  deleteUser(felhasznalo: Felhasznalo) {
+    this.userService.deleteUser(felhasznalo).then(() => {
+
     })
   }
 }

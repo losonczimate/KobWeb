@@ -12,7 +12,10 @@
             <mat-icon>perm_identity</mat-icon>
           </ng-template>
           {{users.nev}}
-          <mat-icon style="margin-left: 2%" *ngIf="users.role !== 'admin'" (click)="unBanUser(users)">error</mat-icon>
+          <mat-icon style="margin-left: 2%" *ngIf="users.role !== 'admin' && !users.isBanned else banned" (click)="banUser(users)">error</mat-icon>
+          <ng-template #banned>
+            <mat-icon style="margin-left: 2%" *ngIf="users.role !== 'admin' && users.isBanned" (click)="unBanUser(users)">done_outline</mat-icon>
+          </ng-template>
           <mat-icon style="margin-left: 1%" *ngIf="users.role !== 'admin'">cancel</mat-icon>
         </mat-list-item>
       </mat-list>

@@ -5,6 +5,7 @@ import {
   doc, docData, deleteDoc, updateDoc, DocumentReference, setDoc, query, where, startAt, endAt, getDocs, orderBy
 } from '@angular/fire/firestore';
 import {Observable} from "rxjs";
+import {user} from "@angular/fire/auth";
 
 @Injectable({
   providedIn: 'root'
@@ -33,15 +34,14 @@ export class UserService {
   }
 
   banUser(Felhasznalo: Felhasznalo) {
-    const bannedUserRef = doc(this.fs, `${this.collectionName}/${Felhasznalo.id}`);
-    return setDoc(bannedUserRef,{disabled: true});
+    const userRef = doc(this.fs, `${this.collectionName}/${Felhasznalo.id}`);
+    return updateDoc(userRef, {isBanned: true});
   }
 
   unBanUser(Felhasznalo: Felhasznalo) {
-    const unBannedUserRef = doc(this.fs, `${this.collectionName}/${Felhasznalo.id}`);
-    return setDoc(unBannedUserRef,{disabled: false});
+    const userRef = doc(this.fs, `${this.collectionName}/${Felhasznalo.id}`);
+    return updateDoc(userRef, {isBanned: false});
   }
-
 
   deleteUser(Felhasznalo: Felhasznalo) {
     const bookDocRef = doc(this.fs, this.collectionName +'/' + Felhasznalo.id);
