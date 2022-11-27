@@ -6,7 +6,7 @@ Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `Felhasznál�
 
 ### 1.1. Felhasználók kezelése
 - Azonosító: TP-01
-- Tesztesetek: TC-01, TC-02, TC-03
+- Tesztesetek: TC-01, TC-02
 - Leírás: Felhasználók eltárolásának tesztelése
   0. Regisztráció 
   1. Bejelentkezés
