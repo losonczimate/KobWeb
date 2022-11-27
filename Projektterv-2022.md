@@ -686,6 +686,29 @@ Tartam:  2 nap
 
 Erőforrásigény:  2 személynap/fő
 
+#### 9.3.38. Posztolás és képfeltöltés backend megvalósítása
+
+Felelős: Oláh Balázs
+
+Tartam:  2 nap
+
+Erőforrásigény:  2 személynap/fő
+
+#### 9.3.39. Menüsávok és az azokhoz tartozó routingok megvalósítása
+
+Felelős: Oláh Balázs
+
+Tartam:  2 nap
+
+Erőforrásigény:  2 személynap/fő
+
+#### 9.3.40. Globális színséma, téma, a weboldal arculatának megtervezése
+
+Felelős: Oláh Balázs
+
+Tartam:  1 nap
+
+Erőforrásigény:  1 személynap/fő
 
 ```
 A feladatokat a 3.2-es pont figyelembevételével érdemes meghatározni és lehető legrészletesebben definiálni a feladatokat és a felelőseit. 
@@ -812,7 +835,7 @@ Az egyes leadások alkalmával rögzített erőforrásigényt, az elvállalt fel
 |                     Juhász István        |           1          |             1            |           5          |            1           |    8     |
 |                     Gila Valter          |           1          |             1            |           5          |            1           |    8     |
 |                     Orosz Bence          |           1          |             1            |           5          |            1           |    8     |
-|                     Oláh Balázs          |           1          |             1            |           5          |            1           |    8     |
+|                     Oláh Balázs          |           1          |             1            |           8          |            1           |    11    |
 |                     Papp Lukács Lóránt   |           1          |             1            |           5          |            1           |    8     |
 |                     Simon Dániel         |           1          |             1            |           8          |            1           |    11    |
 |                     Losonczi Máté        |           1          |             1            |           5          |            1           |    8     |
