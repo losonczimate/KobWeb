@@ -32,13 +32,14 @@ Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.4.8. Bevit
   3. lépés: Felhasználónév, email, jelszó kétszeres, telefonszám megadása
   4. lépés: Regisztráció gombra nyomás
 
-### 1.4. 
+### 1.4. Felhasználók keresése keresősávval
 - Azonosító: TP-04
 - Tesztesetek: TC-01
-- Leírás: 
-    1. lépés: 
-    2. lépés: 
-    3. lépés: 
+- Leírás: Felhasználókra keresés lehetősége keresősáv segítségével
+    1. lépés: Bejelentkezés
+    2. lépés: Felső keresősávra kattintás
+    3. lépés: Keresni kívánt felasználó teljes, vagy kezdetleges neve
+    4. lépés: Enter lenyomása
 
 ## 2. Teszesetek (TC)
 
@@ -90,14 +91,14 @@ Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.4.8. Bevit
 - Művelet: Az adatokat regisztráció gomb hatására létrehozza az adatbázisban és ellenőrzi a jelszó helyes ismétlését
 - Elvárt kimenet: Sikeres regisztráció, feedre átirányítás
 
-### 2.3. tesztesete
+### 2.4. Felhasználók keresése keresősávval tesztesete
 
 #### 2.3.1. TC-01
-- TP: TP-03
-- Leírás: 
-- Bemenet: 
-- Művelet: 
-- Elvárt kimenet: 
+- TP: TP-04
+- Leírás: Felhasználó keresése a keresősáv használatáaval
+- Bemenet: Keresősávba írás
+- Művelet: Enter lenyomással a kívánt felhasználókat kilistázza
+- Elvárt kimenet: Azokat a felhasználókat listázza ki, akik nevében szerepel a keresni kívánt szöveg
 
 
 ## 3. Tesztriportok (TR)
@@ -159,4 +160,14 @@ Az alábbi tesztdokumentum a `2022_IB153I-9_C` projekthez tartozó `9.4.8. Bevit
     5. lépés: Regisztráció gombra nyomás
     6. lépés: Sikeres regisztráció, felhasználó feedjére átirányítás
 
-    
+
+### 3.4. Felhasználók keresése keresősávval  tesztriportja
+
+#### 3.4.1. TR-01 (TC-01)
+- TP: TP-04
+  1. lépés: Bejelentkezés
+  2. lépés: Keresősávra kattintás
+  3. lépés: Keresni kívánt felhasználó beírása (vagy szövegrészlet beírása): tesz
+  4. lépés: Enter megnyomása
+  5. lépés: Keresni kívánt szöveget (vagy szövegrészletet) tartalmazó felhasználónevek kilistázása
+  6. lépés: Eredmény: teszt1, teszt2, sikeres keresés beviteli mezővel
