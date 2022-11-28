@@ -23,7 +23,9 @@ export class AdminpanelComponent implements OnInit {
       this.loggedInUser = curruser;
       this.userService.getAll().subscribe(users => {
         users.forEach(user => {
-          if (user.id !== this.loggedInUser.uid) {
+          if (user.id === this.loggedInUser.uid) {
+            this.userek.unshift(user);
+          } else {
             this.userek.push(user);
           }
         })
