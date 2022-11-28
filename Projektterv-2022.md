@@ -64,10 +64,11 @@ Mik a megrendelő és a felhasználók igényei? Miért van szükség a projektr
 		+ Első alkalomnál regisztráció, utána loginnal elérhető jogszint. Ő az aki már tud tevékenykedni a saját oldalán, posztolhat, kommentelhet, és likeolhat.
 	- Admin:
 		+ Minden jogosultsággal rendelkezik (pl. posztok törlése, kommentek moderálása stb...), moderátorok ill. developerek rendelkeznek vele.
+		+ Rendelkeznek egy ún. rendszerpulttal, ahol tudnak kitiltani felhasználókat moderálás végett.
  - Felhasználók kezelése (CRUD):
 	- Az oldal rendelkezik egy bejelentkező ill. egy regisztrációs felülettel, ahol tudnak a régi/új felhasználók bejelentkezni régi fiókjaikba, ill. létrehozni újat. 
 	- Már létrehozott fiókoknál lehetőség van a bejelentkezési adatok módosítására (jellemzően e-mail cím/jelszó).
-	- Lehetőség van fiók(ok) törlésére is, az adminisztrátor vagy saját döntés alapján.
+	- Lehetőség van fiók(ok) törlésére is, saját döntés alapján.
  - Regisztráció/bejelentkezés folyamata (CRUD):
 	- Regisztrálni bármelyik személy tud jogtól független. Kell megadni egy szabad e-mail címet, és egy tetszőleges jelszót 2x. Helyes form kitöltés után az e-mail címre, amivel lehet bejelentkezni.
 	- Bejelentkezni e-mail cím és jelszó párosítással lehetséges, sikeres regisztráció után.
@@ -77,7 +78,7 @@ Mik a megrendelő és a felhasználók igényei? Miért van szükség a projektr
 	- Ha esetleg később már nem szeretnénk, hogy lássa más, lehet letörölni is őket.
  - Felhasználók keresése (CRUD):
 	- Lehetőség van felhasználók/oldalak keresésére, ehhez is minimum követelmény a bejelentkezett fiók.
-	- Keresés e-mail cím ill. tel. szám alapján lesz lehetséges.
+	- Keresés felhasználónév alapján lesz lehetséges.
  - Idővonal megtekintése (CRUD):
 	- Szintén regisztrált fiókkal lehetséges belépés után, az ismerősök aktivitását tudja megtekinteni, ill. interaktálni vele.
  - Értesítés kommentekről, like-okról és követésekről:
@@ -87,6 +88,10 @@ Mik a megrendelő és a felhasználók igényei? Miért van szükség a projektr
 	- A social media platformok nagy része a kommentelés/követés és az ún. like-olás. Így tudunk interaktálni más személyekkel az oldalon.
  - Regisztrált felhasználóknak saját profil:
 	- Lesz külön oldala az adott felhasználónak, ahol megjelenik a saját profilképe, adatai, képei. Saját követéseit és követőit fogja látni. Profilképet lehet változtatni.
+ - Profil szerkesztése:
+    - Bejelentkezett és regisztrált felhasználó tud profilképet váltani ill. nevet. Emellett itt tudja törölni a fiókját, ha szeretné.
+ - Reklámok:
+    - A feed oldalán több random zavaró reklám is meg fog jelenni, plusz funckióképp.
  - Poszt készítése:
 	- Regisztrált és belépett felhasználók tudnak posztot csinálni, ami tartalmaz egy képet és leírást a poszthoz kapcsolódóan. Más felhasználók tudnak reagálni és kommentelni a poszt alatt.
  - Posztok és kommentek pontos időpontja:
@@ -238,6 +243,18 @@ A projekt hetente ülésezik, hogy megvitassák az azt megelőző hét problém�
  - Hely: Discord.
  - Résztvevők: Juhász István, Papp Lukács, Gila Valter, Simon Dániel, Oláh Balázs(írásban), Bondár Kristóf, Losonczi Máté
  - Érintett témák:  Végső simítások projekt bemutatása előtt, általános megbeszélés.
+
+7. Megbeszélés:
+ - Időpont: 2022.11.19.
+ - Hely: Discord.
+ - Résztvevők: Juhász István, Papp Lukács, Gila Valter, Simon Dániel, Oláh Balázs, Bondár Kristóf(írásban), Losonczi Máté
+ - Érintett témák: Általános megbeszélés, projekt véglegesítésének előkészítése.
+
+8. Megbeszélés:
+ - Időpont: 2022.11.27.
+ - Hely: Discord.
+ - Résztvevők: Juhász István, Papp Lukács, Gila Valter, Simon Dániel, Oláh Balázs, Bondár Kristóf, Losonczi Máté
+ - Érintett témák: Utolsó meeting a végső bemutatás előtt, beszéd előkészítés, projekt átnézése, final deploy.
 
 ```
 A memókat ebben a dokumentumban kell vezetni a teljes projekt során, amely tartalmazza a következőket: 
