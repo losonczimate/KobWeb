@@ -3,6 +3,7 @@ import {UserService} from "../../Shared/services/user.service";
 import {AuthService} from "../../Shared/services/auth.service";
 import {Felhasznalo} from "../../Model/Felhasznalo";
 import firebase from "firebase/compat/app";
+import {first} from "rxjs";
 
 
 @Component({
